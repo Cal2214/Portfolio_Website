@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>project-taxi</title>
+</head>
+<body>
+            <!--------------------------------- HEADER --------------------------------->
+            <header class="header"> 
+                <div class="header-container">
+                    
+                    <!-- Name and Job Role -->
+                    <div class="name-role">
+                        <div class="header-name">Callum Dourneen</div>    
+                        <div class="header-job-role">Game Developer</div>    
+                    </div>
+    
+                    <!-- Icons -->
+                    <div class="icons">
+                        <!-- Home Icon -->
+                        <div class="icon-container">
+                            <a href="../../index.html" class="project-card">
+                            <img src="../../Images/home.png" alt="Home Icon">
+                        </a>
+                        </div>
+                    
+                    <!-- Game Icon -->
+                    <a href="../../../Pages/software-dev/index.html" class="icon-link">
+                        <div class="icon-container">
+                            <img src="../../Images/coding.png" alt="Software Icon">
+                        </div>
+                    </a>
+
+                        <!-- Linkdein Icon -->
+                        <div class="icon-container">
+                            <a href="https://www.linkedin.com/in/callum-dourneen-80a810296" target="_blank">
+                                <img src="../../Images/linkedin.png" alt="LinkedIn Icon">
+                            </a>
+                        </div>
+                        <!-- Github Icon -->
+                        <div class="icon-container">
+                            <a href="https://github.com/Cal2214" target="_blank">
+                                <img src="../../Images/social.png" alt="GitHub Icon">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Resume -->
+                    <div class="resume">
+                        <a href="../../Files/Cv_GameDev.pdf" target="_blank">
+                        <div class="resume-container">Resume</div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <!--------------------------------- END HEADER --------------------------------->
+    
+            <!--------------------------------- PROJECT INTRODUCTION --------------------------------->
+            <div class = "project-introduction">
+                <!-- Project Title and Description -->
+                <div class = "project-container">
+                        <a href="../../index.html" class="back-text"> < Back</a>
+                    <div class = "project-title">Project_Taxi</div>
+                    <div class = "project-description">A thrilling taxi simulator.</div>
+                </div>
+            </div>
+    
+            <div class="project-slideshow">
+                <div class="slides">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <video class="slide-item active"  src="../../projects/gameDev/project-taxi/Slideshow/cover.mp4" autoplay loop muted playsinline></video>
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/t-main-menu.png" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/buy.png" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/skill-points.png" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/employee.png" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/t-map.png" alt="Project Screenshot">
+            
+                <!-- Next Slide Button -->
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
+    
+            <div class="center-container"> 
+                <div class="about-introduction">
+    
+                    <!-- About Section -->
+                    <div class="about-container">
+                        <div class="about-section">About</div>
+                        <div class="about-text">
+                            Step into the fast-paced world of Project Taxi, an immersive taxi simulation game where every ride counts! Navigate busy city streets, pick up dynamic passengers, and build your own taxi empire. Upgrade your fleet, hire drivers, and manage your business while tackling unpredictable traffic, weather, and demanding customers. With realistic driving mechanics, a detailed open-world city, and strategic business elements, Project Taxi puts you in the driver’s seat of your own success story.
+                        </div>
+                    </div>
+            
+                    <!-- Project Details -->
+                    <div class="project-details-container">
+                        <div class="project-details">Project Details</div>
+                        <div class="details-text">
+                            Game Title: NA<br>
+                            Genre: Simulation<br>
+                            Platform: PC<br>
+                            Development Tools: Unreal Engine, C++<br>
+                            Game Features: 
+                            <li> Player and Vehicle Systems</li>
+                            <li>Job System</li>
+                            <li>Vehicle Managment and Upgrades</li>
+                            <li>AI Vehicles</li>
+                            <li>Employee Management</li>
+
+                        </div>
+                    </div>
+            
+                    <!-- Links Section -->
+                    <div class="project-links-container">
+                        <div class="project-links">Links</div>
+                        <div class="links">
+                            <div class="itch-link">
+                                Try the game on itch.io:<br>
+                                <a href="" target="_blank">Comming Soon</a>
+                            </div>
+                            <div class="itch-link">
+                                Check out the repository on GitHub:<br>
+                                <a href="" target="_blank">Comming Soon</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------- END PROJECT INTRODUCTION --------------------------------->
+    
+            <!--------------------------------- TECHNICAL BREAKDOWN --------------------------------->
+            
+            <!-- Tech Title -->
+            <div class="tech">
+                <div class="tech-title">
+                    <div class="technical-text">Technical Analysis</div>
+                </div>
+                <div class="tech-container">
+    
+    <!--------------------------------- FIRST CONTAINER --------------------------------->
+    <ul class="dropdown">
+        <li>
+            <input type="checkbox" id="first-holder">
+            <label for="first-holder">Player Systems and Vehicle Features</label>
+            <div class="content">
+                <!---------------------------------FIRST FEATURE  --------------------------------->
+                <ul class="dropdown-inside">
+                    <li>
+                        <input type="checkbox" id="first-feature">
+                        <label for="first-feature">Player Movement and Possession</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            Player movement forms the foundation of the gameplay experience, allowing players to navigate the environment, interact with vehicles, and engage in the game's core systems. Player movement is integral to transitioning between on-foot exploration and vehicle-based gameplay. This feature includes walking, running, interacting with objects (e.g., vehicles), and animations for entering/exiting vehicles. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            The player movement system is implemented using Unreal Engine's Character Class, which provides built-in tools for character locomotion and physics-based interactions. Locomotion 
+                            Configuring inputs for movement to ensure responsiveness and accessibility,
+                            Using a blend space to dynamically swich between idle., walking and running animations based on the players speed.
+                            Interaction with Vehicles
+                            Interaction are triggered with collision boxes when the player is near the vehicle door. 
+                            Using a animation montage when the player interacts with the vehicle e.g. opening the door. 
+                            Swapping the input controls from the player character to the vehicle actor once the interaction is complete. <br>
+                            
+                            <div class="title"> Design Approach </div>
+                            The design of the player movement system focuses on delivering fluidity, realism, and functionality to ensure the player feels connected to the game world.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="1">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-1">
+            <div class="carousel-slide" onclick="openLightbox(1, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/player-movement/walking.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 1)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/player-movement/getting-in.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(1, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(1, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-1" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(1)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-1">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/player-movement/walking.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Player Movement<br>The player uses standard WASD keys for movement with smooth directional changes and responsive character control. </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/player-movement/getting-in.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Possessing Vehicle <br>The video shows the player interacting with the vehicle transitioning smoothly from on foot movement to entering and exiting the car. </p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(1, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(1, 1)">Next &#10095;</button>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name"> Animation Clipping During Vehicle Entry / Exit</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">A key challenge in implementing vehicle entry/exit mechanics was ensuring character animations aligned seamlessly with the vehicle. During the door-opening sequence, noticeable clipping occurred at the end of the animation, where the player's hand would not always reach the door handle accurately. This broke immersion and made transitions appear unpolished.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">I implemented an interpolation system to adjust the player character's position dynamically during the animation. By ensuring the character moves to a specific offset relative to the vehicle, the player's hand consistently aligns with the door handle throughout the animation. To further smooth the transition, I incorporated a fade-in/fade-out UI animation during the entry/exit sequence. This subtle visual effect hides any minor animation clipping, improving the perceived quality of the transition.
+        Together, these adjustments created a more seamless and immersive experience when interacting with vehicles.</div>
+</div>
+
+                <!--------------------------------- END FIRST FEATURE  --------------------------------->
+                        </div>
+                    </li>
+                </ul>
+    <!---------------------------------  --------------------------------->
+ <!--------------------------------- SECOND FEATURE  --------------------------------->
+                 <ul class="dropdown-inside">
+                    <li>
+                        <input type="checkbox" id="second-feature">
+                        <label for="second-feature">Vehicle Features</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            Vehicles are the backbone of the game, serving as the primary tool for players to immerse themselves in the game world and complete their objectives. Each vehicle is equipped with a range of dynamic components and interactive features, designed to enhance realism and gameplay functionality. These include togglable indicators, functioning headlights, responsive door animations, and physics-driven driving mechanics. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            All vehicles inherit from a single base class, enabling shared functionality such as lights, doors, and driving systems. <br>
+                            
+                            <div class="title"> Design Approach </div>
+                            Every vehicle feature is designed to reinforce immersion, their was also a heavy focus on scalability through the modular vehicle framework which allows for the addition of new vehicles or features without significant rework. For example, new car models can inherit core systems while introducing unique capabilities.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="2">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-2">
+            <div class="carousel-slide" onclick="openLightbox(2, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/headlights.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 1)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/breaklights.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 2)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/indicator.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 3)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/fp-view.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 4)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/steering.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 5)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/doors.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(2, 6)">
+                <div class="media-wrapper">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/vehicle-features/struct.png" alt="Image Slide">
+            </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(2, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(2, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-2" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(2)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-2">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/headlights.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Headlights<br>The clip demonstrates the functionality of vehicle headlights, showing how they illuminate the surroundings when toggled on. This is particularly effective for night-time gameplay or low-visibility scenarios, enhancing realism.
+
+                    The headlights are activated through the player input, transitioning smoothly with a subtle glow effect. The lighting casts dynamic shadows on the environment, emphasizing the integration of the vehicle with the game world.</p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/breaklights.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Breaklights<br>This segment highlights the vehicle's brake light system. When the player applies the brakes, the rear lights illuminate, signaling the action.
+
+                    The responsiveness of the brake lights is shown in sync with vehicle deceleration.  </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/indicator.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Indicators <br>This clip focuses on the vehicle's turn indicators. The player toggles the left and right indicators to show directional intent, which is mirrored by flashing lights on the respective side of the vehicle. </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/fp-view.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">First-person View<br>The camera shifts to the vehicle's interior, providing a first-person view of the dashboard and how the indicators are represented inside the cabin.
+
+                    The corresponding indicator lights on the dashboard blink in sync with the exterior lights. This attention to detail enhances the immersive quality of the game, showcasing the interplay between interior and exterior vehicle systems. </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/steering.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Steering wheel + Speedometer/Tachometer<br>The final clip showcases the interaction of the steering wheel and speedometer as the vehicle moves. The player's inputs are reflected in real-time on these elements.
+
+                    The steering wheel responds dynamically to directional changes, rotating smoothly as the player steers. The speedometer needle moves fluidly in response to vehicle acceleration, demonstrating the integration of the driving system with the HUD and interior mechanics. </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/doors.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Doors<br>The clip shows the door animations when the player or passenger gets in / out of the vehicle aiding the games immersion.  </p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/vehicle-features/struct.png" alt="Image Slide">
+                <p class="video-info">Vehicle Structure<br>This image provides an overview of the vehicle blueprint, detailing its modular structure and key components. Each component is designed to interact seamlessly, creating a dynamic and realistic driving experience.</p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(2, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(2, 1)">Next &#10095;</button>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name"> Optimizing Vehicle Lights with Material Swapping</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">One of the challenges in designing the vehicle system was finding a way to implement visually appealing headlights and indicators without relying on real-time lighting, which can be computationally expensive. Using real lights for features like headlights, indicators, and brake lights significantly impacted performance when multiple vehicles were present or when targeting lower-end hardware.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">To address this, I implemented a material-swapping system for the lights. Instead of real-time light sources, I created two versions of the light materials: one with an emissive texture for the "on" state and a non-emissive version for the "off" state. The system dynamically swaps materials when lights are toggled. This approach reduced the computational load, eliminated the need for shadow and light calculations, and allowed the game to maintain visual fidelity across platforms.</div>
+</div>
+
+                <!--------------------------------- END SECOND FEATURE  --------------------------------->
+                        </div>
+                    </li>
+                </ul>
+     <!--------------------------------- END SECOND FEATURE  --------------------------------->
+            </div>
+        </li>
+    </ul>
+     <!--------------------------------- SECOND CONTAINER --------------------------------->
+     <ul class="dropdown">
+        <li>
+            <input type="checkbox" id="second-holder">
+            <label for="second-holder">Job System</label>
+            <div class="content">
+                <!---------------------------------THIRD FEATURE  --------------------------------->
+                <ul class="dropdown-inside">
+                    <li>
+                        <input type="checkbox" id="third-feature">
+                        <label for="third-feature">Job Preparation</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            Job preparation is a critical system that ensures smooth gameplay flow by dynamically spawning and assigning passengers to the player. This feature prevents invalid spawn points, generates randomized passenger data, and presents a clear UI for players to accept or decline jobs, adding realism and interactivity.
+When the player is without a passenger, the system spawns a new passenger at a valid location along predefined pathways. Passengers are dynamically generated with attributes like name, fare, and difficulty level. A seamless UI system introduces the job to the player, providing all necessary details, and allows the player to either accept or decline the request. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            Passenger Spawning
+-  When no passenger exists, a passenger actor is spawned using a predefined class. 
+- The mesh initially set to be invisible and non collatable. 
+- A random spawn location is selected from a designated pathway collision boxes. 
+- Collision boxes validate the location using a Boolean flag. if invalid the, location is reset until valid. 
+Passenger Attributes 
+- Upon spawning, passenger's attributes such as name, fare, difficulty and time estimates are generated and assigned.
+Job UI Prompt
+- Once a valid location is confirmed a UI element appears on the screen including, passengers name, estimated fare. time to pickup and drop off along side the jobs difficulty level. 
+Job Handling
+- Players can then choose to accept or decline the job, if declined the passenger actor is destroyed and the system restarts the loop to generate a new passenger. <br>
+                            
+                            <div class="title"> Design Approach </div>
+                            By using collision pathway boxes and continuous checks, the system ensures no passenger spawns in invalid areas for example in the middle of roads or other obstacles. This avoids immersion-breaking glitches. Randomized passenger attributes add variety, making each job unique. Including factors like difficulty level and time constraints allows for scalability in gameplay. Players can make strategic decisions based on their preferences and vehicle capabilities.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 3 -->
+<div class="slideshow-wrapper" data-id="3">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-3">
+            <div class="carousel-slide" onclick="openLightbox(3, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/job-prep/passanger-spawning.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(3, 1)">
+                <div class="media-wrapper">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-prep/map-image.png" alt="Image Slide">
+            </div>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(3, 2)">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-prep/job-request.png" alt="Image Slide">
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(3, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(3, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 3 -->
+<div id="lightbox-3" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(3)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-3">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/job-prep/passanger-spawning.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Passenger Spawning<br>The video shows the process of spawning a passenger in the game and having them appear in the level. </p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-prep/map-image.png" alt="Image Slide">
+                <p class="video-info">Passenger Valid Spawn Locations<br>Shows the valid locations the passenger can be placed making sure they can be collected by the player or AI taxis.</p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-prep/job-request.png" alt="Image Slide">
+                <p class="video-info">Job Types<br>Image shows the randomness in the job types. </p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(3, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(3, 1)">Next &#10095;</button>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name">  Issue with passenger spawning </div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">A recurring issue during the development of the passenger spawning system was ensuring that passengers did not appear in invalid or inaccessible locations. This included spawning on roads, inside buildings, or in areas where the player could not reach them. These misplacements disrupted gameplay and led to frustrating experiences for players who could not pick up passengers.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">As I mentioned I used a collision box to check if the players location is valid this prevents issues with the player being unable to pick up the passenger as the check makes sure they are on the pavement before allowing them to be picked up.</div>
+</div>
+
+                <!--------------------------------- END THIRD FEATURE  --------------------------------->
+                        </div>
+                    </li>
+                </ul>
+    <!---------------------------------  --------------------------------->
+ <!--------------------------------- FOURTH FEATURE  --------------------------------->
+                 <ul class="dropdown-inside">
+                    <li>
+                        <input type="checkbox" id="fourth-feature">
+                        <label for="fourth-feature">Job Acceptance</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            The job acceptance feature is a crucial part of the gameplay loop that allows players to decide whether to accept or decline a passenger’s request. Upon accepting a job a pointer system guides the player to the passenger's location. If the player declines, the passenger is removed, and the system generates a new job. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            Picking up Passenger
+-  Once the job is accepted a timer to pick up the passenger is started to keep track how long it takes for the player to reach the passenger. 
+- The player is directed to the passengers location through the use of a UI arrow which points in the passengers direction. 
+- The passenger will be seen waiting with a golden aura and pointer which helps make them stand out against the map. 
+-  Once the player has found the passenger they will drive close to the pavement and stop, once stopped the passenger will walk towards the vehicle and choose the closest available door and open it.
+
+Dropping off Passenger
+- Once stopped on the spot the door the passenger is in will open they will get out and the job will be completed.
+- A HUD panel will appear showing the details of the drop off displaying the time it took the player to drop off and pick up the passenger. These aspects will also directly impact the rating of the job which impact the tip the player can receive.  <br>
+                            
+                            <div class="title"> Design Approach </div>
+                            The feature can easily be expanded to include more complex job scenarios or passenger traits without overhauling the core mechanics. Randomization in job generation ensures variety without redundancy, keeping the system computationally efficient.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 4 -->
+<div class="slideshow-wrapper" data-id="4">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-4">
+            <div class="carousel-slide" onclick="openLightbox(4, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-taxi/Features/job-accept/job-loop.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(4, 1)">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-accept/pick-drop-location.png" alt="Image Slide">
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(4, 2)">
+                <div class="media-wrapper">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-accept/drop-details.png" alt="Image Slide">
+            </div>
+            </div>  
+        </div>
+        <button class="prev" onclick="changeCarousel(4, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(4, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 4 -->
+<div id="lightbox-4" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(4)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-4">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-taxi/Features/job-accept/job-loop.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Job Loop<br>As you can see from the video once the player has accepted the job they will begin to head towards the passengers location to pick them up. 
+
+                    Once picked up they will then head towards the drop off location where once dropped off they will be presented with the job details.  </p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-accept/pick-drop-location.png" alt="Image Slide">
+                <p class="video-info">Pick up / Drop off locations<br>Shows the indicators used to display the locations where the player need to pick up / drop off passengers. </p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-accept/drop-details.png" alt="Image Slide">
+                <p class="video-info">Drop off Details<br>Shows how by completing the job on time improves the xp gained by the player.  </p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(4, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(4, 1)">Next &#10095;</button>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name">  Issue with passenger respawning</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">One of the issues was having issues with passengers respawning once they have been dropped off. </div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">To solve this I made sure to check if the vehicle has a available passenger if one is not it will try to loop through all instances available on the map if it returns null a new one will get spawned then the instance will become the target for the player to pick up.</div>
+</div>
+
+                <!--------------------------------- END FOURTH FEATURE  --------------------------------->
+                        </div>
+                    </li>
+                </ul>
+     <!--------------------------------- END FOURTH FEATURE  --------------------------------->
+            </div>
+        </li>
+    </ul>
+         <!--------------------------------- FITH CONTAINER --------------------------------->
+         <ul class="dropdown">
+            <li>
+                <input type="checkbox" id="third-holder">
+                <label for="third-holder">Fine System</label>
+                <div class="content">
+                    <!---------------------------------FITH FEATURE  --------------------------------->
+                    <ul class="dropdown-inside">
+                        <li>
+                            <input type="checkbox" id="fith-feature">
+                            <label for="fith-feature">Redlight Fine</label>
+                            <div class="content">
+                                <div class="title"> Description</div>
+                                The Red Light Fine system is a core mechanic that adds realism and challenge to the gameplay by enforcing traffic laws. When the player drives through a red traffic light, they incur a monetary penalty. This system encourages players to adhere to realistic driving behaviour, adding depth to the simulation and increasing the difficulty of managing their in-game finances.<br>
+                                
+                                <div class="title"> Implementation</div>
+                                The system uses collision boxes or trigger zones at intersections to detect if the player’s vehicle crosses the line while the traffic light is red. When a violation is detected, a penalty is applied to the player's current balance. An alert is displayed on the HUD, notifying the player of the fine, including the amount deducted.
+<br>
+                                
+                                <div class="title"> Design Approach </div>
+                                The system aims to create a realistic traffic environment where players must abide by traffic laws. Fines act as a soft punishment, pushing players to consider the financial impact of reckless driving. The design allows for easy expansion, such as implementing additional traffic rules.<br>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+    
+    <!-- SlideShow and LightBox -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- Slideshow 3 -->
+    <div class="slideshow-wrapper" data-id="5">
+        <div class="video-carousel">
+            <div class="carousel-track" id="carousel-track-5">
+                <div class="carousel-slide" onclick="openLightbox(5, 0)">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="../../projects/gameDev/project-taxi/Features/red-light/redlight-fine.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-slide" onclick="openLightbox(5, 1)">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/red-light/fine-image.png" alt="Image Slide">
+                </div>
+                <div class="carousel-slide" onclick="openLightbox(5, 2)">
+                    <div class="media-wrapper">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/red-light/traffic-light.png" alt="Image Slide">
+                </div>
+                </div>
+            </div>
+            <button class="prev" onclick="changeCarousel(5, -1)">&#10094;</button>
+            <button class="next" onclick="changeCarousel(5, 1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="more-text">Click for details</div>
+    
+    <!-- Lightbox 3 -->
+    <div id="lightbox-5" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox(5)">&times;</span>
+            <div class="lightbox-slideshow" id="lightbox-slideshow-5">
+                <div class="lightbox-slide">
+                    <video class="lightbox-media" controls>
+                        <source src="../../projects/gameDev/project-taxi/Features/red-light/redlight-fine.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-info">Traffic Fine<br>Video shows what an example of what happens when the player runs a red light. </p>
+                </div>
+                <div class="lightbox-slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/red-light/fine-image.png" alt="Image Slide">
+                    <p class="video-info">UI Display<br>Displays the what the fine was for along side the amount that has been deducted. </p>
+                </div>
+                <div class="lightbox-slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/red-light/traffic-light.png" alt="Image Slide">
+                    <p class="video-info">Traffic Lights<br>Shows how the traffic light blueprint is set up. The collision box just past the traffic light detects if the player has crossed it during the traffic lights red light section. . </p>
+                </div>
+            </div>
+            <button class="prev" onclick="changeLightbox(5, -1)">&#10094; Prev</button>
+            <button class="next" onclick="changeLightbox(5, 1)">Next &#10095;</button>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="challanges-container">
+        <div class="challanges-title">Challenges</div>
+    
+        <div class ="challange-name">   Fining Player Wrongly </div>
+        <div class ="challange">Challange:</div>
+        <div class ="challange-text">A recurring issue occurs when players are fined incorrectly while making legitimate turns. This happens because the detection system uses collision boxes to determine if a vehicle runs a red light, but it lacks context to differentiate between lawful and unlawful crossings.</div>
+        <div class ="solution">Solution:</div>
+        <div class ="solution-text"> The solution under consideration involves adding a context-aware detection system. </div>
+    </div>
+    
+                    <!--------------------------------- END THIRD FEATURE  --------------------------------->
+                            </div>
+                        </li>
+                    </ul>
+        <!---------------------------------  --------------------------------->
+     <!--------------------------------- SIXTH FEATURE  --------------------------------->
+                     <ul class="dropdown-inside">
+                        <li>
+                            <input type="checkbox" id="sixth-feature">
+                            <label for="sixth-feature">Collision Fine</label>
+                            <div class="content">
+                                <div class="title"> Description</div>
+                                The job acceptance feature is a crucial part of the gameplay loop that allows players to decide whether to accept or decline a passenger’s request. Upon accepting a job a pointer system guides the player to the passenger's location. If the player declines, the passenger is removed, and the system generates a new job. <br>
+                                
+                                <div class="title"> Implementation</div>
+                                A collision event checks if the player's vehicle intersects with other valid objects it then takes the speed of the player to decide how bad of a impact the collision was. <br>
+                                
+                                <div class="title"> Design Approach </div>
+                                The system incentivizes cautious driving, adding a layer of realism and responsibility to gameplay. By tying the fines to monetary consequences, players are encouraged to minimize reckless behaviour, balancing fun and strategy.<br>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+    
+    <!-- SlideShow and LightBox -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- Slideshow 4 -->
+    <div class="slideshow-wrapper" data-id="6">
+        <div class="video-carousel">
+            <div class="carousel-track" id="carousel-track-6">
+                <div class="carousel-slide" onclick="openLightbox(6, 0)">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fine.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-slide" onclick="openLightbox(6, 1)">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fines.png" alt="Image Slide">
+                </div>
+                <div class="carousel-slide" onclick="openLightbox(6, 2)">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collider.png" alt="Image Slide">
+                </div>
+            </div>
+            <button class="prev" onclick="changeCarousel(6, -1)">&#10094;</button>
+            <button class="next" onclick="changeCarousel(6, 1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="more-text">Click for details</div>
+    
+    <!-- Lightbox 4 -->
+    <div id="lightbox-6" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox(6)">&times;</span>
+            <div class="lightbox-slideshow" id="lightbox-slideshow-6">
+                <div class="lightbox-slide">
+                    <video class="lightbox-media" controls>
+                        <source src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fine.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-info">Collision Example<br>Video shows the player colliding into a vehicle which causes the player being fined, you can see how the fine animation appears to visually alert the player.   </p>
+                </div>
+                <div class="lightbox-slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fines.png" alt="Image Slide">
+                    <p class="video-info">Fine Examples<br>Shows the range of collision fine messages and fine amounts depending on the speed of the collision. </p>
+                </div>
+                <div class="lightbox-slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collider.png" alt="Image Slide">
+                    <p class="video-info">Collision Detection<br>The collision box placed at the end of the vehicle detects if the player has collided with a vehicle.  </p>
+                </div>
+            </div>
+            <button class="prev" onclick="changeLightbox(6, -1)">&#10094; Prev</button>
+            <button class="next" onclick="changeLightbox(6, 1)">Next &#10095;</button>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="challanges-container">
+        <div class="challanges-title">Challenges</div>
+    
+        <div class ="challange-name">Overwhelming Players</div>
+        <div class ="challange">Challange:</div>
+        <div class ="challange-text">A single collision shouldn't heavily penalize or demotivate players. </div>
+        <div class ="solution">Solution:</div>
+        <div class ="solution-text">Fine scaling provides a fair system, with minor mistakes incurring smaller penalties and more severe errors appropriately fined.</div>
+    </div>
+    
+                    <!--------------------------------- END SIXTH FEATURE  --------------------------------->
+                            </div>
+                        </li>
+                    </ul>
+         <!--------------------------------- END SIXTH FEATURE  --------------------------------->
+                </div>
+            </li>
+        </ul>
+         <!--------------------------------- SEVENTH CONTAINER --------------------------------->
+         <ul class="dropdown">
+            <li>
+                <input type="checkbox" id="fourth-holder">
+                <label for="fourth-holder">Vehicle Management and Upgrades </label>
+                <div class="content">
+                    <!---------------------------------SEVENTH FEATURE  --------------------------------->
+                    <ul class="dropdown-inside">
+                        <li>
+                            <input type="checkbox" id="seventh-feature">
+                            <label for="seventh-feature">Vehicle Management</label>
+                            <div class="content">
+                                <div class="title"> Description</div>
+                                The Vehicle Management system is a core gameplay mechanic, enabling players to oversee and optimize their fleet of vehicles. This system provides options for purchasing new vehicles, inspecting the fleet, and managing repairs. It ensures that the player’s fleet remains functional and competitive, adding a strategic layer to the game.<br>
+                                
+                                <div class="title"> Implementation</div>
+                                Purchasing Vehicles:
+Players can access a "Garage Menu" to view available vehicles with varying stats. A vehicle purchase triggers a reduction in the player's balance and adds the selected vehicle to the garage.
+Inspecting Vehicles:
+The player can view each vehicle's current condition, including metrics like durability, mileage, and fuel levels.
+This information is displayed using a UI panel, dynamically updated based on gameplay events.
+Repair System: 
+Vehicles degrade over time or take damage during collisions.
+Repairing involves deducting repair costs from the player’s balance while restoring the vehicle's stats.
+<br>
+                                
+                                <div class="title"> Design Approach </div>
+                                The system incentivizes players to maintain their fleet, balancing gameplay resources like earnings from jobs and repair costs. Modular blueprint structures allow for easy additions to the fleet management system.<br>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+    
+    <!-- SlideShow and LightBox -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- Slideshow 3 -->
+    <div class="slideshow-wrapper" data-id="7">
+        <div class="video-carousel">
+            <div class="carousel-track" id="carousel-track-7">
+                <div class="carousel-slide" onclick="openLightbox(7, 0)">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="../../projects/gameDev/project-taxi/Features/vehicle-management/repair-system.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="carousel-slide" onclick="openLightbox(7, 1)">
+                    <div class="media-wrapper">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/vehicle-management/collision-boxes.png" alt="Image Slide">
+                </div>
+                </div>
+            </div>
+            <button class="prev" onclick="changeCarousel(7, -1)">&#10094;</button>
+            <button class="next" onclick="changeCarousel(7, 1)">&#10095;</button>
+        </div>
+    </div>
+    <div class="more-text">Click for details</div>
+    
+    <!-- Lightbox 3 -->
+    <div id="lightbox-7" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox(7)">&times;</span>
+            <div class="lightbox-slideshow" id="lightbox-slideshow-7">
+                <div class="lightbox-slide">
+                    <video class="lightbox-media" controls>
+                        <source src="../../projects/gameDev/project-taxi/Features/vehicle-management/repair-system.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-info">Management and Repair System<br>The video shows the inspection progress and the repair system as the player drives around the vehicles components will begin to degrade needing to be repaired.  </p>
+                </div>
+                <div class="lightbox-slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/vehicle-management/collision-boxes.png" alt="Image Slide">
+                    <p class="video-info">Collision Boxes<br>These collision boxes check if the player has moved onto one, if it has it will deduct a certain amount from the vehicle stats.  </p>
+                </div>
+            </div>
+            <button class="prev" onclick="changeLightbox(7, -1)">&#10094; Prev</button>
+            <button class="next" onclick="changeLightbox(7, 1)">Next &#10095;</button>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="challanges-container">
+        <div class="challanges-title">Challenges</div>
+    
+        <div class ="challange-name"> Balancing Repair Costs </div>
+        <div class ="challange">Challange:</div>
+        <div class ="challange-text">If repair costs are too high, players might feel stuck or unable to progress. On the other hand, if costs are too low, the system might lose its strategic value.</div>
+        <div class ="solution">Solution:</div>
+        <div class ="solution-text"> Introduce a dynamic pricing system where repair costs depend on the vehicle's condition or damage severity. </div>
+    </div>
+    
+                    <!--------------------------------- END SEVENTH FEATURE  --------------------------------->
+                            </div>
+                        </li>
+                    </ul>
+        <!---------------------------------  --------------------------------->
+     <!--------------------------------- EIGTH FEATURE  --------------------------------->
+                     <ul class="dropdown-inside">
+                        <li>
+                            <input type="checkbox" id="eigth-feature">
+                            <label for="eigth-feature">Upgrades</label>
+                            <div class="content">
+                                <div class="title"> Description</div>
+                                The upgrade system allows players to improve aspects of their gameplay by reducing operational costs and enhancing rewards. Players can unlock upgrades that decrease vehicle repair costs, reduce fines for violations, and increase the experience points (XP) earned from jobs, creating a sense of progression and efficiency in their operations.<br>
+                                
+                                <div class="title"> Implementation</div>
+                                Reduce Fines:
+Lowers the penalty amounts for infractions such as running red lights or collisions.
+Increase XP Gains:
+Multiplies the XP earned per job, allowing faster levelling and access to advanced content.
+Reduce Vehicle Repair Costs:
+Decreases the amount deducted from the player’s earnings when repairing vehicles. <br>
+                                
+                                <div class="title"> Design Approach </div>
+                                Upgrades cater to different playstyles cost-conscious players might prioritize reducing repair or fine costs. Players focused on progression could prioritize increasing XP gains. Present the upgrades as meaningful choices that impact long-term gameplay.<br>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+    
+    <!-- SlideShow and LightBox -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- Slideshow 4 -->
+    <div class="slideshow-wrapper" data-id="8">
+        <div class="video-carousel">
+            <div class="carousel-track" id="carousel-track-8">
+                <div class="carousel-slide" onclick="openLightbox(8, 0)">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="../../projects/gameDev/project-taxi/Features/upgrade/upgrades.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <!-- <button class="prev" onclick="changeCarousel(8, -1)">&#10094;</button>
+            <button class="next" onclick="changeCarousel(8, 1)">&#10095;</button> -->
+        </div>
+    </div>
+    <div class="more-text">Click for details</div>
+    
+    <!-- Lightbox 4 -->
+    <div id="lightbox-8" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox(8)">&times;</span>
+            <div class="lightbox-slideshow" id="lightbox-slideshow-8">
+                <div class="lightbox-slide">
+                    <video class="lightbox-media" controls>
+                        <source src="../../projects/gameDev/project-taxi/Features/upgrade/upgrades.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-info">Upgrade Showcase<br>From the video you can see how at first the fine for running a red light is a deduction of £10.00 however after the 2 upgrades made to the deduction of fines the fine was £9.00  </p>
+                </div>
+            </div>
+            <!-- <button class="prev" onclick="changeLightbox(8, -1)">&#10094; Prev</button>
+            <button class="next" onclick="changeLightbox(8, 1)">Next &#10095;</button> -->
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="challanges-container">
+        <div class="challanges-title">Challenges</div>
+    
+        <div class ="challange-name">Balancing Upgrade Impact</div>
+        <div class ="challange">Challange:</div>
+        <div class ="challange-text">One challenge in implementing the upgrade system is balancing its impact to ensure it remains meaningful without breaking the core gameplay loop. If the upgrades, such as fine reductions or XP multipliers, are too powerful too early, they can undermine the game's difficulty and progression. Conversely, if they are too weak, players might not see the value in investing in them. </div>
+        <div class ="solution">Solution:</div>
+        <div class ="solution-text">Design the upgrades with diminishing returns so that early levels have a noticeable impact while higher levels provide incremental improvements. This ensures players see value initially but prevents upgrades from becoming overpowered.</div>
+    </div>
+    
+                    <!--------------------------------- END EIGHTH FEATURE  --------------------------------->
+                            </div>
+                        </li>
+                    </ul>
+         <!--------------------------------- END EIGHTH FEATURE  --------------------------------->
+                </div>
+            </li>
+        </ul>
+                 <!--------------------------------- NINTH CONTAINER --------------------------------->
+                 <ul class="dropdown">
+                    <li>
+                        <input type="checkbox" id="fith-holder">
+                        <label for="fith-holder">Employee Management</label>
+                        <div class="content">
+                            <!---------------------------------NINTH FEATURE  --------------------------------->
+                            <ul class="dropdown-inside">
+                                <li>
+                                    <input type="checkbox" id="ninth-feature">
+                                    <label for="ninth-feature">Hiring Employees</label>
+                                    <div class="content">
+                                        <div class="title"> Description</div>
+                                        The hiring and inspecting employees feature is a management aspect of the game where players can recruit and manage a team of employees to expand their taxi business. Each employee comes with unique stats this system allows players to strategically grow their fleet and optimize revenue by assigning employees to specific vehicles.
+Players can inspect employees to view detailed information about their attributes, providing insights into how they might perform and helping with decision-making for task assignments or improvements.<br>
+                                        
+                                        <div class="title"> Implementation</div>
+                                        Employees are generated dynamically with random stats such as name, potential, and experience.
+        <br>
+                                        
+                                        <div class="title"> Design Approach </div>
+                                        The system incentivizes players to maintain their fleet, balancing gameplay resources like earnings from jobs and repair costs. Modular blueprint structures allow for easy additions to the fleet management system. Hired employees are added to the player’s roster and linked to the fleet management system.<br>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+            
+            <!-- SlideShow and LightBox -->
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- Slideshow 3 -->
+            <div class="slideshow-wrapper" data-id="9">
+                <div class="video-carousel">
+                    <div class="carousel-track" id="carousel-track-9">
+                        <div class="carousel-slide" onclick="openLightbox(9, 0)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/employee-management/hiring-screen.png" alt="Image Slide">
+                        </div>
+                        </div>
+
+                        <div class="carousel-slide" onclick="openLightbox(9, 1)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/employee-management/employee-deatils.png" alt="Image Slide">
+                        </div>
+                        </div>
+
+                    </div>
+                    <button class="prev" onclick="changeCarousel(9, -1)">&#10094;</button>
+                    <button class="next" onclick="changeCarousel(9, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="more-text">Click for details</div>
+            
+            <!-- Lightbox 3 -->
+            <div id="lightbox-9" class="lightbox">
+                <div class="lightbox-content">
+                    <span class="close" onclick="closeLightbox(9)">&times;</span>
+                    <div class="lightbox-slideshow" id="lightbox-slideshow-9">
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/employee-management/hiring-screen.png" alt="Image Slide">
+                            <p class="video-info">Hiring Screen<br></p>
+                        </div>
+
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/employee-management/employee-deatils.png" alt="Image Slide">
+                            <p class="video-info">Employee Details<br></p>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="changeLightbox(9, -1)">&#10094; Prev</button>
+                    <button class="next" onclick="changeLightbox(9, 1)">Next &#10095;</button>
+                </div>
+            </div>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="challanges-container">
+                <div class="challanges-title">Challenges</div>
+            
+                <div class ="challange-name">   Employee Instances </div>
+                <div class ="challange">Challange:</div>
+                <div class ="challange-text">When generating employees, each instance must reliably retain its unique stats, a common issue arises when new employees overwrite or incorrectly initialize these stats due to mismanagement of the data during object creation or assignment.</div>
+                <div class ="solution">Solution:</div>
+                <div class ="solution-text"> The stats get passed to the employee as soon as the instance gets created preventing the stats being lost during creation. </div>
+            </div>
+            
+                            <!--------------------------------- END NINTH FEATURE  --------------------------------->
+                                    </div>
+                                </li>
+                            </ul>
+                <!---------------------------------  --------------------------------->
+             <!--------------------------------- TENTH FEATURE  --------------------------------->
+                             <ul class="dropdown-inside">
+                                <li>
+                                    <input type="checkbox" id="tenth-feature">
+                                    <label for="tenth-feature">Assigning Employees</label>
+                                    <div class="content">
+                                        <div class="title"> Description</div>
+                                        The employee assignment system allows players to manage their workforce by assigning hired employees to specific tasks, such as driving vehicles. This feature enables strategic gameplay, where players maximize profits and efficiency by choosing the right employee for the right job based on their stats.<br>
+                                        
+                                        <div class="title"> Implementation</div>
+                                        A list of available vehicles is displayed, along with details such as their condition and upgrades. Once an employee is selected and assigned to a vehicle, their unique identifier (ID) is linked to the vehicle object, activating it as "in use." The system dynamically updates the employee's status to "Assigned." A check prevents assigning the same employee to multiple vehicles. The game logic tracks the employee's performance during jobs, updating their attributes or earning experience based on outcomes. A feature allows players to "recall" an employee from a job, returning them to the management pool and marking their vehicle as available. <br>
+                                        
+                                        <div class="title"> Design Approach </div>
+                                        Intuitive UI layout to simplify navigation. The design uses clear panels showing employees and vehicles side-by-side for seamless selection. The assignment system is modular, enabling future expansion to include additional roles or dynamic events affecting employee availability.<br>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+            
+            <!-- SlideShow and LightBox -->
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- Slideshow 4 -->
+            <div class="slideshow-wrapper" data-id="10">
+                <div class="video-carousel">
+                    <div class="carousel-track" id="carousel-track-10">
+                        <div class="carousel-slide" onclick="openLightbox(10, 0)">
+                            <video class="preview-video" autoplay muted loop>
+                                <source src="../../projects/gameDev/project-taxi/Features/assign-employee/assign-employee.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <!-- <button class="prev" onclick="changeCarousel(10, -1)">&#10094;</button>
+                    <button class="next" onclick="changeCarousel(10, 1)">&#10095;</button> -->
+                </div>
+            </div>
+            <div class="more-text">Click for details</div>
+            
+            <!-- Lightbox 4 -->
+            <div id="lightbox-10" class="lightbox">
+                <div class="lightbox-content">
+                    <span class="close" onclick="closeLightbox(10)">&times;</span>
+                    <div class="lightbox-slideshow" id="lightbox-slideshow-10">
+                        <div class="lightbox-slide">
+                            <video class="lightbox-media" controls>
+                                <source src="../../projects/gameDev/project-taxi/Features/assign-employee/assign-employee.mp4" type="video/mp4">
+                            </video>
+                            <p class="video-info">Assigning Employee<br>When the player assigns a employee to a vehicle the current passenger gets destroyed and a new passenger specifically for the ai driver is spawned using the same idea as the player passenger spawning system in order for the ai driver to go pick up and drop off the passengers. </p>
+                        </div>
+                    </div>
+                    <!-- <button class="prev" onclick="changeLightbox(10, -1)">&#10094; Prev</button>
+                    <button class="next" onclick="changeLightbox(10, 1)">Next &#10095;</button> -->
+                </div>
+            </div>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="challanges-container">
+                <div class="challanges-title">Challenges</div>
+            
+                <div class ="challange-name">Managing Possession and Instances</div>
+                <div class ="challange">Challange:</div>
+                <div class ="challange-text">One of the issues was having the player and ai vehicle being able to switch from being possessed by ai or the player as this would cause issues where the ai wouldn't be able to possess the vehicle if it had been possessed by the player, their was also issues where if a driver possessed the vehicle it wouldn't be able to possess it again once being removed from the vehicle or other drivers wouldn't be able to possess it. 
+                </div>
+                <div class ="solution">Solution:</div>
+                <div class ="solution-text">Many bool and checks are made and references get set and removed from the widgets to make sure theirs no overlap with the possession. </div>
+            </div>
+            
+                            <!--------------------------------- END TENTH FEATURE  --------------------------------->
+                                    </div>
+                                </li>
+                            </ul>
+                 <!--------------------------------- END TENTH FEATURE  --------------------------------->
+                        </div>
+                    </li>
+                </ul>
+                <!--------------------------------- ELEVENTH FEATURE  --------------------------------->
+        
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="eleventh">
+        <label for="eleventh">AI Vehicles</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            The AI vehicle system creates dynamic traffic within the game world, simulating realistic driving behaviour to enhance immersion. These vehicles navigate roads, obey traffic laws, and interact with other elements in the environment, providing a vibrant backdrop and challenging obstacles for the player.<br>
+            
+            <div class="title"> Implementation</div>
+            The AI vehicles use navigation meshes or splines to move along predefined road networks.
+
+Each vehicle has a set of waypoints to follow, with behaviours triggered at specific points, such as stopping at intersections or adjusting for obstacles.
+
+AI vehicles check for traffic light states via collision or trigger boxes.
+
+At red lights, they stop and resume movement when the light turns green.
+
+​At intersections, vehicles determine the right-of-way based on a priority system, ensuring smooth flow without unnecessary halts or collisions. <br>
+            
+            <div class="title"> Design Approach </div>
+            ​AI vehicles mimic real-world traffic patterns to reinforce the city setting and provide challenges for players.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="11">
+<div class="video-carousel">
+<div class="carousel-track" id="carousel-track-11">
+    <div class="carousel-slide" onclick="openLightbox(11, 0)">
+        <video class="preview-video" autoplay muted loop>
+            <source src="../../projects/gameDev/project-taxi/Features/ai/ai-driving.mp4" type="video/mp4">
+        </video>
+        </div>
+<div class="carousel-slide" onclick="openLightbox(11, 1)">
+    <div class="media-wrapper">
+<img class="preview-media" src="../../projects/gameDev/project-taxi/Features/ai/splines.png" alt="Image Slide">
+</div>
+</div>
+<div class="carousel-slide" onclick="openLightbox(11, 2)">
+    <video class="preview-video" autoplay muted loop>
+        <source src="../../projects/gameDev/project-taxi/Features/ai/prio-system.mp4" type="video/mp4">
+    </video>
+    </div>
+<div class="carousel-slide" onclick="openLightbox(11, 3)">
+    <div class="media-wrapper">
+<img class="preview-media" src="../../projects/gameDev/project-taxi/Features/ai/prio-collision.png" alt="Image Slide">
+</div>
+</div>
+</div>
+<button class="prev" onclick="changeCarousel(11, -1)">&#10094;</button>
+<button class="next" onclick="changeCarousel(11, 1)">&#10095;</button>
+</div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-11" class="lightbox">
+<div class="lightbox-content">
+<span class="close" onclick="closeLightbox(11)">&times;</span>
+<div class="lightbox-slideshow" id="lightbox-slideshow-11">
+<div class="lightbox-slide">
+    <video class="lightbox-media" controls>
+    <source src="../../projects/gameDev/project-taxi/Features/ai/ai-driving.mp4" type="video/mp4">
+    </video>
+    <p class="video-info">Ai Vehicle Driving<br>In this video you can see the Ai Vehicles driving around the map using the spline on the roads.  </p>
+</div>
+<div class="lightbox-slide">
+    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/ai/splines.png" alt="Image Slide">
+    <p class="video-info">Splines<br>Shows the splines around the map and their paths.</p>
+</div>
+<div class="lightbox-slide">
+    <video class="lightbox-media" controls>
+    <source src="../../projects/gameDev/project-taxi/Features/ai/prio-system.mp4" type="video/mp4">
+    </video>
+    <p class="video-info">Priory System<br>The video shows if a vehicle wants to turn left but their is still on coming vehicles they will position themselves in the middle of the road angled towards the turning point and once its clear they will then be able to make the turn this  prevents the vehicle trying to turn causing congestion and making the vehicles get stuck in the middle. </p>
+</div>
+<div class="lightbox-slide">
+    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/ai/prio-collision.png" alt="Image Slide">
+    <p class="video-info">Priority System Collision Boxes<br>Shows the collision boxes for the priority system.</p>
+</div>
+
+</div>
+<button class="prev" onclick="changeLightbox(11, -1)">&#10094; Prev</button>
+<button class="next" onclick="changeLightbox(11, 1)">Next &#10095;</button>
+</div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">  Vehicle Congestion</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">The primary challenge faced in this system was vehicles becoming stuck in the middle of the intersection. This occurred when a vehicle intending to go straight conflicted with another trying to turn left, leading to deadlock. This not only disrupted the flow of traffic but also shattered immersion and obstructed the player's ability to navigate parts of the map effectively.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">I solved this issue using the priority system which allows turning vehicles to wait in the centre until the roads are clear to make the turn, this allows two sets of traffic lights to be green at once making the roads more interesting and realistic.</div>
+
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ------------------------------------------------------------- END ELVENTH FEATURE --------------------------------------------------------------------------------------------------- -->
+                  <!--------------------------------- TWELVETH CONTAINER --------------------------------->
+                  <ul class="dropdown">
+                    <li>
+                        <input type="checkbox" id="seventh-holder">
+                        <label for="seventh-holder">HUD and UI</label>
+                        <div class="content">
+                            <!---------------------------------TWELVETH FEATURE  --------------------------------->
+                            <ul class="dropdown-inside">
+                                <li>
+                                    <input type="checkbox" id="twelfth-feature">
+                                    <label for="twelfth-feature">HUD</label>
+                                    <div class="content">
+                                        <div class="title"> Description</div>
+                                        The HUD is a multifunctional interface that provides players with essential game information at a glance, enabling efficient gameplay without obstructing the driving experience. Key features are strategically placed to ensure visibility and accessibility during intense gameplay moments.<br>
+                                        
+                                        <div class="title"> Implementation</div>
+                                        Top Left: Current Amount of Money <br>
+
+                                        Displays the player’s current earnings.
+                                        
+                                        Dynamically updates when the player earns or spends money.
+                                        
+                                        Implemented using a text box in UMG, bound to a variable tracking the player’s total cash. <br>
+                                        
+                                        Middle: Time <br>
+                                        
+                                        Shows the in-game time or countdown related to jobs.
+                                        
+                                        Updates in real-time using a timer manager.
+                                        
+                                        Includes smooth transitions for clarity when time is critical. <br>
+                                        
+                                        Top Right: XP and Current Level <br>
+                                        
+                                        Displays the player’s experience points and current progression level.
+                                        
+                                        Includes a progress bar to visually represent XP gain toward the next level.
+                                        
+                                        Dynamically bound to the player's XP variable. <br>
+                                        
+                                        Bottom Left: Speedometer <br>
+                                        
+                                        A circular or linear visual display representing the player’s current speed.
+                                        
+                                        Connected to the vehicle's velocity to update in real-time.
+                                        
+                                        Designed using a progress bar or custom animation tied to the vehicle movement component. <br>
+                                        
+                                        Bottom Right: Mini-Map <br>
+                                        
+                                        Provides a top-down view of the surrounding area, showing nearby roads and objectives.
+                                        
+                                        Built using a render target and dynamic markers for key locations like passengers and drop-off points. <br>
+                                        
+                                        Middle Left: Accept Job Posting <br>
+                                        
+                                        Shows details of available jobs, such as passenger name, fare, and difficulty level.
+                                        
+                                        Pop-up appears only when a new job is available.
+                                        
+                                        Uses a button component for interaction, triggering job acceptance logic. <br>
+                                        
+                                        Middle Right: Drop-Off Stats / Fines <br>
+                                        
+                                        Displays stats related to the current job, such as the fare, time taken, or fines incurred.
+                                        
+                                        Updates dynamically as the job progresses.
+                                        
+                                        Includes animations to emphasize major events like earning a tip or incurring a fine. <br>
+                                        
+                                        Middle Top: Pointer <br>
+                                        
+                                        Guides the player toward objectives like passengers and drop-off points.
+                                        
+                                        Updates direction dynamically based on player position and the target's world coordinates.
+                                        
+                                        Uses a simplified arrow icon with smooth animations for clarity.
+        <br>
+                                        
+                                        <div class="title"> Design Approach </div>
+                                        Speedometer, mini-map, and pointer are placed prominently to support navigation and driving. Money, XP, and time are placed in corners for quick reference without drawing too much attention. Elements are spaced out to avoid clutter while maintaining readability.<br>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+            
+            <!-- SlideShow and LightBox -->
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- Slideshow 3 -->
+            <div class="slideshow-wrapper" data-id="12">
+                <div class="video-carousel">
+                    <div class="carousel-track" id="carousel-track-12">
+
+                        <div class="carousel-slide" onclick="openLightbox(12, 0)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD-1.png" alt="Image Slide">
+                        </div>
+                        </div>
+
+                        <div class="carousel-slide" onclick="openLightbox(12, 1)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 2.png" alt="Image Slide">
+                        </div>
+                        </div>
+
+                        <div class="carousel-slide" onclick="openLightbox(12, 2)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 3.png" alt="Image Slide">
+                        </div>
+                        </div>
+
+                        <div class="carousel-slide" onclick="openLightbox(12, 3)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 4.png" alt="Image Slide">
+                        </div>
+                        </div>
+
+                    </div>
+                    <button class="prev" onclick="changeCarousel(12, -1)">&#10094;</button>
+                    <button class="next" onclick="changeCarousel(12, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="more-text">Click for details</div>
+            
+            <!-- Lightbox 3 -->
+            <div id="lightbox-12" class="lightbox">
+                <div class="lightbox-content">
+                    <span class="close" onclick="closeLightbox(12)">&times;</span>
+                    <div class="lightbox-slideshow" id="lightbox-slideshow-12">
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD-1.png" alt="Image Slide">
+                            <p class="video-info"><br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 2.png" alt="Image Slide">
+                            <p class="video-info"><br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 3.png" alt="Image Slide">
+                            <p class="video-info"><br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 4.png" alt="Image Slide">
+                            <p class="video-info"><br></p>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="changeLightbox(12, -1)">&#10094; Prev</button>
+                    <button class="next" onclick="changeLightbox(12, 1)">Next &#10095;</button>
+                </div>
+            </div>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="challanges-container">
+                <div class="challanges-title">Challenges</div>
+            
+                <div class ="challange-name"> Balancing Clarity and Complexity </div>
+                <div class ="challange">Challange:</div>
+                <div class ="challange-text">One of the main challenges when designing the HUD was achieving a balance between displaying all essential gameplay information and maintaining visual clarity. The HUD needs to include multiple data points (money, time, XP, speedometer, mini-map, job details, etc.) without overwhelming the player or obstructing the gameplay view. Overloading the interface could distract players from focusing on driving and completing jobs efficiently.</div>
+                <div class ="solution">Solution:</div>
+                <div class ="solution-text">Organized information based on importance during gameplay (e.g., speedometer and mini-map in peripheral vision zones for constant access). Secondary elements like XP and money updates are placed in corners and updated unobtrusively.</div>
+            </div>
+            
+                            <!--------------------------------- END TWELFTH FEATURE  --------------------------------->
+                                    </div>
+                                </li>
+                            </ul>
+                <!---------------------------------  --------------------------------->
+             <!--------------------------------- THIRTEENTH FEATURE  --------------------------------->
+                             <ul class="dropdown-inside">
+                                <li>
+                                    <input type="checkbox" id="thirteenth-feature">
+                                    <label for="thirteenth-feature">UI</label>
+                                    <div class="content">
+                                        <div class="title"> Description</div>
+                                        The User Interface (UI) in the game includes several essential menus that facilitate navigation, gameplay management, and customization. These menus include the Main Menu, Pause Menu, Garage Menu, Upgrade Menu, and Management Menu. Each serves a distinct function to enhance player interaction and streamline game progression.<br>
+                                        
+                                        <div class="title"> Implementation</div>
+                                        Main Menu: Acts as the game's entry point, featuring options like Start Game, Settings, and Quit.
+
+Pause Menu: Allows players to pause the game, access settings, and return to the main menu without losing progress.
+
+Garage Menu: Enables vehicle repairs and inspection.
+
+Upgrade Menu: Provides access to upgrades for improving gameplay mechanics (e.g., reduced repair costs).
+
+Management Menu: Helps players manage employees and fleet. <br>
+                                        
+                                        <div class="title"> Design Approach </div>
+                                        Each menu is designed with clarity in mind. Navigation is straightforward, with visual feedback like button highlights on hover.<br>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+            
+            <!-- SlideShow and LightBox -->
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- Slideshow 4 -->
+            <div class="slideshow-wrapper" data-id="13">
+                <div class="video-carousel">
+                    <div class="carousel-track" id="carousel-track-13">
+                        <div class="carousel-slide" onclick="openLightbox(13, 0)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox(13, 1)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/pause-menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox(13, 2)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/garage-menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox(13, 3)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/shoping-menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox(13, 4)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/upgrade-menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox(13, 5)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/recruitment-menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                        <div class="carousel-slide" onclick="openLightbox(13, 6)">
+                            <div class="media-wrapper">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/staff-menu.png" alt="Image Slide">
+                        </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="changeCarousel(13, -1)">&#10094;</button>
+                    <button class="next" onclick="changeCarousel(13, 1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="more-text">Click for details</div>
+            
+            <!-- Lightbox 4 -->
+            <div id="lightbox-13" class="lightbox">
+                <div class="lightbox-content">
+                    <span class="close" onclick="closeLightbox(13)">&times;</span>
+                    <div class="lightbox-slideshow" id="lightbox-slideshow-13">
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/menu.png" alt="Image Slide">
+                            <p class="video-info">Main Menu<br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/pause-menu.png" alt="Image Slide">
+                            <p class="video-info">Pause Menu<br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/garage-menu.png" alt="Image Slide">
+                            <p class="video-info">Garage Menu<br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/shoping-menu.png" alt="Image Slide">
+                            <p class="video-info">Shop Menu<br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/upgrade-menu.png" alt="Image Slide">
+                            <p class="video-info">Upgrade Menu<br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/recruitment-menu.png" alt="Image Slide">
+                            <p class="video-info">Recruitment Menu<br></p>
+                        </div>
+                        <div class="lightbox-slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/staff-menu.png" alt="Image Slide">
+                            <p class="video-info">Staff Management Menu<br></p>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="changeLightbox(13, -1)">&#10094; Prev</button>
+                    <button class="next" onclick="changeLightbox(13, 1)">Next &#10095;</button>
+                </div>
+            </div>
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            
+            <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+            <div class="challanges-container">
+                <div class="challanges-title">Challenges</div>
+            
+                <div class ="challange-name">Getting the Correct Instance</div>
+                <div class ="challange">Challange:</div>
+                <div class ="challange-text">One of the challenges in the menus was getting the right instance of the vehicle or employee when clicking on the image to make sure it brought up the correct information about that specific instance of blueprint. 
+                </div>
+                <div class ="solution">Solution:</div>
+                <div class ="solution-text">I have in my render employee and render vehicle functions in the menus I set the instance of the vehicle or employee in the function making sure each element is separate.</div>
+            </div>
+            
+                            <!--------------------------------- END THIRTEENTH FEATURE  --------------------------------->
+                                    </div>
+                                </li>
+                            </ul>
+                 <!--------------------------------- END THIRTEENTH FEATURE  --------------------------------->
+                        </div>
+                    </li>
+                </ul>
+    <!--------------------------------- WHAT I LEARNT --------------------------------->
+    <div class = "learn-container">
+    <div class = "learn-title">What I Learnt</div>
+    
+    <div class = "learn-subtitle">Enhanced Input System in UE5:</div>
+    <div class = "learn-text">As this was my first project in Unreal Engine 5, one of the first challenges was understanding the Enhanced Input System. This system allowed me to define input actions for all vehicle components and movement actions, streamlining the input management process. It helped in making the vehicle control system flexible and scalable for future updates.</div>
+    
+    <div class = "learn-subtitle">Switching from C++ to Blueprints:</div>
+    <div class = "learn-text">The initial version of the game started with C++ for prototyping, but I quickly realized that building a game loop in C++ was taking too long. This led me to transition to Blueprints, which I had never used extensively before. Over time, I became proficient in Blueprints, allowing me to develop custom functions and game mechanics rapidly. This shift not only sped up the development process but also improved my understanding of how Unreal's C++ and Blueprints integrate with each other. For instance, learning how collision parameters work in Blueprints helped me grasp their practical application in C++, making me more efficient at debugging and enhancing the game.</div>
+    
+    <div class = "learn-subtitle">AI Pathfinding for Vehicles:</div>
+    <div class = "learn-text">One of the key challenges was creating a working AI vehicle path system. I learned how to implement AI pathfinding logic to allow NPC vehicles to drive around dynamically within the game world. This involved setting up waypoints and triggers, which helped AI vehicles follow specific paths and avoid obstacles. This system is fundamental to creating a believable and functional world where AI drivers interact seamlessly with the player’s vehicle.</div>
+    
+    <div class = "learn-subtitle">UI/UX Design for Dynamic Systems:</div>
+    <div class = "learn-text">Since the game involves many dynamic elements like ongoing jobs, passenger pickups, vehicle statuses, and money earned, I had to design a UI that could quickly and clearly communicate all these changing variables to the player. I gained valuable experience in UI/UX design by organizing this information, ensuring that the UI was responsive and intuitive. I also learned the importance of keeping the interface clean and providing feedback through animations or colour changes (e.g., green for completed jobs, red for traffic fines).</div>
+    
+    <div class = "learn-subtitle">Optimization and Asset Management:</div>
+    <div class = "learn-text">One significant challenge was optimizing the game to run smoothly, especially with the vehicle models. The initial vehicle assets had extremely high polygon counts, with millions of vertices, causing severe performance drops. I learned the importance of using Level of Detail (LOD) models to reduce rendering overhead for distant objects. To further enhance performance, I plan to implement object pooling for both AI and player vehicles. This approach would recycle existing vehicles instead of spawning new ones, reducing memory usage and improving runtime efficiency. This experience underscored the critical role of optimization in maintaining performance, especially in systems with dynamic, resource-heavy objects.</div>
+    
+    </div>
+    <!--------------------------------- END WHAT I LEARNT --------------------------------->
+    
+        
+</body>
+<script src="scripts.js"></script>
+</html>

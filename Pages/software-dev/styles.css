@@ -1,0 +1,311 @@
+body{
+    margin: 0;
+    background-color: #1A1A1A;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #9B3D44;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.header-container {
+    width: 1000px;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.name-role {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-name {
+    font-size: 42px;
+}
+
+.header-job-role {
+    font-size: 15px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9B3D44;  
+    border-radius: 50%;
+    padding: 10px; 
+    width: 35px;  
+    height: 35px; 
+}
+
+.icon-container img {
+    width: 30px; 
+    height: 30px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.icon-container img:hover {
+    filter: brightness(0) invert(1);
+    width: 25px; 
+    height: 25px;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.resume {
+    display: flex;
+    align-items: center;
+}
+
+.resume-container {
+    background-color: #1A1A1A;
+    color: #9B3D44;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: #9B3D44;
+    border: 2px solid #9B3D44;;
+}
+
+.resume-container:hover {
+    border-color: white;
+    color: white;
+    font-size: 12px;
+}
+
+.resume a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.introduction{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 450px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #9B3D44;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.introduction-container{
+    width: 1000px;
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+
+/* .self-image{
+    
+} */
+
+.self-image img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border-color: #9B3D44;
+    border: 5px solid #9B3D44;
+    box-shadow: 0px 0px 100px #9B3D44;
+    border-radius: 50%;
+}
+
+.self-text{
+    text-align: center;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.projects-section {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: center;
+    padding-right: 750px;
+    font-size: 32px;
+    color: #9B3D44;
+    margin-bottom: 20px; 
+    font-weight: bold;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.project-card {
+    background-color: #282626;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.project-card h3 {
+    display: flex;
+    justify-content: left;
+    color: #9B3D44;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+    color: white;
+}
+
+.project-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+    display: block;
+}
+
+.project-info {
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.project-description {
+    padding: 10px;
+    color: white;
+}
+
+.project-description h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #9B3D44;
+}
+
+.project-description p {
+    font-size: 14px;
+    color: white;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.education-skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-skills-container {
+    width: 900px;
+    height: 350px; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    /* background-color: red; */
+    padding: 20px;
+}
+
+
+.education-section {
+    width: 45%;  
+    display: flex;
+    flex-direction: column;
+}
+
+.education-title {
+    font-size: 32px;
+    color: #9B3D44;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.education-text {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+
+.skills-section {
+    width: 45%;  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.skills-title {
+    font-size: 32px;
+    color: #9B3D44;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 300px;
+    max-width: 400px;
+}
+
+.skills-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    color: #9B3D44;
+    font-weight: bold;
+    height: 60px;
+    width: 100%;  
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1A1A1A;
+    border: 3px solid #9B3D44; 
+    border-radius: 10px; 
+}

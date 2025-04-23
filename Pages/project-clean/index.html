@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>project-clean</title>
+</head>
+<body>
+            <!--------------------------------- HEADER --------------------------------->
+            <header class="header"> 
+                <div class="header-container">
+                    
+                    <!-- Name and Job Role -->
+                    <div class="name-role">
+                        <div class="header-name">Callum Dourneen</div>    
+                        <div class="header-job-role">Game Developer</div>    
+                    </div>
+    
+                    <!-- Icons -->
+                    <div class="icons">
+                        <!-- Home Icon -->
+                        <div class="icon-container">
+                            <a href="../../index.html" class="project-card">
+                            <img src="../../Images/home.png" alt="Home Icon">
+                        </a>
+                        </div>
+                    
+                        <!-- Game Icon -->
+                        <a href="../../../Pages/software-dev/index.html" class="icon-link">
+                            <div class="icon-container">
+                                <img src="../../Images/coding.png" alt="Software Icon">
+                            </div>
+                        </a>
+
+                        <!-- Linkdein Icon -->
+                        <div class="icon-container">
+                            <a href="https://www.linkedin.com/in/callum-dourneen-80a810296" target="_blank">
+                                <img src="../../Images/linkedin.png" alt="LinkedIn Icon">
+                            </a>
+                        </div>
+                        <!-- Github Icon -->
+                        <div class="icon-container">
+                            <a href="https://github.com/Cal2214" target="_blank">
+                                <img src="../../Images/social.png" alt="GitHub Icon">
+                            </a>
+                        </div>
+                    </div>
+    
+                    <!-- Resume -->
+                    <div class="resume">
+                        <a href="../../Files/Cv_GameDev.pdf" target="_blank">
+                        <div class="resume-container">Resume</div>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <!--------------------------------- END HEADER --------------------------------->
+    
+            <!--------------------------------- PROJECT INTRODUCTION --------------------------------->
+            <div class = "project-introduction">
+                <!-- Project Title and Description -->
+                <div class = "project-container">
+                        <a href="../../index.html" class="back-text"> < Back</a>
+                    <div class = "project-title">Project_Clean</div>
+                    <div class = "project-description">A thrilling party game where you play as a roomba with the goal to collect the most dirt.</div>
+                </div>
+            </div>
+    
+            <div class="project-slideshow">
+                <!-- Previous Slide Button -->
+                <!-- <button class="prev" onclick="changeSlide(-1)">&#10094;</button> -->
+                
+                <!-- Slide Container -->
+                <div class="slides">
+                    <video class="slide-item" src="../../projects/gameDev/project-roomba/Slideshow/roombaslide.mp4" autoplay loop muted playsinline></video>
+                    <!-- <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/main-menu.png" alt="Project Screenshot"> -->
+                </div>
+            
+                <!-- Next Slide Button -->
+                <!-- <button class="next" onclick="changeSlide(1)">&#10095;</button> -->
+            </div>
+    
+            <div class="center-container"> 
+                <div class="about-introduction">
+    
+                    <!-- About Section -->
+                    <div class="about-container">
+                        <div class="about-section">About</div>
+                        <div class="about-text">
+                            Project_Clean is a fun and fast-paced party game where you take control of a quirky Roomba on a mission to collect the most dirt! In this lively arena, you’ll navigate around obstacles and sweep up scattered messes, using strategically placed power-ups to give you an edge.
+
+With power-ups like speed boosts that let you zip across the map and size increases that allow you to vacuum up more dirt, every match brings new opportunities for clever strategies and fast-paced action.
+                        </div>
+                    </div>
+            
+                    <!-- Project Details -->
+                    <div class="project-details-container">
+                        <div class="project-details">Project Details</div>
+                        <div class="details-text">
+                            Game Title: NA<br>
+                            Genre: Party<br>
+                            Platform: PC<br>
+                            Development Tools: Unreal Engine, C++<br>
+                            Game Features: 
+                            <li>Powerups</li>
+                            <li>Multiplayer</li>
+                        </div>
+                    </div>
+            
+                    <!-- Links Section -->
+                    <div class="project-links-container">
+                        <div class="project-links">Links</div>
+                        <div class="links">
+                            <div class="itch-link">
+                                Try the game on itch.io:<br>
+                                <a href="" target="_blank">Comming Soon</a>
+                            </div>
+                            <div class="itch-link">
+                                Check out the repository on GitHub:<br>
+                                <a href="https://github.com/Cal2214/project_clean" target="_blank">Project Clean / GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------- END PROJECT INTRODUCTION --------------------------------->
+    
+            <!--------------------------------- TECHNICAL BREAKDOWN --------------------------------->
+            
+            <!-- Tech Title -->
+            <div class="tech">
+                <div class="tech-title">
+                    <div class="technical-text">Technical Analysis</div>
+                </div>
+                <div class="tech-container">
+    
+    <!--------------------------------- FEATURE ONE  --------------------------------->
+            
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Drop Down -->
+                    <ul class="dropdown">
+                        <li>
+                            <input type="checkbox" id="first">
+                            <label for="first">Replicated Movement</label>
+                            <div class="content">
+                                <div class="title"> Description</div>
+                                The replicated movement system in the multiplayer Roomba game ensures that player actions are consistently mirrored across all connected devices in real time. This system supports smooth movement and synchronized gameplay. The feature is built on Unreal Engine's replication system, enabling server-client communication to maintain accurate and fair gameplay. <br>
+                                
+                                <div class="title"> Implementation</div>
+                                Player inputs (e.g., moving left, right, up, or down) are captured using Unreal's Enhanced Input System.
+Directional inputs update a replicated variable CurrentDirection, which determines movement logic.
+The MovePlayer function calculates a new location based on the current direction and speed.
+The server validates and applies these movements using a Remote Procedure Call (RPC), ensuring authoritative control. <br>
+                                
+                                <div class="title"> Design Approach </div>
+                                The server maintains authoritative control over movement, ensuring fair play and consistency. Only critical variables like direction and speed are replicated, reducing network overhead. Client-side prediction ensures that players experience real-time movement while the server processes and confirms updates.<br>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+    
+    <!-- SlideShow and LightBox -->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <!-- Slideshow 1 -->
+    <div class="slideshow-wrapper" data-id="1">
+        <div class="video-carousel">
+            <div class="carousel-track" id="carousel-track-1">
+                <div class="carousel-slide" onclick="openLightbox(1, 0)">
+                    <video class="preview-video" autoplay muted loop>
+                        <source src="../../projects/gameDev/project-roomba/Features/r-movement/r-movement.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more-text">Click for details</div>
+    
+    <!-- Lightbox 1 -->
+    <div id="lightbox-1" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close" onclick="closeLightbox(1)">&times;</span>
+            <div class="lightbox-slideshow" id="lightbox-slideshow-1">
+                <div class="lightbox-slide">
+                    <video class="lightbox-media" controls>
+                        <source src="../../projects/gameDev/project-roomba/Features/r-movement/r-movement.mp4" type="video/mp4">
+                    </video>
+                    <p class="video-info">Replicated Player Movement in Multiplayer<br>This video demonstrates the smooth synchronization of player movement in a multiplayer environment, where the server handles all movement calculations while ensuring that clients are responsive and synchronized. Watch as player positions are correctly replicated across all connected clients, providing seamless gameplay despite network latency. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Drop Down Inside -->
+    <ul class="dropdown-inside">
+        <li>
+            <input type="checkbox" id="first-inside">
+            <label for="first-inside">Code Snippets</label>
+            <div class="content">
+                <div class="grid-container">
+                    <!-- Box 1 -->
+                    <div class="grid-item">
+                        <h3 class="item-title">Server Movement Logic</h3>
+                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/s-movement.png" alt="Snippet 1" class="item-image">
+                        <div class="item-description">
+                            <p>This function moves the player based on input direction (CurrentDirection) and updates the player's position.
+
+                                If it's the client, the Server_MovePlayer function is called to replicate the movement on the server, ensuring consistency. </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Box 2 -->
+                    <div class="grid-item">
+                        <h3 class="item-title">Server Move Player Function</h3>
+                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/s-move-player.png" alt="Snippet 2" class="item-image">
+                        <div class="item-description">
+                            <p>Server_MovePlayer_Implementation updates the player’s location on the server when the client sends the request.
+
+                                The Server_MovePlayer_Validate function allows you to add validation if needed (e.g., checking if the new position is valid).  </p>
+                        </div>
+                    </div>
+    
+                    <!-- Box 3 -->
+                    <div class="grid-item">
+                        <h3 class="item-title">Replicating Player Direction (State Replication)</h3>
+                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/r-player-direction.png" alt="Snippet 3" class="item-image">
+                        <div class="item-description">
+                            <p>The GetLifetimeReplicatedProps function ensures that variables like CurrentDirection and MoveSpeed are replicated to all clients.
+
+                                DOREPLIFETIME is used to indicate which properties should be replicated and synchronized across all instances.</p>
+                        </div>
+                    </div>
+    
+                    <!-- Additional Boxes  -->
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="challanges-container">
+        <div class="challanges-title">Challenges</div>
+    
+        <div class ="challange-name">Server-Side Movement Replication and Client Synchronization</div>
+        <div class ="challange">Challange:</div>
+        <div class ="challange-text">Ensuring that the server was the ultimate authority on player movement to prevent any form of cheating or desynchronization. Clients need to display smooth movement to the player, even with network latency, to maintain a responsive gameplay experience.</div>
+        <div class ="solution">Solution:</div>
+        <div class ="solution-text">The solution to this problem was to employ a combination of server-side authority and client-side prediction to handle player movement effectively while minimizing the impact of network latency. </div>
+    </div>
+    
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+            </div>
+        </li>
+    </ul>
+    <!--------------------------------- END FEATURE ONE --------------------------------->
+    
+    <!--------------------------------- FEATURE TWO  --------------------------------->
+             
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Drop Down -->
+    <ul class="dropdown">
+        <li>
+            <input type="checkbox" id="second">
+            <label for="second">Replicated Dirt Spawning</label>
+            <div class="content">
+                <div class="title"> Description</div>
+                This system ensures dirt objects are spawned dynamically in a multiplayer environment, with proper replication across the server and clients to maintain gameplay synchronization.  <br>
+                
+                <div class="title"> Implementation</div>
+                The dirt spawning system utilizes Unreal Engine's replication features to ensure consistency between the server and all connected clients.
+The server, acting as the authoritative entity, initiates the spawning process. During the BeginPlay() lifecycle, the server checks for authority and calls the SpawnDirt() function.
+The server calls the Multi_SpawnDirt() multicast function to ensure that the dirt actors are instantiated on all connected clients. The spawned dirt actor is configured to replicate itself and its movement.
+​A randomized delay is applied between spawn events using the DelayDirt() function. This introduces variability in the spawn timing, controlled by the server to maintain consistency. <br>
+                
+                <div class="title"> Design Approach </div>
+                The Multi_SpawnDirt() function ensures that spawned dirt appears simultaneously across all the clients, creating a synchronized gameplay experience.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="2">
+<div class="video-carousel">
+<div class="carousel-track" id="carousel-track-2">
+<div class="carousel-slide" onclick="openLightbox(2, 0)">
+    <video class="preview-video" autoplay muted loop>
+        <source src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/dirt-spawn.mp4" type="video/mp4">
+    </video>
+</div>
+</div>
+</div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-2" class="lightbox">
+<div class="lightbox-content">
+<span class="close" onclick="closeLightbox(2)">&times;</span>
+<div class="lightbox-slideshow" id="lightbox-slideshow-2">
+<div class="lightbox-slide">
+    <video class="lightbox-media" controls>
+        <source src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/dirt-spawn.mp4" type="video/mp4">
+    </video>
+    <p class="video-info">
+        Dirt Spawning<br>The video shows how the spawning of dirt is multicasted allowing them to spawn in at the same time.  </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="second-inside">
+<label for="second-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+    <!-- Box 1 -->
+    <div class="grid-item">
+        <h3 class="item-title">Server Authority and Delayed Dirt Spawning</h3>
+        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/s-delaydirt.png" alt="Snippet 1" class="item-image">
+        <div class="item-description">
+            <p>This snippet demonstrates how the server handles the authority for spawning dirt with a randomized delay using Unreal Engine's TimerManager. The server controls when dirt is spawned, ensuring synchronization across clients. </p>
+        </div>
+    </div>
+    
+    <!-- Box 2 -->
+    <div class="grid-item">
+        <h3 class="item-title">Server-side Timer Handling for Dirt Delay</h3>
+        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/s-timer.png" alt="Snippet 2" class="item-image">
+        <div class="item-description">
+            <p>This snippet demonstrates how the server ensures that dirt spawning is properly delayed. The Server_DelayDirt_Implementation() ensures that the server controls when the dirt spawn timer is set.  </p>
+        </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="grid-item">
+        <h3 class="item-title">Multicast Replication for Spawning Dirt on All Clients</h3>
+        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/m-replicated.png" alt="Snippet 3" class="item-image">
+        <div class="item-description">
+            <p>This snippet handles the multicast functionality to ensure dirt is spawned on all connected clients, not just the server. It uses Unreal Engine's Multi_SpawnDirt_Implementation() to synchronize the spawn across clients.</p>
+        </div>
+    </div>
+
+    <!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Spawning Dirt Synchronization</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Ensuring that the dirt spawning system is synchronized so that dirt appears at the same time on both the server and clients was a key challenge. When using timers, discrepancies could arise due to network latency or inconsistent local timer handling, leading to mismatched spawn times between the server and clients.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">The solution was to centralize all timer-based spawning logic on the server. The server initiated the spawning process, including the randomized delay between spawns, and used a multicast function to replicate the spawning event to all connected clients. </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+    <!--------------------------------- END FEATURE TWO --------------------------------->
+    
+    
+    <!--------------------------------- FEATURE THREE  --------------------------------->
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- Drop Down -->
+    <ul class="dropdown">
+        <li>
+            <input type="checkbox" id="third">
+            <label for="third">Replicated Powerups</label>
+            <div class="content">
+                <div class="title"> Description</div>
+                The replicated power-up system allows players to collect, store, and activate power-ups in a multiplayer environment. These power-ups (e.g., speed boost or size change) are spawned dynamically in the game world, collected by players, and their effects are replicated across all clients to ensure consistent gameplay. The system ensures synchronization so that all players can see and interact with the same power-ups. Additionally, when a power-up is used, its visual and gameplay effects (such as changes to movement speed or player size) are also replicated, ensuring consistency in how players perceive these effects. <br>
+                
+                <div class="title"> Implementation</div>
+                Power-ups are spawned dynamically in the game world at random locations. The server maintains authority over their lifecycle, ensuring that their spawning, collection, and usage are synchronized across all connected clients. When a player collects or activates a power-up, the server communicates these changes to other clients. This includes updating static meshes, altering movement parameters, or changing player states to reflect the power-up’s effects. <br>
+                
+                <div class="title"> Design Approach </div>
+                The Multi_SpawnDirt() function ensures that spawned dirt appears simultaneously across all clients, creating a synchronized gameplay experience. Similarly, the power-ups are replicated so that their effects, such as speed boosts or size changes, are visible to both the client using them and all other connected players. This approach uses Unreal Engine's replication framework to synchronize visual changes and gameplay mechanics across clients, ensuring fairness and consistency in the multiplayer environment. <br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="3">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-3">
+            <div class="carousel-slide" onclick="openLightbox(3, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-spawning.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(3, 1)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-using.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(3, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(3, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-3" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(3)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-3">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-spawning.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Replicated Powerup Spawning<br>The video shows how powerups are multicast allowing for them to spawn at the same time and location as in the client and the server.  </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-using.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Replicated Power-Up Effects <br>This video showcases the replication of power-up effects in a multiplayer environment. It highlights how a power-up collected by a player on the client is reflected in real-time on the server, ensuring consistent gameplay experiences for all participants. The effects, including changes to player attributes like speed or size, are visibly synchronized between the client and server, demonstrating the robust implementation of Unreal Engine’s replication system. </p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(3, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(3, 1)">Next &#10095;</button>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="third-inside">
+<label for="third-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+    <!-- Box 1 -->
+    <div class="grid-item">
+        <h3 class="item-title">Powerup Spawning</h3>
+        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-power-spawn.png" alt="Snippet 1" class="item-image">
+        <div class="item-description">
+            <p>The power-up spawns after a random delay between 5 to 20 seconds, which is only triggered on the server side using DelayPowerup().
+
+                ​The spawn point is calculated using Unreal's Navigation System, ensuring the power-up appears at a reachable, valid position within a specified radius.
+                
+                The Multi_SpawnPowerup_Implementation function ensures that when a power-up is spawned, it is replicated across all clients in the game, including its movement and interaction. This is done by enabling SetReplicates(true) and SetReplicateMovement(true) for the spawned actor.
+                
+                ​After each spawn, the timer is reset, continuously generating power-ups at random intervals and locations, creating a dynamic gameplay experience. </p>
+        </div>
+    </div>
+    
+    <!-- Box 2 -->
+    <div class="grid-item">
+        <h3 class="item-title">Activating Speed Power-Up</h3>
+        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-activate-power.png" alt="Snippet 2" class="item-image">
+        <div class="item-description">
+            <p>​This snippet demonstrates how the speed power-up is activated in a multiplayer game. The server ensures the effect (increased speed and material change) is replicated across all clients for synchronized gameplay.  </p>
+        </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="grid-item">
+        <h3 class="item-title">Deactivating Speed Power-Up</h3>
+        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-deactivate-power.png" alt="Snippet 3" class="item-image">
+        <div class="item-description">
+            <p>This snippet highlights how the speed power-up is deactivated. It ensures the player’s movement speed and appearance return to their default state across the server and all connected clients.</p>
+        </div>
+    </div>
+
+    <!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Powerup Authority Handling</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">One of the issues is if the client is to pick up two powerups and use them it will prevent them from being able to pick up any more powerups after.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">To solve this I need to make sure all the powerup get/use logic uses server side handling to make sure the server keeps track how many powerups the clients have so they will be then be able to pick up more powerups.  </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+    <!--------------------------------- END FEATURE THREE --------------------------------->
+    
+    
+    
+    <!--------------------------------- WHAT I LEARNT --------------------------------->
+    <div class = "learn-container">
+    <div class = "learn-title">What I Learnt</div>
+    
+    <div class = "learn-subtitle">Hybrid Classes:</div>
+    <div class = "learn-text">This project was my first experience using both C++ and Blueprints together to create hybrid classes. I learned how to effectively balance tasks between C++ and Blueprints, utilizing C++ for more complex logic such as player movement and power-up selection, while offloading collision detection and other simpler tasks to Blueprints, where they are easier to manage. This approach allowed me to optimize the workflow and leverage the strengths of both systems, resulting in a more modular and manageable codebase. Moving forward, I plan to continue using hybrid classes to streamline game development, especially in projects where performance and flexibility are key.</div>
+    
+    </div>
+    <!--------------------------------- END WHAT I LEARNT --------------------------------->
+    
+        
+</body>
+<script src="script.js"></script>
+</html>

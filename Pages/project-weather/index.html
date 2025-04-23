@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project weather</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+        <!--------------------------------- HEADER --------------------------------->
+        <header class="header"> 
+            <div class="header-container">
+                
+                <!-- Name and Job Role -->
+                <div class="name-role">
+                    <div class="header-name">Callum Dourneen</div>    
+                    <div class="header-job-role">Software Developer</div>    
+                </div>
+
+                <!-- Icons -->
+                <div class="icons">
+                    <!-- Home Icon -->
+                    <div class="icon-container">
+                        <a href="../software-dev/index.html" class="project-card">
+                        <img src="../../Images/home.png" alt="Home Icon">
+                    </a>
+                    </div>
+                
+                    <!-- Game Icon -->
+                    <a href="../../index.html" class="icon-link">
+                        <div class="icon-container">
+                            <img src="../../Images/games.png" alt="Games Icon">
+                        </div>
+                    </a>
+                    <!-- Linkdein Icon -->
+                    <div class="icon-container">
+                        <a href="https://www.linkedin.com/in/callum-dourneen-80a810296" target="_blank">
+                            <img src="../../Images/linkedin.png" alt="LinkedIn Icon">
+                        </a>
+                    </div>
+                    <!-- Github Icon -->
+                    <div class="icon-container">
+                        <a href="https://github.com/Cal2214" target="_blank">
+                            <img src="../../Images/social.png" alt="GitHub Icon">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resume -->
+                <div class="resume">
+                    <a href="../../Files/Cv_SoftwareDev.pdf" target="_blank">
+                    <div class="resume-container">Resume</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--------------------------------- END HEADER --------------------------------->
+
+        <!--------------------------------- PROJECT INTRODUCTION --------------------------------->
+        <div class = "project-introduction">
+            <!-- Project Title and Description -->
+            <div class = "project-container">
+                <a href="../../Pages/software-dev/index.html" class="back-text"> < Back</a>
+                <div class = "project-title">project weather</div>
+                <div class = "project-description">A simple weather app.</div>
+            </div>
+        </div>
+            
+            <!-- Slide Container -->
+        <div class="project-slideshow">
+            <div class="slides">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        
+                <video class="slide-item active" src="../../projects/softwareDev/project-weather/weather-cover.mp4" autoplay loop muted playsinline></video>
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/london.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/newyork.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/brazil.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/na.png" alt="Project Screenshot">
+        
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="center-container"> 
+            <div class="about-introduction">
+
+                <!-- About Section -->
+                <div class="about-container">
+                    <div class="about-section">About</div>
+                    <div class="about-text">
+                        Stay informed and plan your day with ease using our Weather App. The app provides real-time weather data, including current weather conditions, a 4-day forecast, and the local time for your location. What makes this app stand out is its dynamic theme: the color scheme and interface adapt based on the current weather type, creating an immersive experience. Whether it’s sunny, rainy, or cloudy, the app changes its appearance to match the weather, giving you a visually engaging way to check your forecast.
+                    </div>
+                </div>
+        
+                <!-- Project Details -->
+                <div class="project-details-container">
+                    <div class="project-details">Project Details</div>
+                    <div class="details-text">
+                        App Title: NA<br>
+                        Genre: Utility<br>
+                        Platform: PC<br>
+                        Development Tools: Javascript, HTML, CSS<br>
+                        App Features:
+                        <li>API Intergration</li>
+                        <li>Theme Changes</li>
+                        <li>4-Day Forecast</li>
+                        <li>Time and Date</li>
+
+                    </div>
+                </div>
+        
+                <!-- Links Section -->
+                <div class="project-links-container">
+                    <div class="project-links">Links</div>
+                    <div class="links">
+                        <div class="itch-link">
+                            Try the app here:<br>
+                            <a href="" target="_blank">Comming Soon</a>
+                        </div>
+                        <div class="itch-link">
+                            Check out the repository on GitHub:<br>
+                            <a href="https://github.com/Cal2214/project_weather" target="_blank">project_weather/Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------- END PROJECT INTRODUCTION --------------------------------->
+
+        <!--------------------------------- TECHNICAL BREAKDOWN --------------------------------->
+        
+        <!-- Tech Title -->
+        <div class="tech">
+            <div class="tech-title">
+                <div class="technical-text">Technical Analysis</div>
+            </div>
+            <div class="tech-container">
+
+<!--------------------------------- FEATURE ONE  --------------------------------->
+        
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down -->
+                <ul class="dropdown">
+                    <li>
+                        <input type="checkbox" id="first">
+                        <label for="first">Weather Data Display</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            The weather app dynamically fetches real-time weather data from the OpenWeatherMap API and displays key weather information like temperature, weather condition (sunny, rainy, etc.), humidity, wind speed, and an icon representing the current weather. The app also shows a 4-day weather forecast to help users plan ahead. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            The app makes a GET request to the OpenWeatherMap API using JavaScript's fetch method to retrieve data about the user's location or a specified city.
+The weather data is then parsed and extracted (temperature, condition, etc.) and displayed in the UI using DOM manipulation.
+A forecast for the next 4 days is displayed with corresponding icons for each day based on the forecast data returned by the API. <br>
+                            
+                            <div class="title"> Design Approach </div>
+                            To ensure a clean and user-friendly experience, weather data is displayed in clearly labeled sections: current weather at the top, followed by the 4-day forecast.
+                            The weather icons are used to visually represent conditions (sun, clouds, rain, etc.), making it easier for users to interpret the information quickly.
+                            The app uses a responsive design to ensure that the weather information is readable on both desktop and mobile devices.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+    <li>
+        <input type="checkbox" id="first-inside">
+        <label for="first-inside">Code Snippets</label>
+        <div class="content">
+            <div class="grid-container">
+                <!-- Box 1 -->
+                <div class="grid-item">
+                    <h3 class="item-title">API Call to Get Weather Data</h3>
+                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/getData.png" alt="Snippet 1" class="item-image">
+                    <div class="item-description">
+                        <p>This function CheckCity takes the city input and fetches weather data.
+                            It then checks if the response is valid (response.ok), extracts the necessary information from the response (data.main.temp, data.wind.speed, etc.), and updates the UI accordingly.</p>
+                    </div>
+                </div>
+                
+                <!-- Box 2 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Temperature Conversion to Celsius</h3>
+                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/getData.png" alt="Snippet 2" class="item-image">
+                    <div class="item-description">
+                        <p>The function ChangetoCelsius takes the temperature subtracts 273.15 to convert it to Celsius, and returns the rounded value. </p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="grid-item">
+                    <h3 class="item-title"> Updating the UI with Weather Data</h3>
+                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/updatingUI.png" alt="Snippet 3" class="item-image">
+                    <div class="item-description">
+                        <p>This part of the code updates various elements on the page with the fetched weather data (city name, humidity, wind speed, temperature, and weather type).</p>
+                    </div>
+                </div>
+
+                <!-- Additional Boxes  -->
+            </div>
+        </div>
+    </li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name">Managing User Inputs for City Searches</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">When users search for a city, they might enter incorrect spellings or a city that doesn't exist. This can result in an error or no data being returned from the API.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">I handled this by implementing error checking. If the API returns no data or an error, a friendly message ("Invalid City Name") is shown to guide the user. This ensures the user understands why the weather data isn't displaying.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        </div>
+    </li>
+</ul>
+<!--------------------------------- END FEATURE ONE --------------------------------->
+
+<!--------------------------------- FEATURE TWO  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="second">
+        <label for="second">Dynamic Theme Change Based on Weather</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            The app changes its theme dynamically based on the current weather conditions. For example, when the weather is sunny, the background becomes brighter, while rainy conditions trigger a darker theme with more muted colors, creating a visual representation of the weather. <br>
+            
+            <div class="title"> Implementation</div>
+            When the weather data is fetched from the OpenWeatherMap API, the condition (e.g., sunny, rainy, cloudy) is checked.
+Based on the condition, the app dynamically adds a corresponding CSS class to the body tag using JavaScript, which adjusts the background color, text color, and other elements for the desired theme.
+Transitions are implemented to smoothly shift between themes.<br>
+            
+            <div class="title"> Design Approach </div>
+            The design adapts to the weather, enhancing the user's experience by providing a visually intuitive representation of the current weather.
+The app’s color scheme changes to match the weather (e.g., warm yellow tones for sunny days, cooler blue tones for rainy days), making it not only functional but also engaging.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+<!-- Slideshow 2 -->
+<div class="slideshow-wrapper" data-id="1">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-1">
+            <div class="carousel-slide" onclick="openLightbox(1, 0)">
+                <div class="media-wrapper">
+                <img class="preview-media" src="../../projects/softwareDev/project-weather/Features/theme-change/new-designs.png" alt="Image Slide">
+            </div>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 1)">
+                <div class="media-wrapper">
+                <img class="preview-media" src="../../projects/softwareDev/project-weather/Features/theme-change/old-design.png" alt="Image Slide">
+            </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(1, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(1, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-1" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(1)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-1">
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/softwareDev/project-weather/Features/theme-change/new-designs.png" alt="Image Slide">
+                <p class="video-info">Redesigned Weather App: Dynamic Themes Based on Weather<br>The updated design incorporates dynamic themes that change based on real-time weather conditions. For example, when the weather is clear, the app background becomes bright and sunny, while rainy weather activates darker, stormy tones. This visually engaging approach enhances the user experience, allowing users to instantly understand the weather condition through the theme. The redesign not only improves the aesthetics but also makes the app more intuitive and immersive, offering a visually dynamic and enjoyable weather tracking experience.</p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/softwareDev/project-weather/Features/theme-change/old-design.png" alt="Image Slide">
+                <p class="video-info">Old Weather App Design: Static Interface<br>The previous version of the weather app used a static design, which applied the same visual theme regardless of the weather conditions. This lack of dynamic theming made it harder for users to immediately associate weather data with a visual context. For instance, the same layout and color scheme were used for sunny, cloudy, or rainy conditions, leading to a less engaging experience. This design lacked the immersive, visual appeal that a dynamic theme could provide, reducing the app's overall intuitiveness.</p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(1, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(1, 1)">Next &#10095;</button>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="second-inside">
+<label for="second-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">CSS: Defining Themes</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/define-themes.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This code defines the themes that can be used by updaing the variables depending on the weather </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title">Switching Themes Based on Weather</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/switch-theme.png" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>The following JavaScript handles the dynamic theme switching. It checks the weather condition and applies the appropriate theme classes </p>
+    </div>
+</div>
+
+<div class="grid-item">
+    <h3 class="item-title">Calling Theme Change Based on Weather Data</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/theme-change.png" alt="Snippet 3" class="item-image">
+    <div class="item-description">
+        <p>This JavaScript function updates the UI with the correct weather information and switches the theme accordingly. </p>
+    </div>
+</div>
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challanges</div>
+
+<div class ="challange-name">Ensuring the Correct Theme is Displayed</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Sometimes the wrong theme would be applied, or the theme wouldn't update properly when switching locations or reloading the page.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Implemented a switch statement that assigns a specific numeric ID to each weather condition (weatherType). This ID is then used to apply the correct theme dynamically. By ensuring each weather condition is mapped to the right theme class, the issue was resolved.</div>
+
+<div class ="challange-name"> Handling Theme Updates When Switching Between Dark and Light Modes</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">When toggling between light and dark mode, old theme classes were sometimes still applied, causing visual inconsistencies.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Before applying a new theme, remove all previous theme classes. Used document.body.classList.remove(...) to clear existing theme classes before adding the new one. This ensures a smooth and accurate transition between themes.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE TWO --------------------------------->
+
+
+<!--------------------------------- FEATURE THREE  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="third">
+        <label for="third">Display of Time and Date</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            Along with the weather information, the app shows the current time and date to keep users informed of the time of day in their location. <br>
+            
+            <div class="title"> Implementation</div>
+            JavaScript's Date() object is used to retrieve the current date and time in the user's local time zone.
+The time is updated every second using setInterval() to ensure the time stays accurate.
+The date and time are then formatted in a user-friendly format (e.g., "Monday, March 15, 2025 - 2:45 PM") and displayed at the top of the weather section. <br>
+            
+            <div class="title"> Design Approach </div>
+            The date and time are prominently displayed in the header of the app to ensure users can quickly check the current time.
+The design of the time section is simple, with a clear contrast against the background for easy readability.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+
+  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="third-inside">
+<label for="third-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Get and Display the Date</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/date/code-snippits/get-date.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This function formats the current date into a readable format </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title"> Get and Display the Current Time</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/date/code-snippits/get-time.png" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>This function updates the time dynamically every second, showing it in 12-hour AM/PM format</p>
+    </div>
+</div>
+
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Ensuring AM/PM is Correctly Displayed</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">The AM/PM format might not have displayed correctly if you didn’t properly handle the conversion from 24-hour time to 12-hour format.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Use modulus (%) and logical OR (||) to properly convert 00:00 - 23:59 into 12-hour AM/PM format.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE THREE --------------------------------->
+
+<!--------------------------------- FEATURE FOUR  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="fourth">
+        <label for="fourth">4-Day Forecast</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            The app provides users with a 4-day forecast showing the expected weather conditions for the next few days. Each day's forecast includes the temperature range (high/low), weather condition, and an icon representing the weather. <br>
+            
+            <div class="title"> Implementation</div>
+            After fetching the weather data from the OpenWeatherMap API, the forecast data for the next 4 days is extracted and displayed.
+Each day’s forecast includes the expected high and low temperatures, the weather condition (e.g., sunny, cloudy, rainy), and an icon representing the weather.
+The forecast is dynamically populated using JavaScript based on the data received from the API.<br>
+            
+            <div class="title"> Design Approach </div>
+            The forecast is laid out in a horizontal row, with each day’s weather details clearly separated for easy comparison.
+Each day’s card displays the date, weather icon, temperature range, and condition in an easy-to-read format.
+The design is kept minimalistic and clean to avoid clutter, ensuring that users can quickly glance at the forecast.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+
+ <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="fourth-inside">
+<label for="fourth-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Fetching the 4-Day Forecast Data</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/4-day/code-snippit/get-data-4day.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>Retrieves weather forecast data for the next 4 days.
+            Selects one forecast per day at midday to ensure accurate temperature trends.
+            Updates HTML elements with the day name, temperature, and weather icon.
+            Handles errors to prevent crashes if the API request fails.</p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title">Structure for Displaying Forecast</h3>
+    <img src="../../projects/softwareDev/project-weather/Features/4-day/code-snippit/struct-4day.png" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>Provides the HTML structure for displaying 4-day weather forecasts.
+            Each forecast "oval" contains:
+            Day label (Monday, Tuesday, etc.)
+            Weather icon (retrieved from OpenWeather API)
+            Temperature label (25°C, 18°C, etc.)</p>
+    </div>
+</div>
+
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challanges</div>
+
+<div class ="challange-name">Ensuring Accurate Forecast Data for Each Day</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">The app would display multiple forecasts for the same day instead of just one.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">I used the index i * 8  because OpenWeather provides data in 3-hour intervals so it made sure the data pciks each new day </div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE FOUR --------------------------------->
+
+<!--------------------------------- WHAT I LEARNT --------------------------------->
+<div class = "learn-container">
+<div class = "learn-title">What I Learnt</div>
+
+<div class = "learn-subtitle">Integrating Real-World Data with APIs:</div>
+<div class = "learn-text">This project was my first experience working with an API to fetch and display real-world data. I learned how to make asynchronous API requests using fetch(), handle JSON responses, and dynamically update the UI based on real-time weather data. Additionally, I gained experience in error handling, ensuring the app functions smoothly even when the API request fails or unexpected data is received. The project also deepened my understanding of asynchronous programming and how to manage state changes dynamically.</div>
+
+</div>
+<!--------------------------------- END WHAT I LEARNT --------------------------------->
+
+<!--------------------------------- RETROSPECTIVE --------------------------------->
+<div class = "learn-container">
+    <div class = "learn-title">Retrospective</div>
+    
+    <div class = "learn-subtitle"> Future Improvements:</div>
+    <div class = "learn-text">Looking back at this project, I encountered several challenges, from ensuring the correct weather theme was displayed to handling API response inconsistencies. Debugging these issues taught me the importance of structured problem-solving and testing edge cases. I also realized the importance of responsive design, as displaying forecast data on different screen sizes required careful layout adjustments.</div>
+
+    
+    </div>
+    <!--------------------------------- END RETROSPECTIVE --------------------------------->
+    
+            </div>
+        </div>
+    </body>
+    <script src="scripts.js"></script>
+</html>

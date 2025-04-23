@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frolic Frog</title>
+    <link rel="stylesheet" href="project-frog.css">
+</head>
+<body>    
+        <!--------------------------------- HEADER --------------------------------->
+        <header class="header"> 
+            <div class="header-container">
+                
+                <!-- Name and Job Role -->
+                <div class="name-role">
+                    <div class="header-name">Callum Dourneen</div>    
+                    <div class="header-job-role">Game Developer</div>    
+                </div>
+
+                <!-- Icons -->
+                <div class="icons">
+                    <!-- Home Icon -->
+                    <div class="icon-container">
+                        <a href="../../index.html" class="project-card">
+                        <img src="../../Images/home.png" alt="Home Icon">
+                    </a>
+                    </div>
+                
+                    <!-- Game Icon -->
+                    <a href="../../../Pages/software-dev/index.html" class="icon-link">
+                        <div class="icon-container">
+                            <img src="../../Images/coding.png" alt="Software Icon">
+                        </div>
+                    </a>
+                    <!-- Linkdein Icon -->
+                    <div class="icon-container">
+                        <a href="https://www.linkedin.com/in/callum-dourneen-80a810296" target="_blank">
+                            <img src="../../Images/linkedin.png" alt="LinkedIn Icon">
+                        </a>
+                    </div>
+                    <!-- Github Icon -->
+                    <div class="icon-container">
+                        <a href="https://github.com/Cal2214" target="_blank">
+                            <img src="../../Images/social.png" alt="GitHub Icon">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resume -->
+                <div class="resume">
+                    <a href="../../Files/Cv_GameDev.pdf" target="_blank">
+                    <div class="resume-container">Resume</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--------------------------------- END HEADER --------------------------------->
+
+        <!--------------------------------- PROJECT INTRODUCTION --------------------------------->
+        <div class = "project-introduction">
+            <!-- Project Title and Description -->
+            <div class = "project-container">
+                    <a href="../../index.html" class="back-text"> < Back</a>
+                <div class = "project-title">Frolic Frog</div>
+                <div class = "project-description">A fun and engaging platformer where players navigate challenges as a clever frog.</div>
+            </div>
+        </div>
+
+        <div class="project-slideshow">
+            <div class="slides">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        
+                <video class="slide-item active" src="../../projects/gameDev/project-frog/Slideshow/cover-frog.mp4" autoplay loop muted playsinline></video>
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/main-menu.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/shop-menu.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/start.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/crocs.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/flowers.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/game-over.png" alt="Project Screenshot">
+        
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        <!-- /* this */ -->
+
+        <div class="center-container"> 
+            <div class="about-introduction">
+
+                <!-- About Section -->
+                <div class="about-container">
+                    <div class="about-section">About</div>
+                    <div class="about-text">
+                        Frolic Frog is a thrilling vertical platformer that invites players to leap into a vibrant world filled with challenges and excitement. As you guide our charismatic frog through hazardous waters and perilous obstacles, you'll need sharp reflexes and strategic thinking to reach new heights and set high scores.
+                    </div>
+                </div>
+        
+                <!-- Project Details -->
+                <div class="project-details-container">
+                    <div class="project-details">Project Details</div>
+                    <div class="details-text">
+                        Game Title: Frolic Frog<br>
+                        Genre: Vertical Platformer<br>
+                        Platform: PC<br>
+                        Development Tools: Unity, C#<br>
+                        Game Features:
+                        <li>Jumping</li>
+                        <li>Collecting</li>
+                        <li>Obstacles</li>
+                    </div>
+                </div>
+        
+                <!-- Links Section -->
+                <div class="project-links-container">
+                    <div class="project-links">Links</div>
+                    <div class="links">
+                        <div class="itch-link">
+                            Try the game on itch.io:<br>
+                            <a href="https://cal-22.itch.io/frolic-frog" target="_blank">Frolic Frog / itch.io</a>
+                        </div>
+                        <div class="itch-link">
+                            Check out the repository on GitHub:<br>
+                            <a href="https://github.com/Cal2214/project_jump" target="_blank">Frolic Frog / GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------- END PROJECT INTRODUCTION --------------------------------->
+
+        <!--------------------------------- TECHNICAL BREAKDOWN --------------------------------->
+        
+        <!-- Tech Title -->
+        <div class="tech">
+            <div class="tech-title">
+                <div class="technical-text">Technical Analysis</div>
+            </div>
+            <div class="tech-container">
+
+<!--------------------------------- FEATURE ONE  --------------------------------->
+        
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down -->
+                <ul class="dropdown">
+                    <li>
+                        <input type="checkbox" id="first">
+                        <label for="first">Procedural Platform Spawning</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            In Frolic Frog, platforms, enemies, and other obstacles are dynamically spawned as the player progresses upwards, ensuring a unique playthrough each time. The game strikes a balance between easy and challenging platforms to keep players engaged. The spawning system is based on the player's position, ensuring that they are continually challenged as they ascend. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            Platforms are spawned at runtime based on the player's current height, with randomisation applied to their X and Y coordinates. Different platform types (e.g. breakable platforms, moving platforms, lily pads) are selected accordingly depending on their probability. To enhance player engagement, I implemented a difficulty curve that gradually increases as the player ascends. <br>
+                            
+                            <div class="title"> Design Approach </div>
+                            ​​At the start, players encounter a high density of platforms and fewer obstacles, making it easier to learn the mechanics. As players progress higher, the number of platforms decreases while the frequency and variety of obstacles increase, creating a more challenging experience.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="1">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-1">
+            <div class="carousel-slide" onclick="openLightbox(1, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/gameDev/project-frog/Features/procedual/procedual-vid2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 1)">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img.png" alt="Image Slide">
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 2)">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img2.png" alt="Image Slide">
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 3)">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img3.png" alt="Image Slide">
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 4)">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img4.png" alt="Image Slide">
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(1, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(1, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-1" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(1)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-1">
+            <div class="lightbox-slide">
+                <div class="media-wrapper">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/gameDev/project-frog/Features/procedual/procedual-vid2.mp4" type="video/mp4">
+                </video>
+            </div>
+                <p class="video-info">Dynamic Platform Spawning<br>This video demonstrates the procedural spawning of platforms in Frolic Frog, showcasing how lily pads are more common in the starting areas, while crocodiles and rocks become more frequent obstacles as the player ascends. Watch as the game adapts to the player's height, creating a unique gameplay experience every time </p>
+            </div>
+            <div class="lightbox-slide">
+                <div class="media-wrapper">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img.png" alt="Image Slide">
+            </div>
+                <p class="video-info">Abundant Starting Platforms<br>In this image, players are greeted with numerous platforms and zero obstacles, providing a safe environment to learn game mechanics. This ensures a smooth introduction to the gameplay experience.</p>
+            </div>
+            <div class="lightbox-slide">
+                <div class="media-wrapper">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img2.png" alt="Image Slide">
+            </div>
+                <p class="video-info">Challenging Pathways Begin<br>As players progress, the number of available platforms decreases, leading to a more focused pathway. Here, players encounter their first challenge with fewer platforms and the need to navigate carefully.</p>
+            </div>
+            <div class="lightbox-slide">
+                <div class="media-wrapper">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img3.png" alt="Image Slide">
+            </div>
+                <p class="video-info">Introduction of Obstacles<br>This image illustrates a single path with a limited number of platforms and the introduction of obstacles. Players must now navigate around rocks, adding an extra layer of challenge to their ascent.</p>
+            </div>
+            <div class="lightbox-slide">
+                <div class="media-wrapper">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img4.png" alt="Image Slide">
+            </div>
+                <p class="video-info">Increased Difficulty Ahead<br>The final image presents a formidable challenge with a narrow pathway blocked by three crocodiles and three rocks. This setup tests players' skills, requiring precise jumps and careful timing to overcome the obstacles.</p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(1, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(1, 1)">Next &#10095;</button>
+    </div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+    <li>
+        <input type="checkbox" id="first-inside">
+        <label for="first-inside">Code Snippets</label>
+        <div class="content">
+            <div class="grid-container">
+                <!-- Box 1 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Platform Spawning</h3>
+                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/platform-spawning.png" alt="Snippet 1" class="item-image">
+                    <div class="item-description">
+                        <p>This snippet focuses on the primary platform spawning logic, its the foundation for the procedural generation and shows how the game ensures platforms are consistently generated as the player progresses. </p>
+                    </div>
+                </div>
+                
+                <!-- Box 2 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Special Platform & Obstacles</h3>
+                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/special-platforms.png" alt="Snippet 2" class="item-image">
+                    <div class="item-description">
+                        <p>This snippet shows how special platforms such as breakable platforms or enemies are added dynamically with a random chance.  </p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Difficulty Curve</h3>
+                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/difficulty-curve.png" alt="Snippet 3" class="item-image">
+                    <div class="item-description">
+                        <p>The code snippet shows the platforms are generated depending on the player's current score. Lower scores increase the likelihood of spawning drop platforms, making it easier for players to learn the mechanics of the game. As players progress and their scores rise, the spawning logic adjusts, providing a gradual increase in difficulty and challenge.</p>
+                    </div>
+                </div>
+
+                <!-- Additional Boxes  -->
+            </div>
+        </div>
+    </li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name">Randomised Spawn Locations</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">Ensuring all the platforms spawn in varied but accessible locations to prevent players from becoming stuck or overwhelmed.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">I implemented constraints to the x coordinates for platform spawning based on player position and predefined limits to maintain consistent accessibility.</div>
+
+    <div class ="challange-name">Dynamic Difficulty Adjustment </div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">Designing the spawning logic to increase difficulty without creating frustration, particularly for new players.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">Gradually reducing the number of platforms and increasing the variety and frequency of obstacles as players ascend, ensuring they have enough safe areas to practice their skills.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        </div>
+    </li>
+</ul>
+<!--------------------------------- END FEATURE ONE --------------------------------->
+
+<!--------------------------------- FEATURE TWO  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="second">
+        <label for="second">Object Pooling</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            Object pooling is used to optimize the performance of effects in the game, such as particles and special visuals. Instead of repeatedly creating and destroying these objects, a pool of pre-initialized objects is recycled, reducing memory usage and ensuring smoother gameplay. <br>
+            
+            <div class="title"> Implementation</div>
+            The game uses object pooling for visual effects such as particle bursts when the player jumps. This ensures that the game runs smoothly, especially during intense moments with multiple effects on-screen.<br>
+            
+            <div class="title"> Design Approach </div>
+            ​I decided to implement object pooling for the jump effect as a way to practice and enhance my understanding of pooling techniques in game development. While I only needed a single instance for the jump effect, utilizing pooling allowed me to experiment with the concept and prepare for potential future scenarios where multiple instances might be required. This practice also contributes to better performance management in cases where instantiating and destroying objects could lead to overhead.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+<!-- Slideshow 2 -->
+<div class="slideshow-wrapper" data-id="2">
+<div class="video-carousel">
+<div class="carousel-track" id="carousel-track-2">
+<div class="carousel-slide" onclick="openLightbox(2, 0)">
+<video class="preview-video" autoplay muted loop>
+    <source src="../../projects/gameDev/project-frog/Features/object-pooling/objectpooling.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+</div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 2 -->
+<div id="lightbox-2" class="lightbox">
+<div class="lightbox-content">
+<span class="close" onclick="closeLightbox(2)">&times;</span>
+<div class="lightbox-slideshow" id="lightbox-slideshow-2">
+<div class="lightbox-slide">
+<video class="lightbox-media" controls>
+    <source src="../../projects/gameDev/project-frog/Features/object-pooling/objectpooling.mp4" type="video/mp4">
+</video>
+<p class="video-info">Object Pooling<br>The effect prefab is set active / deactive during the players jumps rather than spawning new instances in each time</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="second-inside">
+<label for="second-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Object Pooling</h3>
+    <img src="../../projects/gameDev/project-frog/Features/object-pooling/code-snippits/object-pool.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This code snippet demonstrates the implementation of an Object Pooling system for managing visual effects, specifically designed for enhancing performance and optimizing resource usage in the game. </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title">Object Pooling</h3>
+    <img src="../../projects/gameDev/project-frog/Features/object-pooling/code-snippits/using-op.png" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>In the game, the PoolManager is utilized to efficiently manage visual effects triggered by various actions, such as when a player jumps or interacts with an object. Instead of creating new effect instances on the fly, which can be taxing on performance, the game activates pre-initialized objects from the pool. This results in faster response times and smoother graphics, allowing for a more engaging player experience. </p>
+    </div>
+</div>
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Limited Activation of Objects</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">In some cases, the object pool may have more objects than necessary, leading to scenarios where only one object is activated at a time. This limits the effectiveness of the pooling system.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Adjust the pool size based on gameplay requirements.</div>
+
+<div class ="challange-name"> Object Reset Timing</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">If objects reset (deactivate) too quickly, players may not see the effects when needed, causing confusion or dissatisfaction with the gameplay.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">I addressed this by implementing a delay in the reset of the pool until I was confident that there would be no further need for the effect. This allowed for the perfect timing to reset the effect back into the pool, ensuring that players experience the intended visuals without interruption.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE TWO --------------------------------->
+
+
+<!--------------------------------- FEATURE THREE  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="third">
+        <label for="third">Obstacles</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            In Frolic Frog, obstacles such as rocks, crocodiles, and breakable platforms challenge players as they ascend. Rocks serve as barriers, crocodiles add dynamic threats, and breakable platforms require strategic timing. This variety keeps gameplay engaging and encourages players to adapt their strategies. <br>
+            
+            <div class="title"> Implementation</div>
+            Obstacles are spawned based on the player's height and progress using conditional statements that check the player’s score. For instance, as players progress, the frequency and variety of obstacles increase to match their skill level.  <br>
+            
+            <div class="title"> Design Approach </div>
+            The design of obstacles ensures a balanced challenge that evolves with the player. Initially, simple obstacles allow for skill familiarization. As players ascend, obstacle density and complexity increase, promoting advanced strategies. Careful placement encourages exploration, with rocks leading to alternative routes and crocodiles creating intense moments. Playtesting informed adjustments to maintain gameplay flow and player engagement.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+
+  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="third-inside">
+<label for="third-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Obstacle Spawning</h3>
+    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/o-spawning.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This snippet shows how obstacles like rocks and crocodiles are spawned dynamically as the player ascends. </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title">Adjusting Difficulty with Height</h3>
+    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/adjusting-diff.png" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>This snippet shows how the chances of spawning certain obstacles increase as the player reaches higher points in the game, adding difficulty.</p>
+    </div>
+</div>
+
+<!-- Box 3 -->
+<div class="grid-item">
+    <h3 class="item-title">Obstacle Collision Logic</h3>
+    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/o-collision.png" alt="Snippet 3" class="item-image">
+    <div class="item-description">
+        <p>This snippet shows how the player interacts with obstacles, like taking damage after hitting a rock or crocodile.</p>
+    </div>
+</div>
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Obstacle Spawning Logic</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Ensuring obstacles are spaced in such a way that the player has a fair chance of navigating between them, without feeling overwhelmed or getting stuck in unwinnable situations.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">I implemented random spawn positioning with predefined limits for obstacle placement. Additionally, I ensured that paths around obstacles are always possible by adjusting spawn locations if needed. Playtesting was key to fine-tuning these values to maintain game balance.</div>
+
+<div class ="challange-name">Dynamic Difficulty Adjustment </div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Ensuring that obstacles like crocodiles, rocks, and bounce pads don't make the game overly difficult too early, while still maintaining a sense of progression and challenge as the player advances.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">I adjusted the obstacle spawn rates based on the player's score and height in the game. By using conditional statements, I ensured obstacles like rocks and crocodiles only spawn in higher areas, while easier obstacles appear in the early game. This creates a natural difficulty curve, allowing players to practice early and face tougher challenges later.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE THREE --------------------------------->
+
+<!--------------------------------- FEATURE FOUR  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="fourth">
+        <label for="fourth">Player Progression</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            The player progression system in the game ensures that players feel a sense of advancement and reward as they continue to play. It tracks the player's score, money, and unlocks skins through a shop system. Players can earn currency by progressing through the game, which they can then use to unlock new skins, adding an extra layer of personalization and long-term engagement. Scores and currency are saved across sessions, ensuring that player progress is never lost. <br>
+            
+            <div class="title"> Implementation</div>
+            The player’s highest score, current score, and in-game currency are stored persistently using a saving system. When the player earns enough in-game currency, they can access the shop to unlock new skins or items. The shop system checks for available funds and displays available skins for purchase. After unlocking, the selected skin is saved and applied to the player character on the next session or immediately after purchase.<br>
+            
+            <div class="title"> Design Approach </div>
+            ​The design focuses on long-term engagement. By offering a shop where players can unlock new skins, the game incentivizes replay ability and introduces goals beyond just achieving a high score. The skin system is designed to appeal to player personalization, giving them a sense of ownership over their character.
+
+            The saving system ensures continuity, allowing players to feel that their achievements and progression are meaningful and persist across sessions. This reduces frustration and increases motivation to continue playing and unlocking rewards.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Slideshow 1 -->
+<div class="slideshow-wrapper" data-id="3">
+<div class="video-carousel">
+<div class="carousel-track" id="carousel-track-3">
+<div class="carousel-slide" onclick="openLightbox(3, 0)">
+<video class="preview-video" autoplay muted loop>
+    <source src="../../projects/gameDev/project-frog/Features/progression/character-unlock.mp4" type="video/mp4">
+</video>
+</div>
+<div class="carousel-slide" onclick="openLightbox(3, 1)">
+    <video class="preview-video" autoplay muted loop>
+        <source src="../../projects/gameDev/project-frog/Features/progression/end-screen.mp4" type="video/mp4">
+    </video>
+</div>
+</div>
+<button class="prev" onclick="changeCarousel(3, -1)">&#10094;</button>
+<button class="next" onclick="changeCarousel(3, 1)">&#10095;</button>
+</div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-3" class="lightbox">
+<div class="lightbox-content">
+<span class="close" onclick="closeLightbox(3)">&times;</span>
+<div class="lightbox-slideshow" id="lightbox-slideshow-3">
+<div class="lightbox-slide">
+<video class="lightbox-media" controls>
+    <source src="../../projects/gameDev/project-frog/Features/progression/character-unlock.mp4" type="video/mp4">
+</video>
+<p class="video-info">Character Unlock<br>This video demonstrates the Frolic Frog shop system, where players can purchase different frog skins. As the player selects a skin to unlock, you’ll see how the frog's status is updated in the inspector, indicating whether a specific skin is locked or unlocked. When a frog is successfully purchased, the shop system updates the selection, deducts the currency, and sets the frog's status to unlocked, allowing players to use their newly acquired skin in future sessions. </p>
+</div>
+<div class="lightbox-slide">
+    <video class="lightbox-media" controls>
+        <source src="../../projects/gameDev/project-frog/Features/progression/end-screen.mp4" type="video/mp4">
+    </video>
+    <p class="video-info">End Screen<br>In this video, you’ll see how the game menu dynamically updates the player's current score and currency (flies) after each run. When the player dies, the final score and earned flies are displayed on the menu. The system checks if the current score exceeds the highest score from previous sessions. If the new score is higher, it overrides the previous high score and displays a "New High Score!" message on the screen, informing the player of their achievement and updating the high score for future sessions. </p>
+</div>
+</div>
+<button class="prev" onclick="changeLightbox(3, -1)">&#10094; Prev</button>
+<button class="next" onclick="changeLightbox(3, 1)">Next &#10095;</button>
+</div>
+</div>
+ <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="fourth-inside">
+<label for="fourth-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Save Manager Script</h3>
+    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/save-manager.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>Manages saving and loading player data, including the current selected frog skin. </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title">Purchasing Skins in the Shop</h3>
+    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/buying-skins.png" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>This allows players to purchase skins using in-game currency (flies). It checks if the player has enough flies, unlocks the skin upon purchase, and deducts the cost from their currency. Unlocked skins and current selections are saved to ensure persistence across sessions.</p>
+    </div>
+</div>
+
+<!-- Box 3 -->
+<div class="grid-item">
+    <h3 class="item-title">Obstacle Spawning</h3>
+    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/fly-count.png" alt="Snippet 3" class="item-image">
+    <div class="item-description">
+        <p>The CollectableManager script manages the player's collection of in-game items (flies), keeping track of both the current game session's count and the total collected across all playthroughs. It uses PlayerPrefs to save and retrieve the player's total collection progress, ensuring persistent data between sessions.</p>
+    </div>
+</div>
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Managing Character Unlocks and Currency Balance</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Tracking which characters are unlocked and ensuring the player has enough in-game currency (flies) to make purchases without errors or inconsistencies.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">I used PlayerPrefs to store the unlock status of characters and the player's current currency. Each character's unlock status is checked when the game loads, and the player’s available flies are retrieved to ensure they can afford a purchase. To avoid bugs, the UpdateUi() function is called every time the player makes a transaction to dynamically adjust button states.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE FOUR --------------------------------->
+
+<!--------------------------------- WHAT I LEARNT --------------------------------->
+<div class = "learn-container">
+<div class = "learn-title">What I Learnt</div>
+
+<div class = "learn-subtitle">Dynamic Player Progression Loop:</div>
+<div class = "learn-text">One of the key challenges in Frog Doodle Jump was designing a dynamic and engaging gameplay loop that scales with player progression. I learned how to adjust the difficulty by increasing the challenge as the player progresses through the game. This included creating a difficulty curve where platforms become faster and obstacles increase in number, making the game more challenging and fun as the player advances. This progression system kept the gameplay fresh and ensured players stayed engaged.</div>
+
+<div class = "learn-subtitle">Saving Player Data and High Scores:</div>
+<div class = "learn-text">For the first time, I implemented a save system to track the player's progress, including their current score, high score, and selected characters. I learned how to serialize data and create a system that would save this information even after the game is closed and reopened. I also worked on displaying this data on the game over screen, ensuring players could see their achievements. This was essential for providing feedback to players about their performance and encouraging replayability.</div>
+
+<div class = "learn-subtitle">Shop System and Unlocking Mechanisms:</div>
+<div class = "learn-text">I developed a shop system where players could unlock new characters using in-game currency. This was my first time building a system that handled unlockable content, and I gained experience in managing an in-game economy. I learned how to save player choices (such as selected characters) and persist these selections across sessions. This experience deepened my understanding of how to balance game progression and reward systems to keep players motivated.</div>
+
+<div class = "learn-subtitle">Polishing, Debugging, and Packaging:</div>
+<div class = "learn-text">During the development of this game, I learned the importance of polishing and debugging. I made sure the game was free of bugs and optimized for performance, particularly when packaging the game for online play. I worked on making sure the user interface was intuitive, the controls were smooth, and the overall experience was free of interruptions. This was my first time preparing a game for public release and I learned how to debug efficiently and polish the final product for a professional standard.</div>
+
+
+</div>
+<!--------------------------------- END WHAT I LEARNT --------------------------------->
+
+<!--------------------------------- RETROSPECTIVE --------------------------------->
+<div class = "learn-container">
+    <div class = "learn-title">Retrospective</div>
+    
+    <div class = "learn-subtitle">Object Pooling:</div>
+    <div class = "learn-text">I implemented object pooling for the jump effect, as it allowed me to avoid constantly instantiating and destroying objects. However, I only applied it to a single type of object. In retrospect, I realized that platforms could benefit greatly from object pooling as well. Rather than destroying and spawning new platform objects as they leave the screen, I could have instead deactivated them, moved them to a new position, and then reactivated them. This would have reduced unnecessary object creation, thus improving performance, especially if the game expanded in scope. While it didn't significantly impact gameplay performance due to the small scale of the project, applying object pooling more broadly would have followed best practices and helped the game run more efficiently. Moving forward, I plan to implement object pooling more comprehensively in future projects, particularly for dynamic objects like platforms, obstacles, and enemies.</div>
+    
+    <div class = "learn-subtitle">Unplanned Features:</div>
+    <div class = "learn-text">The addition of new characters and a shop system, which wasn't initially planned, significantly extended the project’s timeline. While it enhanced the game’s depth and replayability, it also created unforeseen delays. In hindsight, incorporating the shop system added complexity that could have been avoided or planned better in the early stages. Moving forward, I plan to be more mindful of scope creep and ensure that features are fully scoped out before implementation. This will help avoid delays and improve the overall development process.</div>
+    
+    
+    </div>
+    <!--------------------------------- END RETROSPECTIVE --------------------------------->
+    
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

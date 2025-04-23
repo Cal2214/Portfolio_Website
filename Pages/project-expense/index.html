@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project expense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+        <!--------------------------------- HEADER --------------------------------->
+        <header class="header"> 
+            <div class="header-container">
+                
+                <!-- Name and Job Role -->
+                <div class="name-role">
+                    <div class="header-name">Callum Dourneen</div>    
+                    <div class="header-job-role">Software Developer</div>    
+                </div>
+
+                <!-- Icons -->
+                <div class="icons">
+                    <!-- Home Icon -->
+                    <div class="icon-container">
+                        <a href="../software-dev/index.html" class="project-card">
+                        <img src="../../Images/home.png" alt="Home Icon">
+                    </a>
+                    </div>
+                
+                    <!-- Game Icon -->
+                    <a href="../../index.html" class="icon-link">
+                        <div class="icon-container">
+                            <img src="../../Images/games.png" alt="Games Icon">
+                        </div>
+                    </a>
+                    <!-- Linkdein Icon -->
+                    <div class="icon-container">
+                        <a href="https://www.linkedin.com/in/callum-dourneen-80a810296" target="_blank">
+                            <img src="../../Images/linkedin.png" alt="LinkedIn Icon">
+                        </a>
+                    </div>
+                    <!-- Github Icon -->
+                    <div class="icon-container">
+                        <a href="https://github.com/Cal2214" target="_blank">
+                            <img src="../../Images/social.png" alt="GitHub Icon">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resume -->
+                <div class="resume">
+                    <a href="../../Files/Cv_SoftwareDev.pdf" target="_blank">
+                    <div class="resume-container">Resume</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--------------------------------- END HEADER --------------------------------->
+
+        <!--------------------------------- PROJECT INTRODUCTION --------------------------------->
+        <div class = "project-introduction">
+            <!-- Project Title and Description -->
+            <div class = "project-container">
+                    <a href="../../Pages/software-dev/index.html" class="back-text"> < Back</a>
+                <div class = "project-title">project expense</div>
+                <div class = "project-description">A simple expense tracker app.</div>
+            </div>
+        </div>
+
+        <div class="project-slideshow">
+            <!-- Previous Slide Button -->
+            <!-- <button class="prev" onclick="changeSlide(-1)">&#10094;</button> -->
+            
+            <!-- Slide Container -->
+            <div class="slides">
+                <video class="slide-item" src="../../projects/softwareDev/project-expense/expense-cover.mp4" autoplay loop muted playsinline></video>
+            </div>
+        
+            <!-- Next Slide Button -->
+            <!-- <button class="next" onclick="changeSlide(1)">&#10095;</button> -->
+        </div>
+
+        <div class="center-container"> 
+            <div class="about-introduction">
+
+                <!-- About Section -->
+                <div class="about-container">
+                    <div class="about-section">About</div>
+                    <div class="about-text">
+                        The Expense Tracker is a simple yet effective tool designed to help you manage and keep track of your daily spending. The app allows users to easily add, categorize, and view their expenses in real-time. With the ability to filter by category, and calculate the total amount spent, the Expense Tracker provides valuable insights into your financial habits.  In addition to basic functionality, the app stores expenses in a SQLite database, ensuring that your data is securely saved and easily retrievable. It also features an intuitive interface, allowing users to view their spending history, delete individual expenses, or clear all entries when needed.
+                    </div>
+                </div>
+        
+                <!-- Project Details -->
+                <div class="project-details-container">
+                    <div class="project-details">Project Details</div>
+                    <div class="details-text">
+                        App Title: NA<br>
+                        Genre: Utility<br>
+                        Platform: PC<br>
+                        Development Tools: Python, Tkinter, SQLite<br>
+                        App Features:<li>Add, categorize, and describe your expenses</li>
+                        <li>View total amount spent across all expenses</li>
+                        <li>Filter expenses by category</li>
+                        <li>Delete individual expenses or clear all entries</li>
+                        <li>Save expenses to a SQLite database for persistence</li>
+                        <li>Simple, user-friendly interface using Tkinter</li>
+                    </div>
+                </div>
+        
+                <!-- Links Section -->
+                <div class="project-links-container">
+                    <div class="project-links">Links</div>
+                    <div class="links">
+                        <div class="itch-link">
+                            Try the app here:<br>
+                            <a href="" target="_blank">Comming Soon</a>
+                        </div>
+                        <div class="itch-link">
+                            Check out the repository on GitHub:<br>
+                            <a href="" target="_blank">Comming Soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------- END PROJECT INTRODUCTION --------------------------------->
+
+        <!--------------------------------- TECHNICAL BREAKDOWN --------------------------------->
+        
+        <!-- Tech Title -->
+        <div class="tech">
+            <div class="tech-title">
+                <div class="technical-text">Technical Analysis</div>
+            </div>
+            <div class="tech-container">
+
+<!--------------------------------- FEATURE ONE  --------------------------------->
+        
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down -->
+                <ul class="dropdown">
+                    <li>
+                        <input type="checkbox" id="first">
+                        <label for="first">Inputing and Removing Data</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            This feature allows users to input new expenses into the system, where each expense is defined by its amount, category, and description. Users can also remove individual expenses or clear all records at once. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            Inputting: A form with text fields allows users to input the amount, category, and description of each expense. On submission, the data is inserted into the SQLite database.
+Removing: Users can select an expense from the table and delete it by clicking a button. The selected record is then removed from the database.
+Deleting All: A separate button allows users to delete all expenses stored in the database, triggering a confirmation prompt before proceeding.<br>
+                            
+                            <div class="title"> Design Approach </div>
+                            A simple form layout with text fields for entering expense details. The user interface includes buttons for adding new expenses and deleting selected expenses or all records. A table (using Treeview) displays the list of current expenses.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Slideshow 2 -->
+<div class="slideshow-wrapper" data-id="1">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-1">
+            <div class="carousel-slide" onclick="openLightbox(1, 0)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/softwareDev/project-expense/Features/input-data/input-data.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 1)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/softwareDev/project-expense/Features/input-data/delete-data.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 2)">
+                <video class="preview-video" autoplay muted loop>
+                    <source src="../../projects/softwareDev/project-expense/Features/input-data/error-messages.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(1, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(1, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-1" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(1)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-1">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/softwareDev/project-expense/Features/input-data/input-data.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Adding Expenses<br>This video demonstrates how users can input an expense by entering an amount, category, and description. Once submitted, the expense is added to the table in real-time, showcasing how new records appear in the list.
+
+                </p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/softwareDev/project-expense/Features/input-data/delete-data.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Deleting Expenses<br>This video shows how users can remove individual expenses by selecting a record and clicking "Delete Selected." It also demonstrates the "Delete All" feature, where a confirmation message appears, requiring the user to confirm before all records are erased.</p>
+            </div>
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/softwareDev/project-expense/Features/input-data/error-messages.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Error Handling in Expense Entry<br>This video highlights the built-in error handling for common mistakes. It shows error messages when a user attempts to enter a non-numeric value in the amount field or tries to delete a record without selecting it first.</p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(1, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(1, 1)">Next &#10095;</button>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+    <li>
+        <input type="checkbox" id="first-inside">
+        <label for="first-inside">Code Snippets</label>
+        <div class="content">
+            <div class="grid-container">
+                <!-- Box 1 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Input Data</h3>
+                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/input-data.png" alt="Snippet 1" class="item-image">
+                    <div class="item-description">
+                        <p>This snippet allows users to add new expenses by entering an amount, category, and description. </p>
+                    </div>
+                </div>
+                
+                <!-- Box 2 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Delete Data</h3>
+                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/delete-data.png" alt="Snippet 2" class="item-image">
+                    <div class="item-description">
+                        <p>This snippit allows the users to delete individual records removing them from the database </p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="grid-item">
+                    <h3 class="item-title"> Delete All</h3>
+                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/delete-all-data.png" alt="Snippet 3" class="item-image">
+                    <div class="item-description">
+                        <p>This snippit shows how the user can delete all data in the databse with a confirmation prompt to prevent accidental deleteion of the whole database.</p>
+                    </div>
+                </div>
+
+                <!-- Additional Boxes  -->
+            </div>
+        </div>
+    </li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challanges</div>
+
+    <div class ="challange-name"> Ensuring Data Updates in Real-Time</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">When adding, deleting, expenses, the UI might not update immediately, leading to a stale or outdated display.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">Use the update_expense_list() function after every database modification to refresh the displayed data.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        </div>
+    </li>
+</ul>
+<!--------------------------------- END FEATURE ONE --------------------------------->
+
+<!--------------------------------- FEATURE TWO  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="second">
+        <label for="second">Total Spend Calculation</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            This feature calculates the total amount spent by summing all the entered expenses. It provides the user with a quick overview of their total expenditure. <br>
+            
+            <div class="title"> Implementation</div>
+            The total amount spent is calculated using SQL queries that sum the amount column from the expenses table.<br>
+            
+            <div class="title"> Design Approach </div>
+            A dedicated button labeled "View Total Spent" allows the user to trigger the calculation.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+<!-- Slideshow 2 -->
+<div class="slideshow-wrapper" data-id="2">
+    <div class="video-carousel">
+        <div class="carousel-slide" onclick="openLightbox(2, 0)">
+            <video class="preview-video" autoplay muted loop>
+                <source src="../../projects/softwareDev/project-expense/Features/total/total.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- <button class="prev" onclick="changeCarousel(2, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(2, 1)">&#10095;</button> -->
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-2" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(2)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-2">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/softwareDev/project-expense/Features/total/total.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Total Spent<br>Displays the total spent to the user. 
+
+                </p>
+            </div>
+        </div>
+        <!-- <button class="prev" onclick="changeLightbox(2, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(2, 1)">Next &#10095;</button> -->
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="second-inside">
+<label for="second-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title"> Total Spend Calculation</h3>
+    <img src="../../projects/softwareDev/project-expense/Features/total/code-snippit/total-spent.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>Shows the total spent.</p>
+    </div>
+</div>
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challanges</div>
+
+<div class ="challange-name"></div>
+<div class ="challange">Challange: Handling Empty Database</div>
+<div class ="challange-text">If there are no expenses recorded, attempting to sum the amounts may return None or cause an error.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Ensure that if the database is empty, the total is displayed as $0.00 instead of None.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE TWO --------------------------------->
+
+
+<!--------------------------------- FEATURE THREE  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="third">
+        <label for="third">Category-Based Filtering</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            This feature enables users to filter expenses by category. For example, if a user wants to see only expenses related to food, they can filter by the "Food" category. <br>
+            
+            <div class="title"> Implementation</div>
+            The app includes a text entry for users to specify the category they want to filter by.
+            A SQL query is executed to retrieve only the expenses that match the specified category, and the results are displayed in the expense list. <br>
+            
+            <div class="title"> Design Approach </div>
+            A text field labeled "Filter by Category" allows the user to type a category name. A button labeled "Filter" applies the filter.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- Slideshow 3 -->
+<div class="slideshow-wrapper" data-id="3">
+    <div class="video-carousel">
+        <div class="carousel-slide" onclick="openLightbox(3, 0)">
+            <video class="preview-video" autoplay muted loop>
+                <source src="../../projects/softwareDev/project-expense/Features/filter/filter.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- <button class="prev" onclick="changeCarousel(2, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(2, 1)">&#10095;</button> -->
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-3" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(3)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-3">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/softwareDev/project-expense/Features/filter/filter.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Filter<br>User can enter in a caterogory name to return all the records with the matching name. 
+
+                </p>
+            </div>
+        </div>
+        <!-- <button class="prev" onclick="changeLightbox(2, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(2, 1)">Next &#10095;</button> -->
+    </div>
+</div>
+  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="third-inside">
+<label for="third-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Get and Display the Date</h3>
+    <img src="../../projects/softwareDev/project-expense/Features/filter/code-snippit/filter-data.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This snippet enables users to filter expenses based on a selected category, displaying only the matching records in the table. </p>
+    </div>
+</div>
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challanges</div>
+
+<div class ="challange-name"> Case Sensitivity in Filtering</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Searching for "Food" might not return results if the stored value is "food".</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Use the LOWER() function to perform a case-insensitive search.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE THREE --------------------------------->
+
+<!--------------------------------- FEATURE FOUR  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="fourth">
+        <label for="fourth">Data Persistence</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            This feature ensures that all entered expenses are saved in a database (SQLite). Even if the app is closed and reopened, the data remains intact, making it easy for users to continue tracking their expenses over time. <br>
+            
+            <div class="title"> Implementation</div>
+            SQLite is used to store all expense data in a persistent database. Each time an expense is added, it is saved into the database.<br>
+            
+            <div class="title"> Design Approach </div>
+            The seamless loading and saving of data ensures that users’ data is always available even if they close the app, providing them with a persistent, reliable experience.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- Slideshow 4 -->
+<div class="slideshow-wrapper" data-id="4">
+    <div class="video-carousel">
+        <div class="carousel-slide" onclick="openLightbox(4, 0)">
+            <video class="preview-video" autoplay muted loop>
+                <source src="../../projects/softwareDev/project-expense/Features/data-perserve/data-p.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- <button class="prev" onclick="changeCarousel(2, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(2, 1)">&#10095;</button> -->
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-4" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(4)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-4">
+            <div class="lightbox-slide">
+                <video class="lightbox-media" controls>
+                    <source src="../../projects/softwareDev/project-expense/Features/data-perserve/data-p.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Data Persistence<br>The video shows how the data persists even when the application is closed.
+
+                </p>
+            </div>
+        </div>
+        <!-- <button class="prev" onclick="changeLightbox(2, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(2, 1)">Next &#10095;</button> -->
+    </div>
+</div>
+ <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="fourth-inside">
+<label for="fourth-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Data Persistence</h3>
+    <img src="../../projects/softwareDev/project-expense/Features/data-perserve/code-snippit/p-data.png" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This snippet ensures that all expenses are stored in a persistent SQLite database, so data remains available even after the application is closed.</p>
+    </div>
+</div>
+
+
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challanges</div>
+
+<div class ="challange-name">Resetting Auto-Increment ID Properly</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">After deleting all expenses, the next added record might not reset its ID to 1.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Manually reset the SQLite sequence after deleting all records.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE FOUR --------------------------------->
+
+<!--------------------------------- WHAT I LEARNT --------------------------------->
+<div class = "learn-container">
+<div class = "learn-title">What I Learnt</div>
+
+<div class = "learn-subtitle">Working with SQLite for Data Management</div>
+<div class = "learn-text">This project was my first experience using SQLite as a database for storing and managing user-inputted data. I learned how to create tables, insert, retrieve, filter, and delete records efficiently. Understanding SQL queries and ensuring data persistence between sessions was a key takeaway. Additionally, I gained insights into handling auto-incrementing IDs, preventing errors when deleting records, and resetting the database properly when needed.</div>
+
+<div class = "learn-subtitle">Building a GUI with Tkinter and ttk</div>
+<div class = "learn-text">Using Tkinter and ttk for GUI development was a completely new experience. I learned how to structure a user-friendly interface, use Treeview tables to display dynamic data, and implement interactive elements like buttons, input fields, and message boxes. Styling elements and ensuring proper layout alignment across different window sizes were also valuable learning points.</div>
+
+<div class = "learn-subtitle">Error Handling and User Experience Enhancements</div>
+<div class = "learn-text">One of the major lessons from this project was implementing proper error handling. I had to ensure users received appropriate feedback when they entered incorrect data (e.g., non-numeric values in the amount field) or attempted invalid actions (like deleting a record without selecting one). Adding confirmation dialogs before critical actions, such as deleting all expenses, improved the user experience and prevented accidental data loss.</div>
+
+</div>
+<!--------------------------------- END WHAT I LEARNT --------------------------------->
+
+<!--------------------------------- RETROSPECTIVE --------------------------------->
+<div class = "learn-container">
+    <div class = "learn-title">Retrospective</div>
+    
+    <div class = "learn-subtitle"> Challenges and Future Improvements</div>
+    <div class = "learn-text">Looking back, one of the biggest challenges was ensuring that the expense list updated in real time whenever a new expense was added or deleted. Initially, changes didn’t reflect instantly, which made the app feel unresponsive. By calling the update_expense_list() function after each database operation, I was able to solve this issue.
+
+        Another challenge was managing category-based filtering in an efficient way. Initially, searches were case-sensitive, meaning "Food" and "food" were treated differently. Implementing case-insensitive filtering improved usability.</div>
+
+    
+    </div>
+    <!--------------------------------- END RETROSPECTIVE --------------------------------->
+    
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
