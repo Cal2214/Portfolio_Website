@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project expense</title>
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>    
@@ -162,17 +163,17 @@ Deleting All: A separate button allows users to delete all expenses stored in th
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-1">
             <div class="carousel-slide" onclick="openLightbox(1, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/softwareDev/project-expense/Features/input-data/input-data.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 1)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/softwareDev/project-expense/Features/input-data/delete-data.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 2)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/softwareDev/project-expense/Features/input-data/error-messages.mp4" type="video/mp4">
                 </video>
             </div>
@@ -189,7 +190,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
         <span class="close" onclick="closeLightbox(1)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-1">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/softwareDev/project-expense/Features/input-data/input-data.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Adding Expenses<br>This video demonstrates how users can input an expense by entering an amount, category, and description. Once submitted, the expense is added to the table in real-time, showcasing how new records appear in the list.
@@ -197,13 +198,13 @@ Deleting All: A separate button allows users to delete all expenses stored in th
                 </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/softwareDev/project-expense/Features/input-data/delete-data.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Deleting Expenses<br>This video shows how users can remove individual expenses by selecting a record and clicking "Delete Selected." It also demonstrates the "Delete All" feature, where a confirmation message appears, requiring the user to confirm before all records are erased.</p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/softwareDev/project-expense/Features/input-data/error-messages.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Error Handling in Expense Entry<br>This video highlights the built-in error handling for common mistakes. It shows error messages when a user attempts to enter a non-numeric value in the amount field or tries to delete a record without selecting it first.</p>
@@ -225,7 +226,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
                 <!-- Box 1 -->
                 <div class="grid-item">
                     <h3 class="item-title">Input Data</h3>
-                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/input-data.png" alt="Snippet 1" class="item-image">
+                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/input-data.png" loading="lazy" alt="Snippet 1" class="item-image">
                     <div class="item-description">
                         <p>This snippet allows users to add new expenses by entering an amount, category, and description. </p>
                     </div>
@@ -234,7 +235,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
                 <!-- Box 2 -->
                 <div class="grid-item">
                     <h3 class="item-title">Delete Data</h3>
-                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/delete-data.png" alt="Snippet 2" class="item-image">
+                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/delete-data.png" loading="lazy" alt="Snippet 2" class="item-image">
                     <div class="item-description">
                         <p>This snippit allows the users to delete individual records removing them from the database </p>
                     </div>
@@ -243,7 +244,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
                 <!-- Box 3 -->
                 <div class="grid-item">
                     <h3 class="item-title"> Delete All</h3>
-                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/delete-all-data.png" alt="Snippet 3" class="item-image">
+                    <img src="../../projects/softwareDev/project-expense/Features/input-data/code-snippits/delete-all-data.png" loading="lazy" alt="Snippet 3" class="item-image">
                     <div class="item-description">
                         <p>This snippit shows how the user can delete all data in the databse with a confirmation prompt to prevent accidental deleteion of the whole database.</p>
                     </div>
@@ -296,7 +297,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
 <div class="slideshow-wrapper" data-id="2">
     <div class="video-carousel">
         <div class="carousel-slide" onclick="openLightbox(2, 0)">
-            <video class="preview-video" autoplay muted loop>
+            <video class="preview-video" autoplay muted loop loading="lazy">
                 <source src="../../projects/softwareDev/project-expense/Features/total/total.mp4" type="video/mp4">
             </video>
         </div>
@@ -312,7 +313,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
         <span class="close" onclick="closeLightbox(2)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-2">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" controls loading="lazy">
                     <source src="../../projects/softwareDev/project-expense/Features/total/total.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Total Spent<br>Displays the total spent to the user. 
@@ -336,7 +337,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title"> Total Spend Calculation</h3>
-    <img src="../../projects/softwareDev/project-expense/Features/total/code-snippit/total-spent.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/softwareDev/project-expense/Features/total/code-snippit/total-spent.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>Shows the total spent.</p>
     </div>
@@ -391,7 +392,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
 <div class="slideshow-wrapper" data-id="3">
     <div class="video-carousel">
         <div class="carousel-slide" onclick="openLightbox(3, 0)">
-            <video class="preview-video" autoplay muted loop>
+            <video class="preview-video" autoplay muted loop loading="lazy">
                 <source src="../../projects/softwareDev/project-expense/Features/filter/filter.mp4" type="video/mp4">
             </video>
         </div>
@@ -407,7 +408,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
         <span class="close" onclick="closeLightbox(3)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-3">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/softwareDev/project-expense/Features/filter/filter.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Filter<br>User can enter in a caterogory name to return all the records with the matching name. 
@@ -430,7 +431,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Get and Display the Date</h3>
-    <img src="../../projects/softwareDev/project-expense/Features/filter/code-snippit/filter-data.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/softwareDev/project-expense/Features/filter/code-snippit/filter-data.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>This snippet enables users to filter expenses based on a selected category, displaying only the matching records in the table. </p>
     </div>
@@ -484,7 +485,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
 <div class="slideshow-wrapper" data-id="4">
     <div class="video-carousel">
         <div class="carousel-slide" onclick="openLightbox(4, 0)">
-            <video class="preview-video" autoplay muted loop>
+            <video class="preview-video" autoplay muted loop loading="lazy">
                 <source src="../../projects/softwareDev/project-expense/Features/data-perserve/data-p.mp4" type="video/mp4">
             </video>
         </div>
@@ -500,7 +501,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
         <span class="close" onclick="closeLightbox(4)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-4">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/softwareDev/project-expense/Features/data-perserve/data-p.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Data Persistence<br>The video shows how the data persists even when the application is closed.
@@ -523,7 +524,7 @@ Deleting All: A separate button allows users to delete all expenses stored in th
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Data Persistence</h3>
-    <img src="../../projects/softwareDev/project-expense/Features/data-perserve/code-snippit/p-data.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/softwareDev/project-expense/Features/data-perserve/code-snippit/p-data.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>This snippet ensures that all expenses are stored in a persistent SQLite database, so data remains available even after the application is closed.</p>
     </div>

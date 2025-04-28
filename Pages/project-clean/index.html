@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
     <title>project-clean</title>
 </head>
@@ -165,8 +166,8 @@ The server validates and applies these movements using a Remote Procedure Call (
         <div class="video-carousel">
             <div class="carousel-track" id="carousel-track-1">
                 <div class="carousel-slide" onclick="openLightbox(1, 0)">
-                    <video class="preview-video" autoplay muted loop>
-                        <source src="../../projects/gameDev/project-roomba/Features/r-movement/r-movement.mp4" type="video/mp4">
+                    <video class="preview-video" autoplay muted loop  loading="lazy">
+                        <source src="../../projects/gameDev/project-roomba/Features/r-movement/r-movement.mp4"  type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -180,7 +181,7 @@ The server validates and applies these movements using a Remote Procedure Call (
             <span class="close" onclick="closeLightbox(1)">&times;</span>
             <div class="lightbox-slideshow" id="lightbox-slideshow-1">
                 <div class="lightbox-slide">
-                    <video class="lightbox-media" controls>
+                    <video class="lightbox-media"  loading="lazy" controls>
                         <source src="../../projects/gameDev/project-roomba/Features/r-movement/r-movement.mp4" type="video/mp4">
                     </video>
                     <p class="video-info">Replicated Player Movement in Multiplayer<br>This video demonstrates the smooth synchronization of player movement in a multiplayer environment, where the server handles all movement calculations while ensuring that clients are responsive and synchronized. Watch as player positions are correctly replicated across all connected clients, providing seamless gameplay despite network latency. </p>
@@ -199,7 +200,7 @@ The server validates and applies these movements using a Remote Procedure Call (
                     <!-- Box 1 -->
                     <div class="grid-item">
                         <h3 class="item-title">Server Movement Logic</h3>
-                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/s-movement.png" alt="Snippet 1" class="item-image">
+                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/s-movement.png" loading="lazy" alt="Snippet 1" class="item-image">
                         <div class="item-description">
                             <p>This function moves the player based on input direction (CurrentDirection) and updates the player's position.
 
@@ -210,7 +211,7 @@ The server validates and applies these movements using a Remote Procedure Call (
                     <!-- Box 2 -->
                     <div class="grid-item">
                         <h3 class="item-title">Server Move Player Function</h3>
-                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/s-move-player.png" alt="Snippet 2" class="item-image">
+                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/s-move-player.png" loading="lazy" alt="Snippet 2" class="item-image">
                         <div class="item-description">
                             <p>Server_MovePlayer_Implementation updates the player’s location on the server when the client sends the request.
 
@@ -221,7 +222,7 @@ The server validates and applies these movements using a Remote Procedure Call (
                     <!-- Box 3 -->
                     <div class="grid-item">
                         <h3 class="item-title">Replicating Player Direction (State Replication)</h3>
-                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/r-player-direction.png" alt="Snippet 3" class="item-image">
+                        <img src="../../projects/gameDev/project-roomba/Features/r-movement/code-snippits/r-player-direction.png" loading="lazy" alt="Snippet 3" class="item-image">
                         <div class="item-description">
                             <p>The GetLifetimeReplicatedProps function ensures that variables like CurrentDirection and MoveSpeed are replicated to all clients.
 
@@ -283,7 +284,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
 <div class="video-carousel">
 <div class="carousel-track" id="carousel-track-2">
 <div class="carousel-slide" onclick="openLightbox(2, 0)">
-    <video class="preview-video" autoplay muted loop>
+    <video class="preview-video" autoplay muted loop  loading="lazy">
         <source src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/dirt-spawn.mp4" type="video/mp4">
     </video>
 </div>
@@ -298,7 +299,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
 <span class="close" onclick="closeLightbox(2)">&times;</span>
 <div class="lightbox-slideshow" id="lightbox-slideshow-2">
 <div class="lightbox-slide">
-    <video class="lightbox-media" controls>
+    <video class="lightbox-media"  loading="lazy" controls>
         <source src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/dirt-spawn.mp4" type="video/mp4">
     </video>
     <p class="video-info">
@@ -318,7 +319,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <!-- Box 1 -->
     <div class="grid-item">
         <h3 class="item-title">Server Authority and Delayed Dirt Spawning</h3>
-        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/s-delaydirt.png" alt="Snippet 1" class="item-image">
+        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/s-delaydirt.png" loading="lazy" alt="Snippet 1" class="item-image">
         <div class="item-description">
             <p>This snippet demonstrates how the server handles the authority for spawning dirt with a randomized delay using Unreal Engine's TimerManager. The server controls when dirt is spawned, ensuring synchronization across clients. </p>
         </div>
@@ -327,7 +328,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <!-- Box 2 -->
     <div class="grid-item">
         <h3 class="item-title">Server-side Timer Handling for Dirt Delay</h3>
-        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/s-timer.png" alt="Snippet 2" class="item-image">
+        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/s-timer.png" loading="lazy" alt="Snippet 2" class="item-image">
         <div class="item-description">
             <p>This snippet demonstrates how the server ensures that dirt spawning is properly delayed. The Server_DelayDirt_Implementation() ensures that the server controls when the dirt spawn timer is set.  </p>
         </div>
@@ -336,7 +337,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <!-- Box 3 -->
     <div class="grid-item">
         <h3 class="item-title">Multicast Replication for Spawning Dirt on All Clients</h3>
-        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/m-replicated.png" alt="Snippet 3" class="item-image">
+        <img src="../../projects/gameDev/project-roomba/Features/r-dirt-spawning/code-snippits/m-replicated.png" loading="lazy" alt="Snippet 3" class="item-image">
         <div class="item-description">
             <p>This snippet handles the multicast functionality to ensure dirt is spawned on all connected clients, not just the server. It uses Unreal Engine's Multi_SpawnDirt_Implementation() to synchronize the spawn across clients.</p>
         </div>
@@ -393,12 +394,12 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-3">
             <div class="carousel-slide" onclick="openLightbox(3, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-spawning.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(3, 1)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-using.mp4" type="video/mp4">
                 </video>
             </div>
@@ -415,13 +416,13 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
         <span class="close" onclick="closeLightbox(3)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-3">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-spawning.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Replicated Powerup Spawning<br>The video shows how powerups are multicast allowing for them to spawn at the same time and location as in the client and the server.  </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-roomba/Features/r-powerup/r-power-using.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Replicated Power-Up Effects <br>This video showcases the replication of power-up effects in a multiplayer environment. It highlights how a power-up collected by a player on the client is reflected in real-time on the server, ensuring consistent gameplay experiences for all participants. The effects, including changes to player attributes like speed or size, are visibly synchronized between the client and server, demonstrating the robust implementation of Unreal Engine’s replication system. </p>
@@ -442,7 +443,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <!-- Box 1 -->
     <div class="grid-item">
         <h3 class="item-title">Powerup Spawning</h3>
-        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-power-spawn.png" alt="Snippet 1" class="item-image">
+        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-power-spawn.png" loading="lazy" alt="Snippet 1" class="item-image">
         <div class="item-description">
             <p>The power-up spawns after a random delay between 5 to 20 seconds, which is only triggered on the server side using DelayPowerup().
 
@@ -457,7 +458,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <!-- Box 2 -->
     <div class="grid-item">
         <h3 class="item-title">Activating Speed Power-Up</h3>
-        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-activate-power.png" alt="Snippet 2" class="item-image">
+        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-activate-power.png" loading="lazy" alt="Snippet 2" class="item-image">
         <div class="item-description">
             <p>​This snippet demonstrates how the speed power-up is activated in a multiplayer game. The server ensures the effect (increased speed and material change) is replicated across all clients for synchronized gameplay.  </p>
         </div>
@@ -466,7 +467,7 @@ The server calls the Multi_SpawnDirt() multicast function to ensure that the dir
     <!-- Box 3 -->
     <div class="grid-item">
         <h3 class="item-title">Deactivating Speed Power-Up</h3>
-        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-deactivate-power.png" alt="Snippet 3" class="item-image">
+        <img src="../../projects/gameDev/project-roomba/Features/r-powerup/code-snippits/r-deactivate-power.png" loading="lazy" alt="Snippet 3" class="item-image">
         <div class="item-description">
             <p>This snippet highlights how the speed power-up is deactivated. It ensures the player’s movement speed and appearance return to their default state across the server and all connected clients.</p>
         </div>

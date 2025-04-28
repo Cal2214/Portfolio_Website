@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project weather</title>
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>    
@@ -72,10 +73,10 @@
                 <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         
                 <video class="slide-item active" src="../../projects/softwareDev/project-weather/weather-cover.mp4" autoplay loop muted playsinline></video>
-                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/london.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/newyork.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/brazil.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/na.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/london.png" loading="lazy"  alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/newyork.png" loading="lazy" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/brazil.png" loading="lazy" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/softwareDev/project-weather/slide-show/na.png" loading="lazy" alt="Project Screenshot">
         
                 <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
@@ -174,7 +175,7 @@ A forecast for the next 4 days is displayed with corresponding icons for each da
                 <!-- Box 1 -->
                 <div class="grid-item">
                     <h3 class="item-title">API Call to Get Weather Data</h3>
-                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/getData.png" alt="Snippet 1" class="item-image">
+                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/getData.png" loading="lazy"  alt="Snippet 1" class="item-image">
                     <div class="item-description">
                         <p>This function CheckCity takes the city input and fetches weather data.
                             It then checks if the response is valid (response.ok), extracts the necessary information from the response (data.main.temp, data.wind.speed, etc.), and updates the UI accordingly.</p>
@@ -184,7 +185,7 @@ A forecast for the next 4 days is displayed with corresponding icons for each da
                 <!-- Box 2 -->
                 <div class="grid-item">
                     <h3 class="item-title">Temperature Conversion to Celsius</h3>
-                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/getData.png" alt="Snippet 2" class="item-image">
+                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/getData.png" loading="lazy" alt="Snippet 2" class="item-image">
                     <div class="item-description">
                         <p>The function ChangetoCelsius takes the temperature subtracts 273.15 to convert it to Celsius, and returns the rounded value. </p>
                     </div>
@@ -193,7 +194,7 @@ A forecast for the next 4 days is displayed with corresponding icons for each da
                 <!-- Box 3 -->
                 <div class="grid-item">
                     <h3 class="item-title"> Updating the UI with Weather Data</h3>
-                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/updatingUI.png" alt="Snippet 3" class="item-image">
+                    <img src="../../projects/softwareDev/project-weather/Features/get-data/code-snippits/updatingUI.png"loading="lazy" alt="Snippet 3" class="item-image">
                     <div class="item-description">
                         <p>This part of the code updates various elements on the page with the fetched weather data (city name, humidity, wind speed, temperature, and weather type).</p>
                     </div>
@@ -251,12 +252,12 @@ The app’s color scheme changes to match the weather (e.g., warm yellow tones f
         <div class="carousel-track" id="carousel-track-1">
             <div class="carousel-slide" onclick="openLightbox(1, 0)">
                 <div class="media-wrapper">
-                <img class="preview-media" src="../../projects/softwareDev/project-weather/Features/theme-change/new-designs.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/softwareDev/project-weather/Features/theme-change/new-designs.png" loading="lazy" alt="Image Slide">
             </div>
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 1)">
                 <div class="media-wrapper">
-                <img class="preview-media" src="../../projects/softwareDev/project-weather/Features/theme-change/old-design.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/softwareDev/project-weather/Features/theme-change/old-design.png" loading="lazy" alt="Image Slide">
             </div>
             </div>
         </div>
@@ -272,11 +273,11 @@ The app’s color scheme changes to match the weather (e.g., warm yellow tones f
         <span class="close" onclick="closeLightbox(1)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-1">
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/softwareDev/project-weather/Features/theme-change/new-designs.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/softwareDev/project-weather/Features/theme-change/new-designs.png" loading="lazy" alt="Image Slide">
                 <p class="video-info">Redesigned Weather App: Dynamic Themes Based on Weather<br>The updated design incorporates dynamic themes that change based on real-time weather conditions. For example, when the weather is clear, the app background becomes bright and sunny, while rainy weather activates darker, stormy tones. This visually engaging approach enhances the user experience, allowing users to instantly understand the weather condition through the theme. The redesign not only improves the aesthetics but also makes the app more intuitive and immersive, offering a visually dynamic and enjoyable weather tracking experience.</p>
             </div>
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/softwareDev/project-weather/Features/theme-change/old-design.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/softwareDev/project-weather/Features/theme-change/old-design.png" loading="lazy" alt="Image Slide">
                 <p class="video-info">Old Weather App Design: Static Interface<br>The previous version of the weather app used a static design, which applied the same visual theme regardless of the weather conditions. This lack of dynamic theming made it harder for users to immediately associate weather data with a visual context. For instance, the same layout and color scheme were used for sunny, cloudy, or rainy conditions, leading to a less engaging experience. This design lacked the immersive, visual appeal that a dynamic theme could provide, reducing the app's overall intuitiveness.</p>
             </div>
         </div>
@@ -296,7 +297,7 @@ The app’s color scheme changes to match the weather (e.g., warm yellow tones f
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">CSS: Defining Themes</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/define-themes.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/define-themes.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>This code defines the themes that can be used by updaing the variables depending on the weather </p>
     </div>
@@ -305,7 +306,7 @@ The app’s color scheme changes to match the weather (e.g., warm yellow tones f
 <!-- Box 2 -->
 <div class="grid-item">
     <h3 class="item-title">Switching Themes Based on Weather</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/switch-theme.png" alt="Snippet 2" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/switch-theme.png" loading="lazy" alt="Snippet 2" class="item-image">
     <div class="item-description">
         <p>The following JavaScript handles the dynamic theme switching. It checks the weather condition and applies the appropriate theme classes </p>
     </div>
@@ -313,7 +314,7 @@ The app’s color scheme changes to match the weather (e.g., warm yellow tones f
 
 <div class="grid-item">
     <h3 class="item-title">Calling Theme Change Based on Weather Data</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/theme-change.png" alt="Snippet 3" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/theme-change/code-snippits/theme-change.png" loading="lazy" alt="Snippet 3" class="item-image">
     <div class="item-description">
         <p>This JavaScript function updates the UI with the correct weather information and switches the theme accordingly. </p>
     </div>
@@ -384,7 +385,7 @@ The design of the time section is simple, with a clear contrast against the back
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Get and Display the Date</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/date/code-snippits/get-date.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/date/code-snippits/get-date.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>This function formats the current date into a readable format </p>
     </div>
@@ -393,7 +394,7 @@ The design of the time section is simple, with a clear contrast against the back
 <!-- Box 2 -->
 <div class="grid-item">
     <h3 class="item-title"> Get and Display the Current Time</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/date/code-snippits/get-time.png" alt="Snippet 2" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/date/code-snippits/get-time.png" loading="lazy" alt="Snippet 2" class="item-image">
     <div class="item-description">
         <p>This function updates the time dynamically every second, showing it in 12-hour AM/PM format</p>
     </div>
@@ -460,7 +461,7 @@ The design is kept minimalistic and clean to avoid clutter, ensuring that users 
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Fetching the 4-Day Forecast Data</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/4-day/code-snippit/get-data-4day.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/4-day/code-snippit/get-data-4day.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>Retrieves weather forecast data for the next 4 days.
             Selects one forecast per day at midday to ensure accurate temperature trends.
@@ -472,7 +473,7 @@ The design is kept minimalistic and clean to avoid clutter, ensuring that users 
 <!-- Box 2 -->
 <div class="grid-item">
     <h3 class="item-title">Structure for Displaying Forecast</h3>
-    <img src="../../projects/softwareDev/project-weather/Features/4-day/code-snippit/struct-4day.png" alt="Snippet 2" class="item-image">
+    <img src="../../projects/softwareDev/project-weather/Features/4-day/code-snippit/struct-4day.png" loading="lazy" alt="Snippet 2" class="item-image">
     <div class="item-description">
         <p>Provides the HTML structure for displaying 4-day weather forecasts.
             Each forecast "oval" contains:

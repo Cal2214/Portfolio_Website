@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frolic Frog</title>
+    <link rel="preload" href="project-frog.css" as="style">
     <link rel="stylesheet" href="project-frog.css">
 </head>
 <body>    
@@ -71,12 +72,12 @@
                 <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         
                 <video class="slide-item active" src="../../projects/gameDev/project-frog/Slideshow/cover-frog.mp4" autoplay loop muted playsinline preload="auto"></video>
-                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/main-menu.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/shop-menu.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/start.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/crocs.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/flowers.png" alt="Project Screenshot">
-                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/game-over.png" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/main-menu.png" loading="lazy" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/shop-menu.png" loading="lazy"alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/start.png" loading="lazy" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/crocs.png" loading="lazy" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/flowers.png"  loading="lazy" alt="Project Screenshot">
+                <img class="slide-item" src="../../projects/gameDev/project-frog/Slideshow/game-over.png" loading="lazy" alt="Project Screenshot">
         
                 <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
@@ -163,21 +164,21 @@
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-1">
             <div class="carousel-slide" onclick="openLightbox(1, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-frog/Features/procedual/procedual-vid2.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 1)">
-                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img.png" loading="lazy" alt="Image Slide">
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 2)">
-                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img2.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img2.png" loading="lazy" alt="Image Slide">
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 3)">
-                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img3.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img3.png" loading="lazy" alt="Image Slide">
             </div>
             <div class="carousel-slide" onclick="openLightbox(1, 4)">
-                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img4.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img4.png" loading="lazy" alt="Image Slide">
             </div>
         </div>
         <button class="prev" onclick="changeCarousel(1, -1)">&#10094;</button>
@@ -193,7 +194,7 @@
         <div class="lightbox-slideshow" id="lightbox-slideshow-1">
             <div class="lightbox-slide">
                 <div class="media-wrapper">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-frog/Features/procedual/procedual-vid2.mp4" type="video/mp4">
                 </video>
             </div>
@@ -201,25 +202,25 @@
             </div>
             <div class="lightbox-slide">
                 <div class="media-wrapper">
-                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img.png" loading="lazy" alt="Image Slide">
             </div>
                 <p class="video-info">Abundant Starting Platforms<br>In this image, players are greeted with numerous platforms and zero obstacles, providing a safe environment to learn game mechanics. This ensures a smooth introduction to the gameplay experience.</p>
             </div>
             <div class="lightbox-slide">
                 <div class="media-wrapper">
-                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img2.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img2.png" loading="lazy" alt="Image Slide">
             </div>
                 <p class="video-info">Challenging Pathways Begin<br>As players progress, the number of available platforms decreases, leading to a more focused pathway. Here, players encounter their first challenge with fewer platforms and the need to navigate carefully.</p>
             </div>
             <div class="lightbox-slide">
                 <div class="media-wrapper">
-                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img3.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img3.png" loading="lazy" alt="Image Slide">
             </div>
                 <p class="video-info">Introduction of Obstacles<br>This image illustrates a single path with a limited number of platforms and the introduction of obstacles. Players must now navigate around rocks, adding an extra layer of challenge to their ascent.</p>
             </div>
             <div class="lightbox-slide">
                 <div class="media-wrapper">
-                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img4.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-frog/Features/procedual/procedual-img4.png" loading="lazy" alt="Image Slide">
             </div>
                 <p class="video-info">Increased Difficulty Ahead<br>The final image presents a formidable challenge with a narrow pathway blocked by three crocodiles and three rocks. This setup tests players' skills, requiring precise jumps and careful timing to overcome the obstacles.</p>
             </div>
@@ -239,7 +240,7 @@
                 <!-- Box 1 -->
                 <div class="grid-item">
                     <h3 class="item-title">Platform Spawning</h3>
-                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/platform-spawning.png" alt="Snippet 1" class="item-image">
+                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/platform-spawning.png" loading="lazy" alt="Snippet 1" class="item-image">
                     <div class="item-description">
                         <p>This snippet focuses on the primary platform spawning logic, its the foundation for the procedural generation and shows how the game ensures platforms are consistently generated as the player progresses. </p>
                     </div>
@@ -248,7 +249,7 @@
                 <!-- Box 2 -->
                 <div class="grid-item">
                     <h3 class="item-title">Special Platform & Obstacles</h3>
-                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/special-platforms.png" alt="Snippet 2" class="item-image">
+                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/special-platforms.png" loading="lazy" alt="Snippet 2" class="item-image">
                     <div class="item-description">
                         <p>This snippet shows how special platforms such as breakable platforms or enemies are added dynamically with a random chance.  </p>
                     </div>
@@ -257,7 +258,7 @@
                 <!-- Box 3 -->
                 <div class="grid-item">
                     <h3 class="item-title">Difficulty Curve</h3>
-                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/difficulty-curve.png" alt="Snippet 3" class="item-image">
+                    <img src="../../projects/gameDev/project-frog/Features/procedual/code-snippits/difficulty-curve.png" loading="lazy" alt="Snippet 3" class="item-image">
                     <div class="item-description">
                         <p>The code snippet shows the platforms are generated depending on the player's current score. Lower scores increase the likelihood of spawning drop platforms, making it easier for players to learn the mechanics of the game. As players progress and their scores rise, the spawning logic adjusts, providing a gradual increase in difficulty and challenge.</p>
                     </div>
@@ -317,7 +318,7 @@
 <div class="video-carousel">
 <div class="carousel-track" id="carousel-track-2">
 <div class="carousel-slide" onclick="openLightbox(2, 0)">
-<video class="preview-video" autoplay muted loop>
+<video class="preview-video" autoplay muted loop loading="lazy">
     <source src="../../projects/gameDev/project-frog/Features/object-pooling/objectpooling.mp4" type="video/mp4">
 </video>
 </div>
@@ -333,7 +334,7 @@
 <span class="close" onclick="closeLightbox(2)">&times;</span>
 <div class="lightbox-slideshow" id="lightbox-slideshow-2">
 <div class="lightbox-slide">
-<video class="lightbox-media" controls>
+<video class="lightbox-media" loading="lazy" controls>
     <source src="../../projects/gameDev/project-frog/Features/object-pooling/objectpooling.mp4" type="video/mp4">
 </video>
 <p class="video-info">Object Pooling<br>The effect prefab is set active / deactive during the players jumps rather than spawning new instances in each time</p>
@@ -353,7 +354,7 @@
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Object Pooling</h3>
-    <img src="../../projects/gameDev/project-frog/Features/object-pooling/code-snippits/object-pool.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/object-pooling/code-snippits/object-pool.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>This code snippet demonstrates the implementation of an Object Pooling system for managing visual effects, specifically designed for enhancing performance and optimizing resource usage in the game. </p>
     </div>
@@ -362,7 +363,7 @@
 <!-- Box 2 -->
 <div class="grid-item">
     <h3 class="item-title">Object Pooling</h3>
-    <img src="../../projects/gameDev/project-frog/Features/object-pooling/code-snippits/using-op.png" alt="Snippet 2" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/object-pooling/code-snippits/using-op.png" loading="lazy" alt="Snippet 2" class="item-image">
     <div class="item-description">
         <p>In the game, the PoolManager is utilized to efficiently manage visual effects triggered by various actions, such as when a player jumps or interacts with an object. Instead of creating new effect instances on the fly, which can be taxing on performance, the game activates pre-initialized objects from the pool. This results in faster response times and smoother graphics, allowing for a more engaging player experience. </p>
     </div>
@@ -431,7 +432,7 @@
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Obstacle Spawning</h3>
-    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/o-spawning.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/o-spawning.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>This snippet shows how obstacles like rocks and crocodiles are spawned dynamically as the player ascends. </p>
     </div>
@@ -440,7 +441,7 @@
 <!-- Box 2 -->
 <div class="grid-item">
     <h3 class="item-title">Adjusting Difficulty with Height</h3>
-    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/adjusting-diff.png" alt="Snippet 2" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/adjusting-diff.png" loading="lazy" alt="Snippet 2" class="item-image">
     <div class="item-description">
         <p>This snippet shows how the chances of spawning certain obstacles increase as the player reaches higher points in the game, adding difficulty.</p>
     </div>
@@ -449,7 +450,7 @@
 <!-- Box 3 -->
 <div class="grid-item">
     <h3 class="item-title">Obstacle Collision Logic</h3>
-    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/o-collision.png" alt="Snippet 3" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/obsticals/code-snippits/o-collision.png" loading="lazy" alt="Snippet 3" class="item-image">
     <div class="item-description">
         <p>This snippet shows how the player interacts with obstacles, like taking damage after hitting a rock or crocodile.</p>
     </div>
@@ -515,12 +516,12 @@
 <div class="video-carousel">
 <div class="carousel-track" id="carousel-track-3">
 <div class="carousel-slide" onclick="openLightbox(3, 0)">
-<video class="preview-video" autoplay muted loop>
+<video class="preview-video" autoplay muted loop loading="lazy">
     <source src="../../projects/gameDev/project-frog/Features/progression/character-unlock.mp4" type="video/mp4">
 </video>
 </div>
 <div class="carousel-slide" onclick="openLightbox(3, 1)">
-    <video class="preview-video" autoplay muted loop>
+    <video class="preview-video" autoplay muted loop loading="lazy">
         <source src="../../projects/gameDev/project-frog/Features/progression/end-screen.mp4" type="video/mp4">
     </video>
 </div>
@@ -537,13 +538,13 @@
 <span class="close" onclick="closeLightbox(3)">&times;</span>
 <div class="lightbox-slideshow" id="lightbox-slideshow-3">
 <div class="lightbox-slide">
-<video class="lightbox-media" controls>
+<video class="lightbox-media" loading="lazy" controls>
     <source src="../../projects/gameDev/project-frog/Features/progression/character-unlock.mp4" type="video/mp4">
 </video>
 <p class="video-info">Character Unlock<br>This video demonstrates the Frolic Frog shop system, where players can purchase different frog skins. As the player selects a skin to unlock, you’ll see how the frog's status is updated in the inspector, indicating whether a specific skin is locked or unlocked. When a frog is successfully purchased, the shop system updates the selection, deducts the currency, and sets the frog's status to unlocked, allowing players to use their newly acquired skin in future sessions. </p>
 </div>
 <div class="lightbox-slide">
-    <video class="lightbox-media" controls>
+    <video class="lightbox-media" loading="lazy" controls>
         <source src="../../projects/gameDev/project-frog/Features/progression/end-screen.mp4" type="video/mp4">
     </video>
     <p class="video-info">End Screen<br>In this video, you’ll see how the game menu dynamically updates the player's current score and currency (flies) after each run. When the player dies, the final score and earned flies are displayed on the menu. The system checks if the current score exceeds the highest score from previous sessions. If the new score is higher, it overrides the previous high score and displays a "New High Score!" message on the screen, informing the player of their achievement and updating the high score for future sessions. </p>
@@ -564,7 +565,7 @@
 <!-- Box 1 -->
 <div class="grid-item">
     <h3 class="item-title">Save Manager Script</h3>
-    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/save-manager.png" alt="Snippet 1" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/save-manager.png" loading="lazy" alt="Snippet 1" class="item-image">
     <div class="item-description">
         <p>Manages saving and loading player data, including the current selected frog skin. </p>
     </div>
@@ -573,7 +574,7 @@
 <!-- Box 2 -->
 <div class="grid-item">
     <h3 class="item-title">Purchasing Skins in the Shop</h3>
-    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/buying-skins.png" alt="Snippet 2" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/buying-skins.png" loading="lazy" alt="Snippet 2" class="item-image">
     <div class="item-description">
         <p>This allows players to purchase skins using in-game currency (flies). It checks if the player has enough flies, unlocks the skin upon purchase, and deducts the cost from their currency. Unlocked skins and current selections are saved to ensure persistence across sessions.</p>
     </div>
@@ -582,7 +583,7 @@
 <!-- Box 3 -->
 <div class="grid-item">
     <h3 class="item-title">Obstacle Spawning</h3>
-    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/fly-count.png" alt="Snippet 3" class="item-image">
+    <img src="../../projects/gameDev/project-frog/Features/progression/code-snippits/fly-count.png" loading="lazy" alt="Snippet 3" class="item-image">
     <div class="item-description">
         <p>The CollectableManager script manages the player's collection of in-game items (flies), keeping track of both the current game session's count and the total collected across all playthroughs. It uses PlayerPrefs to save and retrieve the player's total collection progress, ensuring persistent data between sessions.</p>
     </div>

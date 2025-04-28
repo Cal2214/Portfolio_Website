@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
     <title>project-taxi</title>
 </head>
@@ -71,11 +72,11 @@
                 <div class="slides">
                     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
                     <video class="slide-item active"  src="../../projects/gameDev/project-taxi/Slideshow/cover.mp4" autoplay loop muted playsinline></video>
-                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/t-main-menu.png" alt="Project Screenshot">
-                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/buy.png" alt="Project Screenshot">
-                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/skill-points.png" alt="Project Screenshot">
-                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/employee.png" alt="Project Screenshot">
-                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/t-map.png" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/t-main-menu.png" loading="lazy" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/buy.png" loading="lazy" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/skill-points.png" loading="lazy" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/employee.png"loading="lazy" alt="Project Screenshot">
+                    <img class="slide-item" src="../../projects/gameDev/project-taxi/Slideshow/t-map.png" loading="lazy" alt="Project Screenshot">
             
                 <!-- Next Slide Button -->
                 <button class="next" onclick="changeSlide(1)">&#10095;</button>
@@ -174,12 +175,12 @@
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-1">
             <div class="carousel-slide" onclick="openLightbox(1, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/player-movement/walking.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 1)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/player-movement/getting-in.mp4" type="video/mp4">
                 </video>
             </div>
@@ -196,13 +197,13 @@
         <span class="close" onclick="closeLightbox(1)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-1">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/player-movement/walking.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Player Movement<br>The player uses standard WASD keys for movement with smooth directional changes and responsive character control. </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/player-movement/getting-in.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Possessing Vehicle <br>The video shows the player interacting with the vehicle transitioning smoothly from on foot movement to entering and exiting the car. </p>
@@ -255,38 +256,38 @@
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-2">
             <div class="carousel-slide" onclick="openLightbox(2, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/headlights.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 1)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/breaklights.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 2)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/indicator.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 3)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/fp-view.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 4)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/steering.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 5)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/doors.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(2, 6)">
                 <div class="media-wrapper">
-                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/vehicle-features/struct.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/vehicle-features/struct.png" loading="lazy" alt="Image Slide">
             </div>
             </div>
         </div>
@@ -302,7 +303,7 @@
         <span class="close" onclick="closeLightbox(2)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-2">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media"  loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/headlights.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Headlights<br>The clip demonstrates the functionality of vehicle headlights, showing how they illuminate the surroundings when toggled on. This is particularly effective for night-time gameplay or low-visibility scenarios, enhancing realism.
@@ -310,7 +311,7 @@
                     The headlights are activated through the player input, transitioning smoothly with a subtle glow effect. The lighting casts dynamic shadows on the environment, emphasizing the integration of the vehicle with the game world.</p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/breaklights.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Breaklights<br>This segment highlights the vehicle's brake light system. When the player applies the brakes, the rear lights illuminate, signaling the action.
@@ -318,13 +319,13 @@
                     The responsiveness of the brake lights is shown in sync with vehicle deceleration.  </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/indicator.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Indicators <br>This clip focuses on the vehicle's turn indicators. The player toggles the left and right indicators to show directional intent, which is mirrored by flashing lights on the respective side of the vehicle. </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/fp-view.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">First-person View<br>The camera shifts to the vehicle's interior, providing a first-person view of the dashboard and how the indicators are represented inside the cabin.
@@ -332,7 +333,7 @@
                     The corresponding indicator lights on the dashboard blink in sync with the exterior lights. This attention to detail enhances the immersive quality of the game, showcasing the interplay between interior and exterior vehicle systems. </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/steering.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Steering wheel + Speedometer/Tachometer<br>The final clip showcases the interaction of the steering wheel and speedometer as the vehicle moves. The player's inputs are reflected in real-time on these elements.
@@ -340,13 +341,13 @@
                     The steering wheel responds dynamically to directional changes, rotating smoothly as the player steers. The speedometer needle moves fluidly in response to vehicle acceleration, demonstrating the integration of the driving system with the HUD and interior mechanics. </p>
             </div>
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/vehicle-features/doors.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Doors<br>The clip shows the door animations when the player or passenger gets in / out of the vehicle aiding the games immersion.  </p>
             </div>
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/vehicle-features/struct.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/vehicle-features/struct.png" loading="lazy" alt="Image Slide">
                 <p class="video-info">Vehicle Structure<br>This image provides an overview of the vehicle blueprint, detailing its modular structure and key components. Each component is designed to interact seamlessly, creating a dynamic and realistic driving experience.</p>
             </div>
         </div>
@@ -416,17 +417,17 @@ Job Handling
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-3">
             <div class="carousel-slide" onclick="openLightbox(3, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/job-prep/passanger-spawning.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(3, 1)">
                 <div class="media-wrapper">
-                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-prep/map-image.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-prep/map-image.png"loading="lazy" alt="Image Slide">
             </div>
             </div>
             <div class="carousel-slide" onclick="openLightbox(3, 2)">
-                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-prep/job-request.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-prep/job-request.png"loading="lazy" alt="Image Slide">
             </div>
         </div>
         <button class="prev" onclick="changeCarousel(3, -1)">&#10094;</button>
@@ -441,17 +442,17 @@ Job Handling
         <span class="close" onclick="closeLightbox(3)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-3">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/job-prep/passanger-spawning.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Passenger Spawning<br>The video shows the process of spawning a passenger in the game and having them appear in the level. </p>
             </div>
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-prep/map-image.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-prep/map-image.png"loading="lazy" alt="Image Slide">
                 <p class="video-info">Passenger Valid Spawn Locations<br>Shows the valid locations the passenger can be placed making sure they can be collected by the player or AI taxis.</p>
             </div>
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-prep/job-request.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-prep/job-request.png"loading="lazy" alt="Image Slide">
                 <p class="video-info">Job Types<br>Image shows the randomness in the job types. </p>
             </div>
         </div>
@@ -509,16 +510,16 @@ Dropping off Passenger
     <div class="video-carousel">
         <div class="carousel-track" id="carousel-track-4">
             <div class="carousel-slide" onclick="openLightbox(4, 0)">
-                <video class="preview-video" autoplay muted loop>
+                <video class="preview-video" autoplay muted loop loading="lazy">
                     <source src="../../projects/gameDev/project-taxi/Features/job-accept/job-loop.mp4" type="video/mp4">
                 </video>
             </div>
             <div class="carousel-slide" onclick="openLightbox(4, 1)">
-                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-accept/pick-drop-location.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-accept/pick-drop-location.png"loading="lazy" alt="Image Slide">
             </div>
             <div class="carousel-slide" onclick="openLightbox(4, 2)">
                 <div class="media-wrapper">
-                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-accept/drop-details.png" alt="Image Slide">
+                <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/job-accept/drop-details.png"loading="lazy" alt="Image Slide">
             </div>
             </div>  
         </div>
@@ -534,7 +535,7 @@ Dropping off Passenger
         <span class="close" onclick="closeLightbox(4)">&times;</span>
         <div class="lightbox-slideshow" id="lightbox-slideshow-4">
             <div class="lightbox-slide">
-                <video class="lightbox-media" controls>
+                <video class="lightbox-media" loading="lazy" controls>
                     <source src="../../projects/gameDev/project-taxi/Features/job-accept/job-loop.mp4" type="video/mp4">
                 </video>
                 <p class="video-info">Job Loop<br>As you can see from the video once the player has accepted the job they will begin to head towards the passengers location to pick them up. 
@@ -542,11 +543,11 @@ Dropping off Passenger
                     Once picked up they will then head towards the drop off location where once dropped off they will be presented with the job details.  </p>
             </div>
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-accept/pick-drop-location.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-accept/pick-drop-location.png" loading="lazy" alt="Image Slide">
                 <p class="video-info">Pick up / Drop off locations<br>Shows the indicators used to display the locations where the player need to pick up / drop off passengers. </p>
             </div>
             <div class="lightbox-slide">
-                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-accept/drop-details.png" alt="Image Slide">
+                <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/job-accept/drop-details.png" loading="lazy" alt="Image Slide">
                 <p class="video-info">Drop off Details<br>Shows how by completing the job on time improves the xp gained by the player.  </p>
             </div>
         </div>
@@ -606,16 +607,16 @@ Dropping off Passenger
         <div class="video-carousel">
             <div class="carousel-track" id="carousel-track-5">
                 <div class="carousel-slide" onclick="openLightbox(5, 0)">
-                    <video class="preview-video" autoplay muted loop>
+                    <video class="preview-video" autoplay muted loop loading="lazy">
                         <source src="../../projects/gameDev/project-taxi/Features/red-light/redlight-fine.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="carousel-slide" onclick="openLightbox(5, 1)">
-                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/red-light/fine-image.png" alt="Image Slide">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/red-light/fine-image.png" loading="lazy" alt="Image Slide">
                 </div>
                 <div class="carousel-slide" onclick="openLightbox(5, 2)">
                     <div class="media-wrapper">
-                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/red-light/traffic-light.png" alt="Image Slide">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/red-light/traffic-light.png" loading="lazy" alt="Image Slide">
                 </div>
                 </div>
             </div>
@@ -631,17 +632,17 @@ Dropping off Passenger
             <span class="close" onclick="closeLightbox(5)">&times;</span>
             <div class="lightbox-slideshow" id="lightbox-slideshow-5">
                 <div class="lightbox-slide">
-                    <video class="lightbox-media" controls>
+                    <video class="lightbox-media" controls loading="lazy">
                         <source src="../../projects/gameDev/project-taxi/Features/red-light/redlight-fine.mp4" type="video/mp4">
                     </video>
                     <p class="video-info">Traffic Fine<br>Video shows what an example of what happens when the player runs a red light. </p>
                 </div>
                 <div class="lightbox-slide">
-                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/red-light/fine-image.png" alt="Image Slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/red-light/fine-image.png" loading="lazy" alt="Image Slide">
                     <p class="video-info">UI Display<br>Displays the what the fine was for along side the amount that has been deducted. </p>
                 </div>
                 <div class="lightbox-slide">
-                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/red-light/traffic-light.png" alt="Image Slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/red-light/traffic-light.png" loading="lazy" alt="Image Slide">
                     <p class="video-info">Traffic Lights<br>Shows how the traffic light blueprint is set up. The collision box just past the traffic light detects if the player has crossed it during the traffic lights red light section. . </p>
                 </div>
             </div>
@@ -691,15 +692,15 @@ Dropping off Passenger
         <div class="video-carousel">
             <div class="carousel-track" id="carousel-track-6">
                 <div class="carousel-slide" onclick="openLightbox(6, 0)">
-                    <video class="preview-video" autoplay muted loop>
+                    <video class="preview-video" autoplay muted loop loading="lazy">
                         <source src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fine.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="carousel-slide" onclick="openLightbox(6, 1)">
-                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fines.png" alt="Image Slide">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fines.png" loading="lazy" alt="Image Slide">
                 </div>
                 <div class="carousel-slide" onclick="openLightbox(6, 2)">
-                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collider.png" alt="Image Slide">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collider.png" loading="lazy" alt="Image Slide">
                 </div>
             </div>
             <button class="prev" onclick="changeCarousel(6, -1)">&#10094;</button>
@@ -714,17 +715,17 @@ Dropping off Passenger
             <span class="close" onclick="closeLightbox(6)">&times;</span>
             <div class="lightbox-slideshow" id="lightbox-slideshow-6">
                 <div class="lightbox-slide">
-                    <video class="lightbox-media" controls>
+                    <video class="lightbox-media" loading="lazy" controls>
                         <source src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fine.mp4" type="video/mp4">
                     </video>
                     <p class="video-info">Collision Example<br>Video shows the player colliding into a vehicle which causes the player being fined, you can see how the fine animation appears to visually alert the player.   </p>
                 </div>
                 <div class="lightbox-slide">
-                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fines.png" alt="Image Slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collision-fines.png" loading="lazy" alt="Image Slide">
                     <p class="video-info">Fine Examples<br>Shows the range of collision fine messages and fine amounts depending on the speed of the collision. </p>
                 </div>
                 <div class="lightbox-slide">
-                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collider.png" alt="Image Slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/collision-fine/collider.png" loading="lazy" alt="Image Slide">
                     <p class="video-info">Collision Detection<br>The collision box placed at the end of the vehicle detects if the player has collided with a vehicle.  </p>
                 </div>
             </div>
@@ -797,7 +798,7 @@ Repairing involves deducting repair costs from the player’s balance while rest
                 </div>
                 <div class="carousel-slide" onclick="openLightbox(7, 1)">
                     <div class="media-wrapper">
-                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/vehicle-management/collision-boxes.png" alt="Image Slide">
+                    <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/vehicle-management/collision-boxes.png" loading="lazy" alt="Image Slide">
                 </div>
                 </div>
             </div>
@@ -819,7 +820,7 @@ Repairing involves deducting repair costs from the player’s balance while rest
                     <p class="video-info">Management and Repair System<br>The video shows the inspection progress and the repair system as the player drives around the vehicles components will begin to degrade needing to be repaired.  </p>
                 </div>
                 <div class="lightbox-slide">
-                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/vehicle-management/collision-boxes.png" alt="Image Slide">
+                    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/vehicle-management/collision-boxes.png" loading="lazy" alt="Image Slide">
                     <p class="video-info">Collision Boxes<br>These collision boxes check if the player has moved onto one, if it has it will deduct a certain amount from the vehicle stats.  </p>
                 </div>
             </div>
@@ -874,7 +875,7 @@ Decreases the amount deducted from the player’s earnings when repairing vehicl
         <div class="video-carousel">
             <div class="carousel-track" id="carousel-track-8">
                 <div class="carousel-slide" onclick="openLightbox(8, 0)">
-                    <video class="preview-video" autoplay muted loop>
+                    <video class="preview-video" autoplay muted loop loading="lazy">
                         <source src="../../projects/gameDev/project-taxi/Features/upgrade/upgrades.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -891,7 +892,7 @@ Decreases the amount deducted from the player’s earnings when repairing vehicl
             <span class="close" onclick="closeLightbox(8)">&times;</span>
             <div class="lightbox-slideshow" id="lightbox-slideshow-8">
                 <div class="lightbox-slide">
-                    <video class="lightbox-media" controls>
+                    <video class="lightbox-media" loading="lazy" controls>
                         <source src="../../projects/gameDev/project-taxi/Features/upgrade/upgrades.mp4" type="video/mp4">
                     </video>
                     <p class="video-info">Upgrade Showcase<br>From the video you can see how at first the fine for running a red light is a deduction of £10.00 however after the 2 upgrades made to the deduction of fines the fine was £9.00  </p>
@@ -955,13 +956,13 @@ Players can inspect employees to view detailed information about their attribute
                     <div class="carousel-track" id="carousel-track-9">
                         <div class="carousel-slide" onclick="openLightbox(9, 0)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/employee-management/hiring-screen.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/employee-management/hiring-screen.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
 
                         <div class="carousel-slide" onclick="openLightbox(9, 1)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/employee-management/employee-deatils.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/employee-management/employee-deatils.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
 
@@ -978,12 +979,12 @@ Players can inspect employees to view detailed information about their attribute
                     <span class="close" onclick="closeLightbox(9)">&times;</span>
                     <div class="lightbox-slideshow" id="lightbox-slideshow-9">
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/employee-management/hiring-screen.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/employee-management/hiring-screen.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Hiring Screen<br></p>
                         </div>
 
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/employee-management/employee-deatils.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/employee-management/employee-deatils.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Employee Details<br></p>
                         </div>
                     </div>
@@ -1033,7 +1034,7 @@ Players can inspect employees to view detailed information about their attribute
                 <div class="video-carousel">
                     <div class="carousel-track" id="carousel-track-10">
                         <div class="carousel-slide" onclick="openLightbox(10, 0)">
-                            <video class="preview-video" autoplay muted loop>
+                            <video class="preview-video" autoplay muted loop loading="lazy">
                                 <source src="../../projects/gameDev/project-taxi/Features/assign-employee/assign-employee.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -1050,7 +1051,7 @@ Players can inspect employees to view detailed information about their attribute
                     <span class="close" onclick="closeLightbox(10)">&times;</span>
                     <div class="lightbox-slideshow" id="lightbox-slideshow-10">
                         <div class="lightbox-slide">
-                            <video class="lightbox-media" controls>
+                            <video class="lightbox-media" loading="lazy" controls>
                                 <source src="../../projects/gameDev/project-taxi/Features/assign-employee/assign-employee.mp4" type="video/mp4">
                             </video>
                             <p class="video-info">Assigning Employee<br>When the player assigns a employee to a vehicle the current passenger gets destroyed and a new passenger specifically for the ai driver is spawned using the same idea as the player passenger spawning system in order for the ai driver to go pick up and drop off the passengers. </p>
@@ -1117,23 +1118,23 @@ At red lights, they stop and resume movement when the light turns green.
 <div class="video-carousel">
 <div class="carousel-track" id="carousel-track-11">
     <div class="carousel-slide" onclick="openLightbox(11, 0)">
-        <video class="preview-video" autoplay muted loop>
+        <video class="preview-video" autoplay muted loop loading="lazy">
             <source src="../../projects/gameDev/project-taxi/Features/ai/ai-driving.mp4" type="video/mp4">
         </video>
         </div>
 <div class="carousel-slide" onclick="openLightbox(11, 1)">
     <div class="media-wrapper">
-<img class="preview-media" src="../../projects/gameDev/project-taxi/Features/ai/splines.png" alt="Image Slide">
+<img class="preview-media" src="../../projects/gameDev/project-taxi/Features/ai/splines.png" loading="lazy" alt="Image Slide">
 </div>
 </div>
 <div class="carousel-slide" onclick="openLightbox(11, 2)">
-    <video class="preview-video" autoplay muted loop>
+    <video class="preview-video" autoplay muted loop loading="lazy">
         <source src="../../projects/gameDev/project-taxi/Features/ai/prio-system.mp4" type="video/mp4">
     </video>
     </div>
 <div class="carousel-slide" onclick="openLightbox(11, 3)">
     <div class="media-wrapper">
-<img class="preview-media" src="../../projects/gameDev/project-taxi/Features/ai/prio-collision.png" alt="Image Slide">
+<img class="preview-media" src="../../projects/gameDev/project-taxi/Features/ai/prio-collision.png" loading="lazy" alt="Image Slide">
 </div>
 </div>
 </div>
@@ -1149,23 +1150,23 @@ At red lights, they stop and resume movement when the light turns green.
 <span class="close" onclick="closeLightbox(11)">&times;</span>
 <div class="lightbox-slideshow" id="lightbox-slideshow-11">
 <div class="lightbox-slide">
-    <video class="lightbox-media" controls>
+    <video class="lightbox-media" loading="lazy" controls>
     <source src="../../projects/gameDev/project-taxi/Features/ai/ai-driving.mp4" type="video/mp4">
     </video>
     <p class="video-info">Ai Vehicle Driving<br>In this video you can see the Ai Vehicles driving around the map using the spline on the roads.  </p>
 </div>
 <div class="lightbox-slide">
-    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/ai/splines.png" alt="Image Slide">
+    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/ai/splines.png" loading="lazy" alt="Image Slide">
     <p class="video-info">Splines<br>Shows the splines around the map and their paths.</p>
 </div>
 <div class="lightbox-slide">
-    <video class="lightbox-media" controls>
+    <video class="lightbox-media" loading="lazy" controls>
     <source src="../../projects/gameDev/project-taxi/Features/ai/prio-system.mp4" type="video/mp4">
     </video>
     <p class="video-info">Priory System<br>The video shows if a vehicle wants to turn left but their is still on coming vehicles they will position themselves in the middle of the road angled towards the turning point and once its clear they will then be able to make the turn this  prevents the vehicle trying to turn causing congestion and making the vehicles get stuck in the middle. </p>
 </div>
 <div class="lightbox-slide">
-    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/ai/prio-collision.png" alt="Image Slide">
+    <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/ai/prio-collision.png" loading="lazy" alt="Image Slide">
     <p class="video-info">Priority System Collision Boxes<br>Shows the collision boxes for the priority system.</p>
 </div>
 
@@ -1284,25 +1285,25 @@ At red lights, they stop and resume movement when the light turns green.
 
                         <div class="carousel-slide" onclick="openLightbox(12, 0)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD-1.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD-1.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
 
                         <div class="carousel-slide" onclick="openLightbox(12, 1)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 2.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 2.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
 
                         <div class="carousel-slide" onclick="openLightbox(12, 2)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 3.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 3.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
 
                         <div class="carousel-slide" onclick="openLightbox(12, 3)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 4.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 4.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
 
@@ -1319,19 +1320,19 @@ At red lights, they stop and resume movement when the light turns green.
                     <span class="close" onclick="closeLightbox(12)">&times;</span>
                     <div class="lightbox-slideshow" id="lightbox-slideshow-12">
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD-1.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD-1.png" loading="lazy" alt="Image Slide">
                             <p class="video-info"><br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 2.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 2.png" loading="lazy" alt="Image Slide">
                             <p class="video-info"><br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 3.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 3.png" loading="lazy" alt="Image Slide">
                             <p class="video-info"><br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 4.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/HUD/HUD - 4.png" loading="lazy" alt="Image Slide">
                             <p class="video-info"><br></p>
                         </div>
                     </div>
@@ -1390,37 +1391,37 @@ Management Menu: Helps players manage employees and fleet. <br>
                     <div class="carousel-track" id="carousel-track-13">
                         <div class="carousel-slide" onclick="openLightbox(13, 0)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                         <div class="carousel-slide" onclick="openLightbox(13, 1)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/pause-menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/pause-menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                         <div class="carousel-slide" onclick="openLightbox(13, 2)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/garage-menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/garage-menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                         <div class="carousel-slide" onclick="openLightbox(13, 3)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/shoping-menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/shoping-menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                         <div class="carousel-slide" onclick="openLightbox(13, 4)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/upgrade-menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/upgrade-menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                         <div class="carousel-slide" onclick="openLightbox(13, 5)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/recruitment-menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/recruitment-menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                         <div class="carousel-slide" onclick="openLightbox(13, 6)">
                             <div class="media-wrapper">
-                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/staff-menu.png" alt="Image Slide">
+                            <img class="preview-media" src="../../projects/gameDev/project-taxi/Features/UI/staff-menu.png" loading="lazy" alt="Image Slide">
                         </div>
                         </div>
                     </div>
@@ -1436,31 +1437,31 @@ Management Menu: Helps players manage employees and fleet. <br>
                     <span class="close" onclick="closeLightbox(13)">&times;</span>
                     <div class="lightbox-slideshow" id="lightbox-slideshow-13">
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/menu.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Main Menu<br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/pause-menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/pause-menu.png"loading="lazy" alt="Image Slide">
                             <p class="video-info">Pause Menu<br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/garage-menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/garage-menu.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Garage Menu<br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/shoping-menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/shoping-menu.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Shop Menu<br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/upgrade-menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/upgrade-menu.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Upgrade Menu<br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/recruitment-menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/recruitment-menu.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Recruitment Menu<br></p>
                         </div>
                         <div class="lightbox-slide">
-                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/staff-menu.png" alt="Image Slide">
+                            <img class="lightbox-media" src="../../projects/gameDev/project-taxi/Features/UI/staff-menu.png" loading="lazy" alt="Image Slide">
                             <p class="video-info">Staff Management Menu<br></p>
                         </div>
                     </div>
