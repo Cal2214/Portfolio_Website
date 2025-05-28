@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project weather</title>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+        <!--------------------------------- HEADER --------------------------------->
+        <header class="header"> 
+            <div class="header-container">
+                
+                <!-- Name and Job Role -->
+                <div class="name-role">
+                    <div class="header-name">Callum Dourneen</div>    
+                    <div class="header-job-role">Software Developer</div>    
+                </div>
+
+                <!-- Icons -->
+                <div class="icons">
+                    <!-- Home Icon -->
+                    <div class="icon-container">
+                        <a href="../software-dev/index.html" class="project-card">
+                        <img src="../../Images/home.png" alt="Home Icon">
+                    </a>
+                    </div>
+                
+                    <!-- Game Icon -->
+                    <a href="../../index.html" class="icon-link">
+                        <div class="icon-container">
+                            <img src="../../Images/games.png" alt="Games Icon">
+                        </div>
+                    </a>
+                    <!-- Linkdein Icon -->
+                    <div class="icon-container">
+                        <a href="https://www.linkedin.com/in/callum-dourneen-80a810296" target="_blank">
+                            <img src="../../Images/linkedin.png" alt="LinkedIn Icon">
+                        </a>
+                    </div>
+                    <!-- Github Icon -->
+                    <div class="icon-container">
+                        <a href="https://github.com/Cal2214" target="_blank">
+                            <img src="../../Images/social.png" alt="GitHub Icon">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resume -->
+                <div class="resume">
+                    <a href="../../Files/Cv_SoftwareDev.pdf" target="_blank">
+                    <div class="resume-container">Resume</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!--------------------------------- END HEADER --------------------------------->
+
+        <!--------------------------------- PROJECT INTRODUCTION --------------------------------->
+        <div class = "project-introduction">
+            <!-- Project Title and Description -->
+            <div class = "project-container">
+                <a href="../../Pages/software-dev/index.html" class="back-text"> < Back</a>
+                <div class = "project-title">project prem</div>
+                <div class = "project-description">A Python-based machine learning model that forecasts match outcomes.</div>
+            </div>
+        </div>
+            
+            <!-- Slide Container -->
+        <div class="project-slideshow">
+            <div class="slides">
+                <!-- <button class="prev" onclick="changeSlide(-1)">&#10094;</button> -->
+        
+                <video class="slide-item active" src="../../projects/softwareDev/project-prem/slideshow/premShowcase.mp4" autoplay loop muted playsinline></video>
+        
+                <!-- <button class="next" onclick="changeSlide(1)">&#10095;</button> -->
+            </div>
+        </div>
+
+        <div class="center-container"> 
+            <div class="about-introduction">
+
+                <!-- About Section -->
+                <div class="about-container">
+                    <div class="about-section">About</div>
+                    <div class="about-text">
+                        The Premier League Predictor is a data driven tool built to forecast football match outcomes using machine learning. The project gathers and processes historical Premier League data, team statistics, and form metrics to train a classification model capable of predicting match results. It was designed to explore the application of artificial intelligence in sports analytics and showcases skills in data preprocessing, model training, evaluation, and deployment. The predictor provides a practical example of how AI can interpret and act on real world data.
+                    </div>
+                </div>
+        
+                <!-- Project Details -->
+                <div class="project-details-container">
+                    <div class="project-details">Project Details</div>
+                    <div class="details-text">
+                                App Title: Premier League Predictor<br>
+        Genre: Data Science / Sports Analytics<br>
+        Platform: PC<br>
+        Development Tools: Python, Pandas, Scikit-learn<br>
+        App Features:
+        <li>Preprocess and analyze historical Premier League data</li>
+        <li>Train a classification model to predict match outcomes</li>
+        <li>Evaluate model accuracy and refine predictions</li>
+        <li>Visualize team performance trends and prediction results</li>
+        <li>Explore potential real-world applications of AI in sports</li>
+
+                    </div>
+                </div>
+        
+                <!-- Links Section -->
+                <div class="project-links-container">
+                    <div class="project-links">Links</div>
+                    <div class="links">
+                        <div class="itch-link">
+                            Try the app here:<br>
+                            <a href="" target="_blank">Comming Soon</a>
+                        </div>
+                        <div class="itch-link">
+                            Check out the repository on GitHub:<br>
+                            <a href="https://github.com/Cal2214/project_prem/tree/main" target="_blank">project_prem/Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------------------------- END PROJECT INTRODUCTION --------------------------------->
+
+        <!--------------------------------- TECHNICAL BREAKDOWN --------------------------------->
+        
+        <!-- Tech Title -->
+        <div class="tech">
+            <div class="tech-title">
+                <div class="technical-text">Technical Analysis</div>
+            </div>
+            <div class="tech-container">
+
+<!--------------------------------- FEATURE ONE  --------------------------------->
+        
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down -->
+                <ul class="dropdown">
+                    <li>
+                        <input type="checkbox" id="first">
+                        <label for="first">AI Match Prediction</label>
+                        <div class="content">
+                            <div class="title"> Description</div>
+                            This feature uses a trained machine learning model to predict the outcome of a Premier League football match based on the selected home and away teams. The result can be a Home Win, Draw, or Away Win, providing users with an AI-generated insight into potential match results. <br>
+                            
+                            <div class="title"> Implementation</div>
+                            When the user selects two different teams from the dropdowns and clicks the "Predict" button, the application sends these inputs to a logistic regression model. This model returns both a predicted result and a probability distribution over all three outcomes. The result is displayed as a label in the GUI, and the associated probabilities are shown below it. <br>
+                            
+                            <div class="title"> Design Approach </div>
+                             A clean and focused GUI using Tkinter enables simple team selection and clear display of the prediction result. The model logic is separated from the interface, allowing easy upgrades or retraining of the AI without altering the frontend. The design prioritizes usability and fast access to results.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- SlideShow and LightBox -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Slideshow 2 -->
+<div class="slideshow-wrapper" data-id="1">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-1">
+            <div class="carousel-slide" onclick="openLightbox(1, 0)">
+                <video class="preview-video" autoplay muted loop loading="lazy">
+                    <source src="../../projects/softwareDev/project-prem/features/MatchProb/MatchProb.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-slide" onclick="openLightbox(1, 1)">
+                <div class="media-wrapper">
+                <img class="preview-media" src="../../projects/softwareDev/project-prem/features/MatchProb/Data.png" loading="lazy" alt="Image Slide">
+            </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeCarousel(1, -1)">&#10094;</button>
+        <button class="next" onclick="changeCarousel(1, 1)">&#10095;</button>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-1" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(1)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-1">
+            <div class="lightbox-slide">
+                <video class="lightbox-media"  loading="lazy" controls>
+                    <source src="../../projects/softwareDev/project-prem/features/MatchProb/MatchProb.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Match Prediction<br>This video showcases the process of selecting two football teams from the dropdown menus to generate a match prediction. Once the user picks a home and away team, the AI predicts the match outcome (Home Win, Away Win, or Draw) based on historical data and model training. The video demonstrates the simplicity and interactivity of the interface, where users can easily visualize the predicted result and corresponding probabilities, all in real-time.</p>
+            </div>
+            <div class="lightbox-slide">
+                <img class="lightbox-media" src="../../projects/softwareDev/project-prem/features/MatchProb/Data.png" loading="lazy" alt="Image Slide">
+                <p class="video-info">Match Data Spreadsheet for Training<br>The image presents a snapshot of the training dataset used by the AI model to generate football match predictions.</p>
+            </div>
+        </div>
+        <button class="prev" onclick="changeLightbox(1, -1)">&#10094; Prev</button>
+        <button class="next" onclick="changeLightbox(1, 1)">Next &#10095;</button>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+    <li>
+        <input type="checkbox" id="first-inside">
+        <label for="first-inside">Code Snippets</label>
+        <div class="content">
+            <div class="grid-container">
+                <!-- Box 1 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Training the Logistic Regression Model</h3>
+                    <img src="../../projects/softwareDev/project-prem/features/MatchProb/code-snippits/trainingModel.png" loading="lazy"  alt="Snippet 1" class="item-image">
+                    <div class="item-description">
+                        <p>This snippet demonstrates how the logistic regression model is trained using historical match data. The model learns from features such as goals scored, win rates, and team form, which will later be used for predicting match outcomes.</p>
+                    </div>
+                </div>
+                
+                <!-- Box 2 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Preparing the Input for Match Prediction</h3>
+                    <img src="../../projects/softwareDev/project-prem/features/MatchProb/code-snippits/prepareInput.png" loading="lazy" alt="Snippet 2" class="item-image">
+                    <div class="item-description">
+                        <p>This snippet demonstrates how the most recent data for the selected home and away teams is extracted and used to create a new row. This row will be passed to the model for prediction.</p>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="grid-item">
+                    <h3 class="item-title">Making the Match Prediction</h3>
+                    <img src="../../projects/softwareDev/project-prem/features/MatchProb/code-snippits/predictOutcome.png"loading="lazy" alt="Snippet 3" class="item-image">
+                    <div class="item-description">
+                        <p>Once the data is prepared for the selected teams, this snippet shows how the model is used to predict the outcome of the match. The prediction and its associated probabilities are returned, which provide insight into the likelihood of each outcome (Home Win, Draw, Away Win).</p>
+                    </div>
+                </div>
+
+                <!-- Additional Boxes  -->
+            </div>
+        </div>
+    </li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+    <div class="challanges-title">Challenges</div>
+
+    <div class ="challange-name">Handling Team Data Association</div>
+    <div class ="challange">Challange:</div>
+    <div class ="challange-text">One of the significant challenges I faced during the development of the AI Match Prediction feature was properly associating the teams playing in each match. Initially, the model struggled to differentiate between home and away teams, which made the predictions inaccurate or impossible. The dataset lacked clear distinctions for the teams playing in the matches, leading to errors in the prediction process.</div>
+    <div class ="solution">Solution:</div>
+    <div class ="solution-text">To address the issue of team data association, I restructured the dataset to clearly indicate which teams were playing at home and which were playing away. For each match, I created separate columns for both Home Team and Away Team for all teams in the league. I assigned a value of 1 to the respective columns for the teams involved in the match and 0 for the others. This allowed the model to correctly differentiate between the two teams and capture relevant features for prediction.</div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        </div>
+    </li>
+</ul>
+<!--------------------------------- END FEATURE ONE --------------------------------->
+
+<!--------------------------------- FEATURE TWO  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="second">
+        <label for="second">Probability Breakdown</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            The Probability Breakdown feature provides a detailed analysis of the predicted match result by displaying the likelihood of each possible outcome: a Home Win, Away Win, or Draw. This feature is based on the predictions made by the AI model, and it allows users to understand how confident the model is in each of its predictions, providing valuable insight into the chances of each possible result.
+
+ <br>
+            
+            <div class="title"> Implementation</div>
+             The logistic regression model's predict_proba() function gives us the probability of each class (Home Win, Away Win, and Draw), which we display to the user. This is done after the user selects the teams for the match and the model makes a prediction.<br>
+            
+            <div class="title"> Design Approach </div>
+            The design of the Probability Breakdown feature is focused on clarity and ease of understanding. The goal is to make the probabilities easily visible and simple to interpret for users, without overwhelming them with too much technical detail.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="second-inside">
+<label for="second-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Mapping and Extracting Probabilities</h3>
+    <img src="../../projects/softwareDev/project-prem/features/ProbBreakdown/code-snippits/mappingProbs.png" loading="lazy" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This block maps numeric predictions (like -1, 0, 1) into readable strings and pairs each with its probability </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title">Displaying the Probability</h3>
+    <img src="../../projects/softwareDev/project-prem/features/ProbBreakdown/code-snippits/displayingProbs.png" loading="lazy" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>This updates the GUI labels with the percentage chance of each possible match result. This is the core visual part of the Probability Breakdown feature. </p>
+    </div>
+</div>
+
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- <div class="challanges-container">
+<div class="challanges-title">Challanges</div>
+
+<div class ="challange-name">Ensuring the Correct Theme is Displayed</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">Sometimes the wrong theme would be applied, or the theme wouldn't update properly when switching locations or reloading the page.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">Implemented a switch statement that assigns a specific numeric ID to each weather condition (weatherType). This ID is then used to apply the correct theme dynamically. By ensuring each weather condition is mapped to the right theme class, the issue was resolved.</div>
+
+</div> -->
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE TWO --------------------------------->
+
+
+<!--------------------------------- FEATURE THREE  --------------------------------->
+        
+<!-- Drop Down -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<ul class="dropdown">
+    <li>
+        <input type="checkbox" id="third">
+        <label for="third">Team Selection</label>
+        <div class="content">
+            <div class="title"> Description</div>
+            The Team Selection feature allows users to choose a home and an away team from a list of all Premier League clubs using dropdown menus. It is the foundation for running AI match predictions, as it enables users to simulate real matchups. This feature also includes built-in validation safeguards, ensuring the user cannot proceed with an invalid or incomplete selection—such as choosing the same team for both sides or not selecting a team at all.<br>
+            
+            <div class="title"> Implementation</div>
+            The list of teams is populated from a static list containing all Premier League clubs. Upon clicking the “Predict” button, the app triggers the getDropdownResults() function.<br>
+            
+            <div class="title"> Design Approach </div>
+            User-Focused Design: A simple, clear layout with labels like “Home Team” and “Away Team” guides users intuitively.<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->  
+
+<!-- Slideshow 2 -->
+<div class="slideshow-wrapper" data-id="2">
+    <div class="video-carousel">
+        <div class="carousel-track" id="carousel-track-2">
+            <div class="carousel-slide" onclick="openLightbox(2, 0)">
+                <video class="preview-video" autoplay muted loop loading="lazy">
+                    <source src="../../projects/softwareDev/project-prem/features/TeamSelect/teamSelect.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="more-text">Click for details</div>
+
+<!-- Lightbox 1 -->
+<div id="lightbox-2" class="lightbox">
+    <div class="lightbox-content">
+        <span class="close" onclick="closeLightbox(2)">&times;</span>
+        <div class="lightbox-slideshow" id="lightbox-slideshow-2">
+            <div class="lightbox-slide">
+                <video class="lightbox-media"  loading="lazy" controls>
+                    <source src="../../projects/softwareDev/project-prem/features/TeamSelect/teamSelect.mp4" type="video/mp4">
+                </video>
+                <p class="video-info">Team Dropdown<br>Shows the list of all the teams the user can select</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Drop Down Inside -->
+<ul class="dropdown-inside">
+<li>
+<input type="checkbox" id="third-inside">
+<label for="third-inside">Code Snippets</label>
+<div class="content">
+<div class="grid-container">
+<!-- Box 1 -->
+<div class="grid-item">
+    <h3 class="item-title">Team Dropdown </h3>
+    <img src="../../projects/softwareDev/project-prem/features/TeamSelect/code-snippts/teamDropdownInit.png" loading="lazy" alt="Snippet 1" class="item-image">
+    <div class="item-description">
+        <p>This snippet initializes the Home and Away team dropdown menus using a predefined list of Premier League teams. It ensures users can only select valid teams from a controlled list, reducing input errors. </p>
+    </div>
+</div>
+
+<!-- Box 2 -->
+<div class="grid-item">
+    <h3 class="item-title"> Input Validation</h3>
+    <img src="../../projects/softwareDev/project-prem/features/TeamSelect/code-snippts/inputValidation.png" loading="lazy" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>This function performs critical validation checks before running predictions. It prevents the user from selecting the same team for both sides or proceeding without selecting one or both teams, improving the reliability and user experience of the app.</p>
+    </div>
+</div>
+
+<!-- Box 3 -->
+<div class="grid-item">
+    <h3 class="item-title"> Prediction Trigger</h3>
+    <img src="../../projects/softwareDev/project-prem/features/TeamSelect/code-snippts/predictionTrigger.png" loading="lazy" alt="Snippet 2" class="item-image">
+    <div class="item-description">
+        <p>This button links the user's team selections to the prediction system. Once clicked, it calls the validation and prediction logic, acting as the bridge between the team selection and AI prediction features.</p>
+    </div>
+</div>
+
+
+<!-- Additional Boxes  -->
+</div>
+</div>
+</li>
+</ul>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<div class="challanges-container">
+<div class="challanges-title">Challenges</div>
+
+<div class ="challange-name">Input Validation for Team Selection</div>
+<div class ="challange">Challange:</div>
+<div class ="challange-text">During early development, users were able to select only one team or leave one of the dropdowns blank. This caused the AI prediction function to fail or return incorrect results, as it required data from both a home and away team to make a valid prediction.</div>
+<div class ="solution">Solution:</div>
+<div class ="solution-text">To resolve this, I implemented input validation that checks whether both a home and away team are selected before the prediction is triggered. If one or both teams are missing, a user-friendly warning message is shown to inform the user and prevent the prediction from running. </div>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+</div>
+</li>
+</ul>
+<!--------------------------------- END FEATURE THREE --------------------------------->
+
+<!--------------------------------- WHAT I LEARNT --------------------------------->
+<div class = "learn-container">
+<div class = "learn-title">What I Learnt</div>
+
+<div class = "learn-subtitle">Applying Machine Learning:</div>
+<div class = "learn-text"> This project was my first experience using machine learning to create an AI system that could make predictions based on real world data. I learned how to structure and clean a dataset, train a model using logistic regression, and interpret prediction results.</div>
+
+</div>
+<!--------------------------------- END WHAT I LEARNT --------------------------------->
+
+<!--------------------------------- RETROSPECTIVE --------------------------------->
+<div class = "learn-container">
+    <div class = "learn-title">Retrospective</div>
+    
+    <div class = "learn-subtitle"> Future Improvements:</div>
+    <div class = "learn-text">Looking back, this project gave me a strong foundation in both machine learning and dataset engineering. One of the biggest challenges was preparing data that the model could learn from accurately—especially distinguishing between home and away teams. Initially, the AI couldn't recognize the difference, so I had to explicitly encode team roles with one hot encoding. I also learned the importance of input validation in the GUI to prevent model errors from incorrect user selections. In the future, I would like to expand the dataset and explore more advanced models. </div>
+
+    
+    </div>
+    <!--------------------------------- END RETROSPECTIVE --------------------------------->
+    
+            </div>
+        </div>
+    </body>
+    <script src="scripts.js"></script>
+</html>
