@@ -691,3 +691,82 @@ input[type="checkbox"]:not(:checked) + label + .content {
     font-family: Arial, Helvetica, sans-serif;
     color:white;
 }
+
+/* Footer */
+.site-footer {
+  margin-top: 100px;
+  padding: 1rem 1.5rem;
+  background: #282626;
+  color: #f5f5f5;
+  font-size: 0.95rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.cta-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  /* background: rgba(255, 255, 255, 0.08); */
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: inherit;
+  transition: background .2s, transform .1s;
+}
+
+.footer-cta-button:hover,
+.footer-cta-button:focus-visible {
+  /* background: rgba(255, 255, 255, 0.15); */
+  outline: none;
+  /* transform: translateY(-1px); */
+}
+
+/* icon styling for footer button only */
+.footer-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #486695;
+  border-radius: 50%;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.footer-icon-container img {
+  width: 18px;
+  height: 18px;
+  transition: filter 0.3s ease-in-out, width .2s, height .2s;
+}
+
+.footer-cta-button:hover .footer-icon-container img {
+  filter: brightness(0) invert(1);
+  width: 16px;
+  height: 16px;
+}
+
+.footer-label {
+  white-space: nowrap;
+}
+
+.highlight{
+     color: #486695;
+     font-family: Arial, Helvetica, sans-serif;
+}
+
+.cta-text{
+    font-family: Arial, Helvetica, sans-serif;
+}
